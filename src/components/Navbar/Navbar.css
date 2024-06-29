@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+.nav-container {
+  background-color: #fff;
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 3em;
+  list-style-type: none;
+  font-family: 'DM sans';
+}
+
+.nav-list li{
+  cursor: pointer;
+}
+
+.contact button {
+    background-color: white;
+    outline: none;
+    padding: .4em .9em;
+    font-size: 1rem;
+    border-radius: 1.5em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    color: #2E0086;
+    border: 1px solid #2E0086;
+    font-family: 'open sans';
+}
+
+.contact button:hover {
+  color: #fff;
+  background-color: #2E0086;
+}
+
+.nav-list li:hover{
+  color: #2E0086;
+  font-weight: 600;
+}
+
+.hamburger{
+  display: none;
+}
+
+@media screen and (max-width: 1174px){
+  .nav-list{
+    gap: 2em;
+  }
+}
+
+@media screen and (max-width: 1038px){
+  .nav-list, .contact{
+    display: none;
+  }
+
+  .hamburger{
+    display: flex;
+    cursor: pointer;
+  }
+}
