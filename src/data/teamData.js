@@ -1,153 +1,159 @@
+import teamImages from '../assets/team_members/teamImages';
+
 const teamData = [
   {
-    image: '../src/assets/team_members/valerie.png',
-    name: 'Valerie',
-    position: 'Email Marketing Specialist',
-  },
-  {
-    image: '../src/assets/team_members/sylvia.png',
-    name: 'Sylvia',
-    position: 'Chief Technology Officer',
-  },
-  {
-    image: '../src/assets/team_members/progress.png',
-    name: 'Progress',
-    position: 'Hiring Manager',
-  },
-  {
-    image: '../src/assets/team_members/righteous.png',
-    name: 'Righteous',
-    position: 'Office Assistant',
-  },
-  {
-    image: '../src/assets/team_members/rhei.png',
-    name: 'Rhei',
-    position: 'Email Marketing Specialist',
-  },
-  {
-    image: '../src/assets/team_members/precious.png',
-    name: 'Precious',
-    position: 'Asst. Hiring Manager',
-  },
-  {
-    image: '../src/assets/team_members/patty.png',
-    name: 'Patty',
-    position: 'Manager',
-  },
-  {
-    image: '../src/assets/team_members/nora.png',
-    name: 'Nora',
-    position: 'Executive Officer',
-  },
-  {
-    image: '../src/assets/team_members/nikko.png',
-    name: 'Nikko',
-    position: 'Sales Manager',
-  },
-  {
-    image: '../src/assets/team_members/neil.png',
-    name: 'Neil',
-    position: 'Asst. Sales Manager',
-  },
-  {
-    image: '../src/assets/team_members/mmeno.png',
-    name: 'Mmeno',
-    position: 'Front Desk',
-  },
-  {
-    image: '../src/assets/team_members/memsy.png',
-    name: 'Memsy',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/kevin.png',
-    name: 'Kevin',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/keisha.png',
-    name: 'Keisha',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/justine.png',
-    name: 'Justine',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/john patrick.png',
-    name: 'John Patrick',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/jo.png',
-    name: 'Jo',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/jerricoh.png',
-    name: 'Jerricoh',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/jerimine.png',
-    name: 'Jerimine',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/jeremie.png',
-    name: 'Jeremie',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/jaylo.png',
-    name: 'Jaylo',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/itoro.png',
-    name: 'Itoro',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/gretchel.png',
+    image: teamImages.gretchel,
     name: 'Gretchel',
-    position: 'Customer Support',
+    position: 'Admin'
   },
   {
-    image: '../src/assets/team_members/gene.png',
-    name: 'Gene',
-    position: 'Customer Support',
+    image: teamImages.memsy,
+    name: 'Memsy',
+    position: 'Admin'
   },
   {
-    image: '../src/assets/team_members/emmeline.png',
-    name: 'Emmeline',
-    position: 'Customer Support',
+    image: teamImages.keisha,
+    name: 'Keisha',
+    position: 'Admin'
   },
   {
-    image: '../src/assets/team_members/ella.png',
-    name: 'Ella',
-    position: 'Customer Support',
+    image: teamImages.mmeno,
+    name: 'Mmeno',
+    position: 'Admin'
   },
   {
-    image: '../src/assets/team_members/darianny.png',
-    name: 'Darianny',
-    position: 'Customer Support',
-  },
-  {
-    image: '../src/assets/team_members/cess.png',
+    image: teamImages.cess,
     name: 'Cess',
-    position: 'Customer Support',
+    position: 'Admin'
   },
   {
-    image: '../src/assets/team_members/carlos.png',
+    image: teamImages.darianny,
+    name: 'Darianny',
+    position: 'Admin'
+  },
+  {
+    image: teamImages.righteous,
+    name: 'Righteous',
+    position: 'Admin'
+  },
+  {
+    image: teamImages.sylvia,
+    name: 'Sylvia',
+    position: 'Admin'
+  },
+  {
+    image: teamImages.rhei,
+    name: 'Rhei',
+    position: 'Admin'
+  },
+  {
+    image: teamImages.valerie,
+    name: 'Valerie',
+    position: 'Email Marketing Specialist'
+  },
+
+  {
+    image: teamImages.progress,
+    name: 'Progress',
+    position: 'Hiring Manager'
+  },
+  {
+    image: teamImages.precious,
+    name: 'Precious',
+    position: 'Asst. Hiring Manager'
+  },
+  {
+    image: teamImages.patty,
+    name: 'Patty',
+    position: 'Manager'
+  },
+  {
+    image: teamImages.nora,
+    name: 'Nora',
+    position: 'Executive Officer'
+  },
+  {
+    image: teamImages.nikko,
+    name: 'Nikko',
+    position: 'Sales Manager'
+  },
+  {
+    image: teamImages.neil,
+    name: 'Neil',
+    position: 'Asst. Sales Manager'
+  },
+
+  {
+    image: teamImages.kevin,
+    name: 'Kevin',
+    position: 'Customer Support'
+  },
+
+  {
+    image: teamImages.justine,
+    name: 'Justine',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.john_patrick,
+    name: 'John Patrick',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.jo,
+    name: 'Jo',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.jerricoh,
+    name: 'Jerricoh',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.jerimine,
+    name: 'Jerimine',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.jeremie,
+    name: 'Jeremie',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.jaylo,
+    name: 'Jaylo',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.itoro,
+    name: 'Itoro',
+    position: 'Customer Support'
+  },
+
+  {
+    image: teamImages.gene,
+    name: 'Gene',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.emmeline,
+    name: 'Emmeline',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.ella,
+    name: 'Ella',
+    position: 'Customer Support'
+  },
+  {
+    image: teamImages.carlos,
     name: 'Carlos',
-    position: 'Customer Support',
+    position: 'Customer Support'
   },
   {
-    image: '../src/assets/team_members/angel.png',
+    image: teamImages.angel,
     name: 'Angel',
-    position: 'Customer Support',
+    position: 'Customer Support'
   }
 ];
 

@@ -1,14 +1,13 @@
 import { useSwiper } from 'swiper/react';
 
-const NavButtons = () => {
+const NavButtons = ({ numberOfSlides }) => {
   const swiper = useSwiper();
 
-  let numberOfSlides = swiper.slides.length;
   let activeIndex = swiper.activeIndex + 1;
 
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="p-4 flex items-center justify-center md:justify-end gap-6">
+      <div className="p-4 flex items-center justify-center lg:justify-end gap-6">
         <button
           disabled={activeIndex == 1}
           className={`${

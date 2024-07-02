@@ -1,4 +1,5 @@
 import providersData from '../../data/providersData';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
 const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
@@ -10,7 +11,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
     } else if (states && states.length > 2) {
       return `${states[0]}, ${states[1]} & more.`;
     } else {
-      return '';
+      return 'Nil';
     }
   };
 
@@ -109,8 +110,8 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                       : '~h-[9.5rem]/[13.75rem]'
                   } flex items-end justify-center`}
                 >
-                  <img
-                    className="w-[80%] h-[90%] block object-contain"
+                  <LazyLoadImage
+                    className="size-[90%] block object-contain"
                     src={provider?.image}
                     alt={provider?.name}
                   />
