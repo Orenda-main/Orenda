@@ -11,7 +11,7 @@ const Hear = () => {
   return (
     <div className="hear-container">
       <div className="px-6">
-        <h2 className="font-heading  text-center hear-text">Hear from out Clients</h2>
+        <h2 className="font-heading  text-center hear-text">Hear from our Clients</h2>
         <div className="crystal max-w-[58.13rem] mx-auto sm:pt-[4rem] sm:pl-[4rem] md:pt-[2rem] ~px-8/[5.44rem] relative">
         <img src={quote} alt="" className="absolute left-0 top-0" />
           <Swiper modules={[Navigation, Pagination]}>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import magnifier from '../../assets/magnifier.gif';
 
 const BecomeProvider = ({ bg }) => {
@@ -8,7 +9,7 @@ const BecomeProvider = ({ bg }) => {
           <img className="~size-[8.1875rem]/[25.525rem]" src={magnifier}></img>
         </div>
         <div className="w-full">
-          <h2 className="heading sm:py-1 mb-3 sm:text-justify">
+          <h2 className="heading sm:py-1 mb-3 sm:text-left">
             Become an Orenda Provider!
           </h2>
           <p className="max-w-[35.625rem] font-medium text-center sm:text-justify ~text-sm/xl">
@@ -16,9 +17,9 @@ const BecomeProvider = ({ bg }) => {
             to start with us.
           </p>
 
-          <button className="mt-[2.12rem] mx-auto sm:mx-0 sm:max-w-[15.125rem] border text-orenda-green border-orenda-green py-2.5 px-4 block rounded-[2.5rem] hover:bg-orenda-green hover:text-white font-semibold transition-colors ~text-sm/xl w-full">
+          <Link to='/become-a-provider' className="mt-[2.12rem] mx-auto sm:mx-0 sm:max-w-[15.125rem] border text-orenda-green border-orenda-green py-2.5 px-4 block rounded-[2.5rem] hover:bg-orenda-green hover:text-white font-semibold transition-colors ~text-sm/xl w-full text-center">
             Start Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

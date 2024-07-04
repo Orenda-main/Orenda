@@ -37,10 +37,7 @@ const Treat = () => {
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-y-6 justify-items-center py-8 max-w-[61.25rem] mx-auto">
           {ailments.map((ailment) => (
-            <div
-              key={ailment.text}
-              className="ailment w-full max-h-[10rem] sm:max-h-[unset]"
-            >
+            <div key={ailment.text} className="ailment w-full max-h-[10rem] sm:max-h-[unset]">
               <img src={ailment.image} alt="" />
               <p>{ailment.text}</p>
             </div>

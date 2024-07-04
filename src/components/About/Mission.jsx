@@ -1,4 +1,6 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import streets_mission from '../../assets/streets_mission.jpg';
+import streets_mission_small from '../../assets/streets_mission-small.jpg';
 
 const Mission = () => {
   return (
@@ -7,9 +9,14 @@ const Mission = () => {
         <h2 className="sm:hidden heading mb-4">Our Mission</h2>
         <div className="sm:flex sm:justify-between sm:items-center">
           <div className="sm:order-last">
-            <img
+            <LazyLoadImage
+              effect="blur"
               className="w-full object-cover max-w-[32.25rem] mx-auto sm:mx-0"
               src={streets_mission}
+              placeholderSrc={streets_mission_small}
+              wrapperProps={{
+                style: { transitionDelay: '0.1s' }
+              }}
               alt="Our Mission Img"
             />
           </div>
