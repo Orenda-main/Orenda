@@ -12,11 +12,13 @@ export default {
         'm-footer':
           "url('/src/assets/footer_bg_tl.png'),url('/src/assets/footer_bg_br.png'),url('/src/assets/footer_bg_r.png')",
         'md-footer':
-          "url('/src/assets/md_footer_bg_bl.png'),url('/src/assets/md_footer_bg_tr.png'),url('/src/assets/md_footer_bg_r.png')"
+          "url('/src/assets/md_footer_bg_bl.png'),url('/src/assets/md_footer_bg_tr.png'),url('/src/assets/md_footer_bg_r.png')",
+        arrow: 'url(/src/assets/select.svg)'
       },
       backgroundPosition: {
         'footer-positions': 'top left, bottom right, bottom right',
-        'md-footer-positions': 'bottom left, top right, bottom right'
+        'md-footer-positions': 'bottom left, top right, bottom right',
+        'arrow-position': 'right 0.5rem top 50%'
       },
       backgroundSize: {
         'footer-size': 'auto, auto, 50% 100%'
@@ -36,6 +38,9 @@ export default {
         'open-sans': ['"Open Sans"', 'sans-serif'],
         heading: ["'Ogg Text TRIAL'", 'serif'],
         'dm-sans': ['"DM Sans"', 'sans-serif']
+      },
+      gridTemplateColumns: {
+        team: 'repeat(4, minmax(0, 15.625rem))'
       },
       listStyleImage: {
         dot: 'url("/src/assets/disc.svg")'
