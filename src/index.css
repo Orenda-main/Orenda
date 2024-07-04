@@ -26,13 +26,14 @@ html *::after {
     color: #070707;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    accent-color: #333;
   }
 
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+    -webkit-box-shadow: 0 0 0 30px #f5f5f5db inset !important;
   }
 
   input[type='date']::-webkit-calendar-picker-indicator {
@@ -55,16 +56,25 @@ html *::after {
 }
 
 @layer components {
-  main p {
+  main p,
+  main li {
     @apply ~text-sm/xl font-dm-sans text-justify;
   }
+  form h3 {
+    @apply ~text-sm/xl font-dm-sans;
+  }
   .heading {
-    @apply font-bold ~sm/xl:~text-lg/[2.625rem] text-center font-heading;
+    @apply font-bold ~text-[1.35rem]/[2.625rem] text-center font-heading;
   }
   .footer__heading {
     @apply font-bold ~sm/xl:~text-sm/lg text-justify ~mb-2/4;
   }
+
+  .fieldset {
+    @apply border border-[#D6D6D6] font-dm-sans rounded-2xl ~pt-6/[1.69rem] ~pb-[3.25rem]/[4.06rem] ~pl-4/[3.63rem] ~pr-4/[4.75rem];
+  }
 }
+
 
 h1,
 h2,
