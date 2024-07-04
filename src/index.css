@@ -55,6 +55,18 @@ html *::after {
   }
 }
 
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px;
+}
+
+
 @layer components {
   main p,
   main li {
@@ -73,18 +85,4 @@ html *::after {
   .fieldset {
     @apply border border-[#D6D6D6] font-dm-sans rounded-2xl ~pt-6/[1.69rem] ~pb-[3.25rem]/[4.06rem] ~pl-4/[3.63rem] ~pr-4/[4.75rem];
   }
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 16px;
-}
-
-.h-full{
-  height: unset;
 }

@@ -10,7 +10,7 @@ const Mission = () => {
         <div className="sm:flex sm:justify-between sm:items-center">
           <div className="sm:order-last">
             <LazyLoadImage
-              effect="blur"
+              
               className="w-full object-cover max-w-[32.25rem] mx-auto sm:mx-0"
               src={streets_mission}
               placeholderSrc={streets_mission_small}

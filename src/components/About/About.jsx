@@ -1,3 +1,4 @@
+import React from "react";
 import BecomeProvider from './BecomeProvider';
 import AboutIntro from './AboutIntro';
 import Mission from './Mission';

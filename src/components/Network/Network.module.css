@@ -8,7 +8,7 @@
 }
 
 .network_container {
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 .network_wrapper {
@@ -18,7 +18,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 10em 1rem; /* Adjust padding as needed */
+  padding: 4em 1rem; /* Adjust padding as needed */
   position: relative;
 }
 
