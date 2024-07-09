@@ -41,10 +41,10 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
         numberOfColumns === 5
           ? 'max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.5rem] md:min-w-[unset] md:h-[unset]'
           : 'max-w-[20.7rem] pb-4'
-      } w-full rounded-md shadow relative overflow-hidden`}
+      } w-full rounded-md shadow relative overflow-hidden flex flex-col`}
     >
       <div
-        className={`hidden absolute inset-0 bg-black opacity-0 hover:opacity-100 transition-opacity duration-1000 text-white sm:flex flex-col ${
+        className={`absolute inset-0 bg-black opacity-0 hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col ${
           numberOfColumns === 5 ? 'gap-1 px-3 py-4' : '~p-4/6'
         } justify-between rounded-md cursor-pointer`}
       >
@@ -61,18 +61,18 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
           </p>
         </div>
         <div className={`grid ${numberOfColumns === 5 ? 'gap-2' : 'gap-4'}`}>
-          <Link
+          <a
+            href={provider?.bookingLink}
             className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium text-center"
-            to={`/provider/${index}`}
           >
             Book now
-          </Link>
+          </a>
           <div className="flex justify-center">
             <Link
               className="text-[0.875rem] font-semibold hover:underline"
               to={`/provider/${index}`}
             >
-              More Info
+              See Profile
             </Link>
           </div>
         </div>
@@ -91,7 +91,11 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
           loading="lazy"
         />
       </div>
-      <div className={numberOfColumns === 5 ? 'px-3' : 'px-4'}>
+      <div
+        className={`flex flex-col flex-1 ${
+          numberOfColumns === 5 ? 'px-3' : 'px-4'
+        }`}
+      >
         <p
           className={`${
             numberOfColumns === 5 ? 'text-xs mt-2' : 'text-sm ~mt-2/4'
@@ -118,7 +122,7 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
             {showAgesSeen(provider?.agesSeen)}
           </p>
         </div>
-        <div className="pt-[0.62rem]">
+        <div className="pt-[0.62rem] mt-auto">
           <h3 className="font-medium font-dm-sans text-[#6A6A6A] text-[0.875rem]">
             States Licensed
           </h3>
@@ -142,9 +146,8 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
               {provider?.availability}
             </span>
           )}
-
-          <Link
-            to={`/provider/${index}`}
+          <a
+            href={provider?.bookingLink}
             className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
               numberOfColumns === 5
                 ? 'py-2 min-w-[7.5rem] ~px-2/3'
@@ -152,7 +155,7 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
             }`}
           >
             Book online
-          </Link>
+          </a>
         </div>
       </div>
     </div>

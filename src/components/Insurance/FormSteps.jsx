@@ -5,13 +5,6 @@ import { PageNumberContext } from './Insurance';
 const FormSteps = ({ register, watch, errors }) => {
   const pageNumber = useContext(PageNumberContext);
 
-  const { name, ref, onChange } = register('Insurance Carrier', {
-    required: {
-      value: pageNumber === 3 ? true : false,
-      message: 'This field is required'
-    }
-  });
-
   const [isFocus, setIsFocus] = useState(false);
 
   console.log(watch('Insurance Carrier'));
@@ -45,8 +38,8 @@ const FormSteps = ({ register, watch, errors }) => {
 
   if (pageNumber === 1) {
     const pageOneFields = [
-      { label: 'Your Name', type: 'text', id: 'yourName' },
-      { label: 'Second Name', type: 'text', id: 'secondName' },
+      { label: 'Legal First Name', type: 'text', id: 'firstName' },
+      { label: 'Legal Last Name', type: 'text', id: 'lastName' },
       { label: 'Date of Birth', type: 'date', id: 'DOB' }
     ];
     return (
@@ -104,11 +97,26 @@ const FormSteps = ({ register, watch, errors }) => {
             key={'insuranceCarrier'}
             className="block outline-none bg-transparent w-full border-b border-[#D1D1D1] pb-4 forLabel:pb-2"
             type={fieldType}
-            ref={ref}
-            name={name}
             onFocus={handleFocus}
-            onChange={onChange}
-            onBlur={handleBlur}
+            {...register('Insurance Carrier', {
+              onBlur: () => handleBlur(),
+              required: {
+                value: pageNumber === 3 ? true : false,
+                message: 'This field is required'
+              },
+              validate: {
+                acceptedFormats: (files) => {
+                  if (fieldType === 'file') {
+                    return (
+                      ['image/jpeg', 'image/png', 'application/pdf'].includes(
+                        files[0]?.type
+                      ) || 'Pdf & Jpeg Only!'
+                    );
+                  }
+                }
+              }
+            })}
+            // accept="image/jpeg, image/png, application/pdf"
           />
           <label
             onClick={() => setTypeText()}

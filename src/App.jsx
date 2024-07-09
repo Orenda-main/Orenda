@@ -39,7 +39,7 @@ function App() {
           <Route path="Provider/:index" element={<ProviderInfo/>} />
           <Route path="blogs" element={<Blog />} />
           <Route path="blog info" element={<Bloginfo />} />
-          <Route path="become provider" element={<BecomeProviderPage />} />
+          <Route path="becomeprovider" element={<BecomeProviderPage />} />
         </Route>
         <Route path="/Assessment1" element={<Assessment1/>} />
         <Route path="/Assessment2" element={<Assessment2/>} />

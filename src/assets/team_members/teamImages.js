@@ -15,7 +15,7 @@ import jerricoh from './jerricoh.png';
 import jo from './jo.png';
 import john_patrick from './john patrick.png';
 import justine from './justine.png';
-import keisha from './keisha.png';
+import keishla from './keishla.png';
 import kevin from './kevin.png';
 import memsy from './memsy.png';
 import mmeno from './mmeno.png';
@@ -29,6 +29,14 @@ import rhei from './rhei.png';
 import righteous from './righteous.png';
 import sylvia from './sylvia.png';
 import valerie from './valerie.png';
+import fretzie from './fretzie.png';
+import ime from './ime.png';
+import jessabeth from './jessabeth.png';
+import jirah from './jirah.png';
+import liza from './liza.png';
+import oly from './oly.png';
+import phoebe from './phoebe.png';
+import shaina from './shaina.png';
 
 const teamImages = {
   angel,
@@ -48,7 +56,7 @@ const teamImages = {
   jo,
   john_patrick,
   justine,
-  keisha,
+  keishla,
   kevin,
   memsy,
   mmeno,
@@ -61,7 +69,15 @@ const teamImages = {
   rhei,
   righteous,
   sylvia,
-  valerie
+  valerie,
+  fretzie,
+  ime,
+  jessabeth,
+  jirah,
+  liza,
+  oly,
+  phoebe,
+  shaina
 };
 
 export default teamImages;

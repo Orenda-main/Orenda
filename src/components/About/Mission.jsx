@@ -1,27 +1,16 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import streets_mission from '../../assets/streets_mission.jpg';
-import streets_mission_small from '../../assets/streets_mission-small.jpg';
 
 const Mission = () => {
   return (
-    <div className="max-w-[80rem] mx-auto ~pt-2/[5.25rem] pb-[1.37rem] border border-[#E7DAFF] rounded-b-2xl ~mt-10/16 px-5">
+    <div className="max-w-[80rem] mx-auto ~pt-2/[5.25rem] pb-[1.37rem] border border-[#E7DAFF] rounded-b-2xl ~mt-10/16 px-5 sm:~px-6/12">
       <div className="max-w-[74rem] mx-auto">
         <h2 className="sm:hidden heading mb-4">Our Mission</h2>
-        <div className="sm:flex sm:justify-between sm:items-center">
+        <div className="sm:flex sm:justify-between sm:items-center ~gap-8/12">
           <div className="sm:order-last">
-            <LazyLoadImage
-              
-              className="w-full object-cover max-w-[32.25rem] mx-auto sm:mx-0"
-              src={streets_mission}
-              placeholderSrc={streets_mission_small}
-              wrapperProps={{
-                style: { transitionDelay: '0.1s' }
-              }}
-              alt="Our Mission Img"
-            />
+            <img src={streets_mission} alt="" />
           </div>
-          <div>
-            <h2 className="heading mb-4 sm:text-justify hidden sm:block ">
+          <div className=' flex-shrink-[1.1]'>
+            <h2 className="heading mb-4 sm:text-justify hidden sm:block">
               Our Mission
             </h2>
             <p className="mt-4 sm:max-w-[37.2rem]">

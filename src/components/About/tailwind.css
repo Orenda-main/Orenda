@@ -20,5 +20,5 @@
     .footer__heading {
       @apply font-bold ~sm/xl:~text-sm/lg text-start ~mb-2/4;
     }
-}
+  }
   
