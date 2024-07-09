@@ -86,3 +86,24 @@ h6 {
     @apply border border-[#D6D6D6] font-dm-sans rounded-2xl ~pt-6/[1.69rem] ~pb-[3.25rem]/[4.06rem] ~pl-4/[3.63rem] ~pr-4/[4.75rem];
   }
 }
+
+
+.css-dmmspl-MuiFormGroup-root{
+  display: flex !important;
+  gap: 1.5em !important;
+  width: 100% !important;
+}
+
+.css-1nrlq1o-MuiFormControl-root{
+  width: 100% !important;
+}
+
+.css-j204z7-MuiFormControlLabel-root{
+  border: 1px solid #C9C9C9 !important;
+  padding: .3em .5em !important;
+  border-radius: .5em !important;
+}
+
+.css-ahj2mt-MuiTypography-root{
+  font-size: 1.2rem !important;
+}
