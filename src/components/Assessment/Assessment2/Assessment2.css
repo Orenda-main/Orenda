@@ -7,19 +7,19 @@
 }
 
 .css-dmmspl-MuiFormGroup-root{
-    display: flex;
-    gap: 1.5em;
-    width: 100%;
+    display: flex !important;
+    gap: 1.5em !important;
+    width: 100% !important;
 }
 
 .css-1nrlq1o-MuiFormControl-root{
-    width: 100% ;
+    width: 100% !important;
 }
 
 .css-j204z7-MuiFormControlLabel-root{
-    border: 1px solid #C9C9C9;
-    padding: .3em .5em;
-    border-radius: .5em;
+    border: 1px solid #C9C9C9 !important;
+    padding: .3em .5em !important;
+    border-radius: .5em !important;
 }
 
 .css-ahj2mt-MuiTypography-root{
