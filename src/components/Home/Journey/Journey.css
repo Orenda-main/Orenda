@@ -10,7 +10,7 @@
 .journey-container {
   padding-top: 3em;
   padding-bottom: 5em;
-  margin-bottom: 5em;
+  margin-bottom: 0.4rem;
   background-color: #fff;
 }
 .journey-wrapper h1 {
@@ -42,7 +42,7 @@
   align-items: center;
   width: 270px;
   justify-content: space-between;
-  gap: 1em;
+  gap: .5em;
 }
 .icon {
   display: flex;
@@ -80,6 +80,7 @@ hr {
   min-width: 700px;
   width: 1000px;
   max-width: 1350px; */
+  max-width: 1150px;
   width: 100%;
   margin-top: 4em;
   border-radius: 15px;
@@ -181,21 +182,27 @@ button:hover .color-img {
 @media screen and (max-width: 900px) {
   .icon-cards {
     flex-direction: column;
-    gap: 3.5em;
+    gap: 2em;
   }
   .icon-prop {
     padding-bottom: 3em;
     border-bottom: 1px solid rgb(95, 94, 94);
+    gap: .5em;
     width: 100%;
     max-width: 450px;
   }
   .icon-prop h3 {
-    font-size: clamp(18px, 5vw, 24px);
+    font-size: clamp(18px, 3vw, 34px);
     text-align: center;
+    font-family: OggBold;
+    line-height: 2.5rem;
   }
 
   .icon-prop p {
-    font-size: clamp(20px, 4vw, 16px);
+    font-size: clamp(20px, 3vw, 36px);
+  }
+  .journey-wrapper hr {
+    display: none;
   }
 
   .patient {
@@ -206,12 +213,17 @@ button:hover .color-img {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
   }
+  .new-patient {
+    border: 1px solid #d4d4d4;
+    border-radius: 25px;
+    margin-bottom: 2rem;
+  }
   .new-patient p {
     font-size: 20px;
     text-align: center;
   }
   .new-patient h2 {
-    font-size: 30px;
+    font-size: 29px;
     font-family: OggBold;
     text-align: center;
   }
@@ -220,22 +232,84 @@ button:hover .color-img {
     text-align: center;
   }
   .existing-patient h2 {
-    font-size: 30px;
+    font-size: 29px;
     font-family: OggBold;
     text-align: center;
   }
 }
 
-@media screen and (max-width: 538px){
-  .icon-prop p{
-    font-size: unset;
+@media screen and (max-width: 560px) {
+  .journey-container {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
-
-  .icon-prop{
-    gap: .5em;
+  .journey-wrapper {
+    padding: 1rem;
   }
+  .journey-wrapper h1 {
+    font-family: OggBold;
+    font-size: clamp(30px, 6.2vw, 40px);
+  }
+  .icon-cards {
+    width: 96%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .existing-patient {
+    padding: 1rem;
+  }
+  .new-patient {
+    padding: 1rem;
+  }
+  .patient {
+    padding-top: 0.5rem;
+  }
+  .new-patient{
+    height: 31.25rem;
+  }
+  .existing-patient {
+    height: 31.25rem;
+  }
+  .existing-patient p {
+    font-size: clamp(15px, 4vw, 20px);
+  }
+  .new-patient p {
+    font-size: clamp(15px, 4vw, 20px);
+  }
+}
 
-  .journey-wrapper h1{
-    font-size: 2rem;
+@media screen and (max-width: 460px) {
+  .journey-wrapper > h1 {
+    font-size: clamp(20px, 8.2vw, 40px);
+  }
+  .new-patient h2 {
+    font-size: 25px;
+  }
+  .existing-patient h2 {
+    font-size: 25px;
+  }
+  .icon-prop {
+    gap: .3em;
+    width: 100%;
+    max-width: 330px;
+  }
+  .icon-prop p {
+    font-size: clamp(17px, 4vw, 36px);
+  }
+  .new-patient{
+    height: 28.25rem;
+  }
+  .existing-patient {
+    height: 28.25rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .new-patient{
+    height: 26.25rem;
+  }
+  .existing-patient {
+    height: 26.25rem;
   }
 }

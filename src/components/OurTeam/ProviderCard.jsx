@@ -1,10 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ProviderCard = ({
-  numberOfColumns,
-  provider,
-  index
-}) => {
+const ProviderCard = ({ numberOfColumns, provider, index }) => {
   const showStatesLicensed = (states) => {
     if (states && states.length === 1) {
       return `${states[0]}`;
@@ -23,28 +19,27 @@ const ProviderCard = ({
         const divider = index === array.length - 1 ? '.' : ', ';
 
         if (category === 'Children') {
-          return `${category} (<13)${divider}`;
-        } else if (category === 'Teenagers') {
-          return `${category} (13-17)${divider}`;
-        } else if (category === 'Young Adults') {
-          return `${category} (18-24)${divider}`;
+          return `${category} (<13 yrs)${divider}`;
+        } else if (category === 'Teens') {
+          return `${category} (13-17 yrs)${divider}`;
         } else if (category === 'Adults') {
-          return `${category} (25-64)${divider}`;
+          return `${category} (18-64 yrs)${divider}`;
         } else if (category === 'Seniors') {
-          return `${category} (65+)${divider}`;
+          return `${category} (65+ yrs)${divider}`;
         } else {
           return `${category}${divider}`;
         }
       });
+    } else {
+      return 'Nil';
     }
   };
-
 
   return (
     <div
       className={`${
         numberOfColumns === 5
-          ? 'max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.75rem] md:min-w-[unset] md:h-[unset]'
+          ? 'max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.5rem] md:min-w-[unset] md:h-[unset]'
           : 'max-w-[20.7rem] pb-4'
       } w-full rounded-md shadow relative overflow-hidden`}
     >
@@ -120,7 +115,7 @@ const ProviderCard = ({
               numberOfColumns === 5 ? 'text-[0.625rem]' : 'text-xs'
             } font-open-sans`}
           >
-            {provider.agesSeen && showAgesSeen(provider?.agesSeen)}
+            {showAgesSeen(provider?.agesSeen)}
           </p>
         </div>
         <div className="pt-[0.62rem]">
@@ -140,7 +135,7 @@ const ProviderCard = ({
             <span
               className={`rounded-lg grid place-items-center border border-[#E1EEE4] bg-[#F0FDF3] text-nowrap ${
                 numberOfColumns === 5
-                  ? 'p-1 text-[0.625rem]'
+                  ? 'p-1 px-1.5 text-[0.625rem]'
                   : '~xl/2xl:~px-1.5/3 py-2 ~text-[0.625rem]/xs'
               } font-dm-sans`}
             >
@@ -150,8 +145,10 @@ const ProviderCard = ({
 
           <Link
             to={`/provider/${index}`}
-            className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple ~px-2/4 min-w-[9rem] md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
-              numberOfColumns === 5 ? 'py-2' : ' py-[0.62rem]'
+            className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
+              numberOfColumns === 5
+                ? 'py-2 min-w-[7.5rem] ~px-2/3'
+                : ' py-[0.62rem] min-w-[9rem] ~px-2/4'
             }`}
           >
             Book online

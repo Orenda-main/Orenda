@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-bottom: 3em;
+  margin-bottom: 2rem;
 }
 .location-wrapper {
   display: flex;
@@ -67,8 +67,7 @@
 .loc-prop-txt {
   background: url(../../../assets/swirly.png) no-repeat;
   background-position: top right;
-  background-size: clamp(3.41
-  rem,14vw,6.99rem);
+  background-size: clamp(3.41rem,14vw,6.99rem);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -130,5 +129,13 @@ button:hover .purple {
   .location-wrapper h1{
     font-family: 'OggBold' !important;
     text-align: center;
+    font-size: 35px;
+    line-height: 45px;
   }
+}
+
+@media screen and (max-width: 450px) {
+    .location-wrapper h1 {
+      font-size: 29px;
+    }
 }

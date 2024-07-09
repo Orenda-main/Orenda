@@ -33,7 +33,7 @@
     position: relative;
     font-size: 18px;
     font-weight: 700;
-    padding-right: 80px;
+    /* padding-right: 1em; */
     transition: all 0.4s ease;
     font-family: "DM sans";
   }
@@ -47,6 +47,7 @@
     width: 30px;
     height: 30px;
     transition: all 0.2s ease;
+   
   }
   
   .faqs .faq .faq-answer {
@@ -126,5 +127,27 @@
   .Frequently h1{
     font-size: 1.5rem;
     padding: 0 .5em;
+  }
+}
+
+@media screen and (max-width: 543px){
+  .faqs .faq .faq-question::after{
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 521px){
+  .faqs .faq .faq-question{
+    font-size: .8rem;
+    font-weight: 800;
+  }
+
+  .faqs .faq{
+    margin: 0 0 15px 0;
+    padding: 18px 18px 18px 15px;
+  }
+
+  .faqs .faq .faq-question::after{
+    font-size: 1.2rem;
   }
 }

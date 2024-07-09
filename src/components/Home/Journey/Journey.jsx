@@ -46,7 +46,7 @@ const Journey = () => {
         <hr />
         <div className="patient">
           <div className="new-patient">
-            <img src={undraw} alt="" />
+            <img src={undraw} alt="" className="~w-[2.5rem]/[9rem]" />
             <h2>New Patient?</h2>
             <p>To schedule your first appointment;</p>
             <button className="one">

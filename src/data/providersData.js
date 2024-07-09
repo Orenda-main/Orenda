@@ -7,9 +7,17 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
-    languagesSpoken: ['English'],
-    mainFocus: null,
+    agesSeen: ['Children', 'Teens', 'Adults'],
+    languagesSpoken: ['English', 'Bengali'],
+    specialties: [
+      'Weight Management',
+      'Eating Disorder(s)',
+      'Gender Affirming Care',
+      'Chronic Pain',
+      'Maternity / Postpartum',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Academic Stress',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -21,13 +29,12 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [
+    education: [
       'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -35,7 +42,7 @@ const providersData = [
 
     After graduating with bachelor’s degrees from the State University of New York, Binghamton, and Massachusetts College of Pharmacy and Health Sciences, Mr. Rahman attended Case Western Reserve University, where he earned his master’s degree in psychiatric mental health nursing.
 
-    Mr. Rahman is certified by the American Nurses Credentialing Center. He has received several awards, including the Residential Life Team Developer, Hinman College Den Of Distinction, and Residential Life Community Developer awards. Rakin aims to provide a holistic outlook in his practice. He believes that there should be a partnership between provider and client and strives to create a welcoming compassionate, and open environment.
+    Mr. Rahman is certified by the ANCC. He has received several awards, including the Residential Life Team Developer, Hinman College Den Of Distinction, and Residential Life Community Developer awards. Rakin aims to provide a holistic outlook in his practice. He believes that there should be a partnership between provider and client and strives to create a welcoming compassionate, and open environment.
     `,
     reviews: [
       `“Provider actually cares about your needs, your unique situation, and how your meds are affecting you. He takes the time to check in with care in check-ups, and isn't a 5-minute “hi, here's a prescription, bye,” kind of practitioner, which is rare and VERY appreciated. I would recommend to anyone looking for long-lasting care that feels compassionate and well-informed!”`,
@@ -48,25 +55,23 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: [
-      'Teenagers',
-      'Adults',
-      'Individuals',
-      'Young adults',
-      'Seniors',
-      'Families'
-    ],
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Hyperactivity disorders (ADD / ADHD)',
-      'Bipolar disorder',
-      'Post-traumatic stress disorder (PTSD)',
-      'Obsessive-compulsive disorder (OCD)',
-      'Anxiety'
+    specialties: [
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Geripsych',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Addiction / Substance Abuse',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Hyperactivity disorders (ADD / ADHD)',
+      'Bipolar disorder',
+      'Post-traumatic stress disorder (PTSD)',
+      'Obsessive-compulsive disorder (OCD)',
       'Medication Management',
       'Alcoholism',
       'Anxiety',
@@ -75,20 +80,19 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic', 'Transpersonal'],
-    educationAndBackground: [
+    education: [
       'Walden University, Master’s in Psychiatric Mental Health Nursing',
       'William Paterson University (Bachelor’s)'
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Ms. Tanya Monroe is an adult psychiatric & mental health nurse practitioner. Working at Orenda Psychiatry in Brooklyn and Smyrna, NY, she accepts patients suffering from hyperactivity disorders (ADD / ADHD), anxiety, bipolar disorder, post-traumatic stress disorder (PTSD), and obsessive-compulsive disorder (OCD).
 
     Ms. Monroe is sensitive to the uniqueness of each patient's situation and accordingly adapts her consultations. Her treatment modalities include medications, therapy, and lifestyle changes. She educates caregivers on how to care for the patient to help them heal and recover. She alsoconducts psychiatry follow-ups to evaluate progress and change the care plan if necessary.
     
-    Ms. Monroe obtained her bachelor's degree from William Paterson University and her master's degree in psychiatric mental health nursing from Walden University. Owing to her expertise, she holds a certification from the American Nurses Credentialing Center. Additionally, she is certified in basic life support (BLS), advanced cardiovascular life support (ACLS), and pediatric advanced life support (PALS) by the American Heart Association. 
+    Ms. Monroe obtained her bachelor's degree from William Paterson University and her master's degree in psychiatric mental health nursing from Walden University. Owing to her expertise, she holds a certification from the ANCC. Additionally, she is certified in basic life support (BLS), advanced cardiovascular life support (ACLS), and pediatric advanced life support (PALS) by the American Heart Association. 
     
     I worked with children and adolescents at Four Winds Hospital & New York Presbyterian Hospital. Some of my most rewarding professional moments have been helping my patients overcome addictions so that they can go on to lead a happy and fulfilling life. I continued to further my educational background as well as my experience by getting my master's in science at New York University. My goal is to treat my clients using a client centered, holistic, and nonjudgmental approach.`,
     reviews: [
@@ -103,16 +107,9 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: [
-      'Teenagers',
-      'Adults',
-      'Individuals',
-      'Young adults',
-      'Seniors',
-      'Families'
-    ],
+    agesSeen: ['Teens', 'Adults'],
     languagesSpoken: ['English'],
-    mainFocus: [
+    specialties: [
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Bipolar disorder',
       'Personality disorders',
@@ -129,13 +126,9 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Wilkes University, Master's in Nursing`],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    education: [`Wilkes University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am an experienced psychiatric nurse Practitioner helping people from all lifespans, with areas of expertise in treating anxiety, depression, OCD, ADHD, Bipolar Disorder, and personality disorders. I am a compassionate person who provides a warm and down to earth approach in meeting the person who is on their journey to mental wellness. Together we can come up with a plan that works for you and with your concerns in mind. `,
@@ -150,8 +143,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Children', 'Teens', 'Adults'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Depression',
+      'Adjustment Disorder',
+      'Insomnia',
+      'Major Depressive Disorder (MDD)',
+      'Social Anxiety'
+    ],
     focusAreas: [
       'Abandonment issues',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -163,9 +164,8 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychoanalytic'],
-    educationAndBackground: [`Russell Sage College, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`Russell Sage College, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
@@ -182,8 +182,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
-    agesSeen: ['Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Geripsych',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Academic Stress',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -195,11 +202,10 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
@@ -215,29 +221,45 @@ const providersData = [
     name: 'Nwamaka Onyeogo',
     professionalTitle: 'Nurse Practitioner (Psychiatry), NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Yoruba'],
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Suboxone Management (X Waiver)',
+      'Geripsych',
+      'Weight Management',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Tics/Tourette Syndrome',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Academic Stress',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
+      'Depression',
       'Post-Traumatic Stress Disorder (PTSD)',
       'Anxiety',
-      'Depression',
       'Insomnia',
-      'Prescription / Refill'
+      'Prescription / Refill',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Northern Kentucky University, Master's in Psychiatric Mental Health Nursing`,
       `Walden University, Master's in Adult Gerontology Nursing`,
       `Drexel University (Bachelor's)`,
       `Kean University (Bachelor's)`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    // statesLicensed: ['New Jersey', 'Maine', 'Oregon', 'Maryland', 'Delaware'],
-    statesLicensed: ['New York'],
+    boardCertification: ['ANCC'],
+    statesLicensed: [
+      'New York',
+      'New Jersey',
+      'Maine',
+      'Oregon',
+      'Maryland',
+      'Delaware'
+    ],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
     about: `Ms. Nwamaka Onyeogo is an accomplished adult psychiatric & mental health nurse practitioner offering virtual consultations through Orenda Psychiatry in New York, NY. With experience in treating conditions like bipolar disorder, anxiety, obsessive-compulsive disorder (OCD), and various mental health issues, she provides compassionate and personalized care.
@@ -256,19 +278,28 @@ const providersData = [
     name: 'Nerlande Celestin',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP',
-    agesSeen: ['Individuals', 'Young adults', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Creole'],
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Eating Disorder(s)',
+      'Bipolar Disorder',
+      'Depression',
+      'Anxiety',
+      'ADHD'
+    ],
     focusAreas: [
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Sleeping Disorders',
       'Medication Management',
       'Panic Attack',
       'Anxiety',
       'Depression'
     ],
     treatmentApproaches: null,
-    educationAndBackground: [
+    education: [
       `Molloy University, Post-Master's Certificate in Psychiatric Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: null,
     statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
@@ -286,12 +317,12 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Russian'],
-    mainFocus: [
-      'Anxiety and depression',
-      'Insomnia',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    specialties: [
+      'Genomic Testing',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -303,23 +334,22 @@ const providersData = [
       'Obsessive Compulsive Disorder (OCD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Integrative', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `Fairleigh Dickinson University, Master’s in Psychiatric Mental Health Nursing`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
     about: `Natasha Dillon graduated from Fairleigh Dickinson University as a psychiatric nurse practitioner for all ages and she is Board Certified by ANCC. She graduated with a Master in Nursing Science in 2017 from Ternopil State Medical University. She is in the medical field for 20 years; she has years of experience as a registered nurse in the hospital and she connected with thousands of patients in her career and participated in many meaningful moments in their lives.
 
     Natasha is a patient-focused provider who emphasizes building relationships with her patients and works towards creating a personalized treatment plan. These connections have made her a sensitive, respectful provider that enjoys collaboration. She became interested in drug treatment because of the way it dominates our current approach to managing the suffering and disturbance we call mental disorders. Using psychotherapy and medication management she can help yougain the tools needed to move past the hard times.`,
     reviews: [
-      `“She’s extremely talented at what she does! She really cares about my wellbeing and has been instrumental in getting me healthy again. I love Dr. Dillon and have zero interest ever leaving.”`,
+      `“My experience with Natasha was wonderful. She listens and talks with you. She doesn’t rush you,and truly cares what you maybe going through. I can’t wait for our next visit” - Valentino V.`,
+      `“She’s extremely talented at what she does! She really cares about my wellbeing and has been instrumental in getting me healthy again. I love Dr. Dillon and have zero interest ever leaving.” - I. H.`,
+      `“Nathasha is very kind and listened to my concerns. She created a medicine plan for me. I really recommend her . I'm very thankful for her.” - Maria C.`,
+      `“She listened to my concerns and did not gaslight me. Even though she did not like one of my medications she agreed to prescribe it until we felt comfortable switching,” - Danielle C.`,
+      `“Natasha was wonderful and warm. She fit me into her schedule extremely quick and came up with a plan to help me right away. I would recommend her to anyone looking to get some professional help managing anxiety, depression, or ADHD.” - Kathryn K.`,
       `“Natasha is amazing! I felt so much heard and supported”.`
     ]
   },
@@ -329,13 +359,14 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: [`Teenagers`, `Young adults`, `Adults`],
+    agesSeen: ['Children', `Teens`, `Adults`],
     languagesSpoken: ['English', 'Bengali'],
-    mainFocus: [
-      'Anxiety',
-      `Sleep Disorders`,
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Depression'
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Weight Management',
+      'Genomic Testing',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
     ],
     focusAreas: [
       'Anxiety',
@@ -348,13 +379,12 @@ const providersData = [
       'Depression'
     ],
     treatmentApproaches: ['Psychoanalytic'],
-    educationAndBackground: [
+    education: [
       `D'Youville University, Master's in Psychiatric Mental Health Nursing`,
       `Daemen University (Bachelor's)`,
       `Trocaire College (Associate's)`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -379,13 +409,14 @@ const providersData = [
     name: 'Jena Simon',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: [`Young adults`, `Adults`, `Seniors`],
+    agesSeen: [`Adults`, `Seniors`],
     languagesSpoken: ['English', 'Bengali'],
-    mainFocus: [
-      'Eating Disorders',
-      `Depression`,
-      'APostpartum Depression and Anxiety',
-      'Anxiety'
+    specialties: [
+      `Genomic Testing`,
+      `Bipolar Disorder`,
+      `Chronic Pain`,
+      `Anxiety and Depression`,
+      `Eating Disorders`
     ],
     focusAreas: [
       'Anorexia',
@@ -398,21 +429,20 @@ const providersData = [
       'Postpartum Anxiety'
     ],
     treatmentApproaches: ['Psychodynamic', `Transpersonal`],
-    educationAndBackground: [
+    education: [
       `Case Western Reserve University, Doctor of Nursing Practice`,
       `Columbia University, Master's in Family and Oncology Nursing
       `
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    // statesLicensed: [
-    //   'Oregon',
-    //   'Maryland',
-    //   'Massachusetts',
-    //   'Virginia',
-    //   'Washington'
-    // ],
-    statesLicensed: ['New York'],
+    boardCertification: ['ANCC'],
+    statesLicensed: [
+      'New York',
+      'Oregon',
+      'Maryland',
+      'Massachusetts',
+      'Virginia',
+      'Washington'
+    ],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Jena M. Simon, DNP, is a Double Board-Certified nurse practitioner specializing in psychiatric mental health and family health. After graduating from Columbia University in 2010 as a Family and Oncology Nurse Practitioner, Dr. Simon worked in New York City at a large tertiary medical center caring for adults with sickle cell disease. In this role, she became attuned to the needs of people living with chronic illness and chronic pain.
@@ -437,8 +467,14 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
-    languagesSpoken: ['English', 'Bengali'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English'],
+    specialties: [
+      'Gender-affirming care',
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    ],
     focusAreas: [
       'Eating Disorder',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -448,45 +484,51 @@ const providersData = [
       'Depression',
       'Panic Attack',
       'Prescription / Refill',
-      'LGBT Care'
+      'LGBTQ+ Counselling'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`New York University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Mr. Jeremy Walsh is a skilled adult psychiatric and mental health nurse practitioner. He extends his services at Hurley Dermatology, delivering holistic care with empathy and expertise via virtual consultations.
 
     Mr. Walsh specializes in the assessment, diagnosis, and treatment of mental health disorders in the adult population. He prioritizes individualized care tailored to each patient's unique needs and circumstances.
-    Mr. Walsh graduated from New York University with a master's degree in nursing. He is also certified by the American Nurses Credentialing Center. Committed to ongoing learning and advocacy, he strives to reduce mental health stigma and empower individuals to lead fulfilling lives.`,
+
+    Mr. Walsh graduated from New York University with a master's degree in nursing. He is also certified by the ANCC. Committed to ongoing learning and advocacy, he strives to reduce mental health stigma and empower individuals to lead fulfilling lives.`,
     reviews: null
   },
   {
     image: providersImages.Phillip_McDonald,
     name: 'Phillip McDonald',
-    professionalTitle: `Pediatric Gastroenterologist
-     Modesto, CA`,
+    professionalTitle: `Adult Psychiatric & Mental Health Nurse Practitioner, NY`,
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Major Depressive Disorder',
+      'Generalized Anxiety Disorders',
+      'Social Anxiety',
+      'Obsessive Compulsive Disorder (OCD)',
+      'Post-Traumatic Stress Disorders (PTSD)',
+      'Attention Deficit/Hyperactivity Disorder (ADHD)'
+    ],
     focusAreas: [
-      'Sleep Disorder',
+      'Anxiety',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Medication Management',
       'Eating Disorder',
-      'Anxiety',
+      'Prescription / Refill',
+      'Sleep Disorder',
       'Depression',
-      'Obsessive Compulsive Disorder (OCD)',
-      'Prescription / Refill'
+      'Obsessive Compulsive Disorder (OCD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -507,29 +549,37 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN, PMHNP-BC',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Russian'],
+    specialities: [
+      'Bipolar Disorder',
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    ],
     focusAreas: [
-      'Self-Harm / Injury',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
       'Eating Disorder',
+      'Self-Harm / Injury',
+      'Body Dysmorphic Disorder',
+      'Medication Management',
       'Social Anxiety',
       'Depression',
-      'Body Dysmorphic Disorder',
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Sarah Sakirsky is a Board Certified Psychiatric Nurse Practitioner with experience in inpatient and private practice settings. She graduated with her Masters from Decker School of Nursing at Binghamton University. Sarah utilizes a combination of medication management and therapy in helping her patients achieve favorable outcomes. She is a compassionate and attentive provider. Her mission is to deliver a precise diagnosis and individually tailored treatment plan for each patient.`,
-    reviews: null
+    reviews: [
+      '“Wonderful! So nice and friendly! Felt very comfortable talking with her. Very understanding and caring! Great listener!” - Sara V',
+      '“Sarah was great. She was a great listener and really understood my needs and struggles. She is also very calming and gave me hope.” - Christina V.'
+    ]
   },
   {
     image: providersImages.Anne_Mongiello,
@@ -537,13 +587,12 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN, PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Anxiety',
-      'Depression',
-      'Attention-Deficit/Hyperactivity Disorder (ADHD)',
-      'Eating Disorders'
+    specialties: [
+      'Generalized Anxiety Disorder',
+      'Social Anxiety Disorder',
+      'Binge Eating Disorder'
     ],
     focusAreas: [
       'Anxiety',
@@ -556,9 +605,8 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`New York University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -584,13 +632,14 @@ const providersData = [
     name: 'Ketie Saintelus',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Children', 'Teenagers', 'Young adults', 'Adults'],
+    agesSeen: ['Children', 'Teenagers', 'Adults'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Anxiety',
-      'Eating Disorder',
-      'Care for minors',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    specialties: [
+      'Suboxone Management (X Waiver)',
+      'Weight Management',
+      'Eating Disorder(s)',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Anxiety',
@@ -598,19 +647,13 @@ const providersData = [
       'Panic Attack',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Insomnia',
+      'Prescription / Refill',
       'Depression',
-      'Medication Management',
-      'Prescription / Refill'
+      'Medication Management'
     ],
     treatmentApproaches: ['Psychoanalytic', 'Psychodynamic'],
-    educationAndBackground: [
-      `Long Island University, Master's in Family Nursing`
-    ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`Long Island University, Master's in Family Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -637,8 +680,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Young adults', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Eating Disorder(s)',
+      'Gender Affirming Care',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Anorexia',
       'Eating Disorder',
@@ -649,11 +699,10 @@ const providersData = [
       'Depression',
       'Medication Management'
     ],
-    treatmentApproaches: ['Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    treatmentApproaches: ['Psychodynamic', 'Person-Centered', 'Strenght-Based'],
+    education: [`New York University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'Connecticut'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I have comprehensive approach to care and relationships. I emphasize holistic care of the body and mind. As a provider who is dual board certified in psychiatric mental health and primary care, I am equipped to partner with my clients to meet their psychological and medical needs with an open mind.
@@ -686,13 +735,19 @@ const providersData = [
     name: 'Bethany Malugin',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Adults'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      ' Obsessive Compulsive Disorder (OCD)',
-      'Anxiety and depression',
-      'Eating Disorders',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'ADHD',
+      'Depression',
+      'Anxiety',
+      'PTSD',
+      'Mood disorders',
+      'Bipolar',
+      'Oppositional Defiant Disorder',
+      'Premenstrual Dysphoric Disorder',
+      'Anger Management'
     ],
     focusAreas: [
       'Alcoholism',
@@ -705,10 +760,9 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Drexel University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    education: [`Drexel University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'Alaska'],
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
     about: `Bethany Malugin is a distinguished adult psychiatric and mental health nurse practitioner who follows a patient-centered approach during her sessions, addressing anxiety, bipolar disorder, obsessive-compulsive disorder (OCD), panic attacks, and hyperactive disorder.
@@ -718,9 +772,9 @@ const providersData = [
       `“Honestly just wishing I did this sooner! I have put it off for far too long and Bethany Malugin
       was so helpful and understanding. Finally felt like I was listened to instead of just the usual in
       and out appointment where I end up feeling like I wasted my time. Overall experience has been
-      nothing but great, highly recommend! Looking forward to our next session.” - Amanda V.
-      “Bethany was very patient and clear. She listened well and asked great questions. She was compassionate and professional.” - Sheila D.
-      “Listened to my concerns thoroughly and was extremely clear and precise! Would recommend” -Brianna G.`
+      nothing but great, highly recommend! Looking forward to our next session.” - Amanda V.`,
+      `“Bethany was very patient and clear. She listened well and asked great questions. She was compassionate and professional.” - Sheila D.`,
+      `“Listened to my concerns thoroughly and was extremely clear and precise! Would recommend” -Brianna G.`
     ]
   },
   {
@@ -728,13 +782,18 @@ const providersData = [
     name: 'Brian Yudhistira',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Adults', 'Seniors'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
+    specialties: [
       ' Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Autism Spectrum Disorders (ASD)',
       'Obsessive Compulsive Disorder (OCD)',
+      'Substance Use Disorder',
       'Sleep Disorders',
-      'Anxiety and Depression'
+      'Anxiety and Depression',
+      'Major Depressive Disorders',
+      'Weight Management',
+      'Tics/Tourette Syndrome'
     ],
     focusAreas: [
       'Academic Stress',
@@ -747,13 +806,11 @@ const providersData = [
       'Obsessive Compulsive Disorder (OCD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `D'Youville University, Master's in Psychiatric Mental Health Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
-
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
     about: `Brian Yudhistira is a board-certified psychiatric mental health nurse practitioner specializing inADHD and co-occurring diagnoses, including generalized anxiety disorder, insomnia, and major depressive disorders. Brian has a unique focus on working with clients in underserved populations, addressing challenges such as bipolar disorder and substance use disorder.
@@ -775,7 +832,7 @@ const providersData = [
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults'],
     languagesSpoken: ['English'],
-    mainFocus: [
+    specialties: [
       ' Eating Disorders',
       'Anxiety',
       'Depression',
@@ -792,16 +849,11 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric Nursing`,
       `Lehman College (Bachelor's)`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
@@ -824,13 +876,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Alcoholism',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Insomnia',
-      'Post-Traumatic Stress Disorder (PTSD'
+    specialties: [
+      'Depression',
+      'Anxiety',
+      'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)',
+      'Bipolar Disorder(s)',
+      'Post Traumatic Stress Disorder (PTSD)',
+      'Obsessive Compulsive Disorder (OCD)',
+      'Eating Disorder(s)'
     ],
     focusAreas: [
       'Alcoholism',
@@ -843,11 +898,10 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       'City University of New York, Hunter College, Master’s in Nursing'
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 2 days',
     bookingLink: 'https://booking.url',
@@ -864,17 +918,28 @@ const providersData = [
     name: 'Kimberly Levitt',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP | PMHNP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English', 'Bengali'],
-    focusAreas: null,
-    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [
-      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
-      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
-      'State University of New York, Binghamton (Bachelor’s)'
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Depression',
+      'Chronic Pain',
+      'Maternity / Postpartum'
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    focusAreas: [
+      'Anxiety',
+      'Eating Disorder',
+      'Panic Attack',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
+    ],
+    treatmentApproaches: null,
+    education: [`New York University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -899,13 +964,17 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    agesSeen: ['Teens', 'Adults'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Alcoholism',
-      'Post-Traumatic Stress Disorder (PTSD)',
-      `Women's Mental Health Issues`,
-      `Attention-Deficit / Hyperactivity Disorder (ADHD)`
+    specialties: [
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Suboxone Management (X Waiver)',
+      'Eating Disorder(s)',
+      'Gender Affirming Care',
+      'Tics/Tourette Syndrome',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Alcoholism',
@@ -918,12 +987,8 @@ const providersData = [
       `Women's Mental Health Issues`
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Pace University, Master's in Nursing`],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`Pace University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -936,13 +1001,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English', 'Spanish'],
-    mainFocus: [
-      'Alcoholism',
-      'Post-Traumatic Stress Disorder (PTSD)',
-      `Women's Mental Health Issues`,
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    specialties: [
+      'Geripsych',
+      'Weight Management',
+      'Eating Disorder(s)',
+      'Chronic Pain',
+      'Genomic Testing',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       `Academic Stress`,
@@ -955,11 +1023,10 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `City University of New York, Hunter College, Master's in Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 2 days',
     bookingLink: 'https://booking.url',
@@ -980,14 +1047,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
-    agesSeen: ['Teenagers', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Spanish'],
-    mainFocus: [
-      'Addiction / Substance Abuse',
-      'Depression',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+    specialties: [
+      'Genomic Testing',
+      'Medication-Assisted Treatment',
+      'Substance Use Disorder (SUD)',
+      'Weight Management',
       'Bipolar Disorder',
-      'Eating disorders'
+      'Personality Disorder(s)',
+      'Group therapy'
     ],
     focusAreas: [
       'Addiction / Substance Abuse',
@@ -1001,15 +1070,13 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    // statesLicensed: ['Connecticut', 'Massachusetts'],
-    statesLicensed: ['New York'],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'Connecticut', 'Massachusetts'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Cassandra Williams offers comprehensive treatment to patients with various mental health concerns. While treating anxiety, hyperactive disorders, bipolar disorder, or other mental health conditions, Ms. Williams utilizes her knowledge of psychotherapy modalities to develop personalized treatment plans to meet each patient's needs.
@@ -1032,7 +1099,7 @@ const providersData = [
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
-    mainFocus: null,
+    specialties: null,
     focusAreas: [
       'Obsessive Compulsive Disorder (OCD)',
       'Depression',
@@ -1044,14 +1111,10 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -1068,16 +1131,9 @@ const providersData = [
     name: 'Sarah Otto',
     professionalTitle: 'Nurse Practitioner, NY',
     credentials: 'PMHNP | NP | FNP-BC',
-    agesSeen: [
-      'Children',
-      'Teenagers',
-      'Young adults',
-      'Individuals',
-      'Adults',
-      'Seniors'
-    ],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: null,
+    specialties: ['Anxiety', 'Bipolar Disorder', 'Depression'],
     focusAreas: [
       'Adolescent Addiction / Substance Abuse',
       'Pediatric Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1090,10 +1146,9 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [`Pace University, Master's in Nursing`],
-    specialties: ['Nurse Practitioner (Psychiatry)'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    education: [`Pace University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'South Carolina'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Ms. Sarah Otto is a skilled and compassionate nurse practitioner specializing in psychiatry. At Orenda Psychiatry, she assists physicians in offering comprehensive mental healthcare services to patients in New York and Brooklyn, NY.
@@ -1113,16 +1168,9 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP ',
-    agesSeen: [
-      'Children',
-      'Teenagers',
-      'Young adults',
-      'Individuals',
-      'Adults',
-      'Seniors'
-    ],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: null,
+    specialties: ['Anxiety Disorders'],
     focusAreas: [
       'Anxiety',
       'Depression',
@@ -1133,14 +1181,10 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Stony Brook, Master's in Psychiatric Mental Health Nursing`
     ],
-    specialties: [
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Adult Psychiatric & Mental Health Nurse Practitioner'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -1159,9 +1203,9 @@ const providersData = [
     name: 'Catherine Colson',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitione',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
+    specialties: [
       'Anxiety',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Obsessive Compulsive Disorder (OCD)',
@@ -1184,11 +1228,10 @@ const providersData = [
       'Humanistic',
       'Interpersonal'
     ],
-    educationAndBackground: [
+    education: [
       `D'Youville University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -1215,14 +1258,19 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
-    mainFocus: [
-      'Anxiety',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Obsessive Compulsive Disorder (OCD)',
-      'Insomnia',
-      'Panic attacks'
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Portuguese', 'Spanish'],
+    specialties: [
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Eating Disorder(s)',
+      'Tics/Tourette Syndrome',
+      'Bipolar Disorder',
+      'Personality Disorder(s)',
+      'Schizophrenia',
+      'Post Traumatic Stress Disorder',
+      'Major Depressive Disorder',
+      'Generalized Anxiety Disorder'
     ],
     focusAreas: [
       'Anxiety',
@@ -1234,19 +1282,13 @@ const providersData = [
       'Depression',
       'Insomnia'
     ],
-    treatmentApproaches: [
-      'Psychodynamic',
-      'Strength-Based',
-      'Humanistic',
-      'Interpersonal'
-    ],
-    educationAndBackground: [
+    treatmentApproaches: ['Psychodynamic'],
+    education: [
       `New York University, Master's in Psychiatric Mental Health Nursing`,
       `Mercy University (Bachelor's)`,
       `State University of New York, Westchester Community College (Associate's)`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -1267,9 +1309,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English', 'CHinese(Cantonese)'],
-    mainFocus: null,
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Chinese (Cantonese)'],
+    specialties: [
+      'Generalized Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      `Men's Sexual Health`,
+      'Social Anxiety',
+      'Panic Disorder(s)'
+    ],
     focusAreas: [
       'Anxiety',
       'Academic Stress',
@@ -1281,9 +1330,8 @@ const providersData = [
       'Panic Attack'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [`Pace University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`Pace University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -1291,11 +1339,9 @@ const providersData = [
 
     During follow-ups, Mr. Luong conducts treatment progress evaluations and makes the necessary changes. Patients trust his expertise because his high-quality consultations lead to positive and lasting outcomes`,
     reviews: [
-      `‘Very nice and compassionate doctor. Heard exactly what was my problem and found the solutions. Highly recommended” - Anouar C.
-      `,
-      `“William was very easy to talk to and immediately assessed my needs. I felt heard and validated.” - Elizabeth F.`,
-      `“Dr. Da Silva is a breath of fresh air. I look forward to working with him on my mental health.” - Delilah C.
-`
+      `“Very thorough and easy to talk to! Made me feel comfortable and made a point to address all of my concerns. Highly recommend!” - Keiry C.`,
+      `“Had a lovely consultation with Dr. Loung and am looking forward to continuing a therapeutic relationship.” - GB`,
+      `“Very patient and indepth questions asked. Takes the time to see best way to help.” - Kim H`
     ]
   },
   {
@@ -1303,13 +1349,13 @@ const providersData = [
     name: 'Kerry Callender',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'MSN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Adults', 'Senior'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Eating Disorders',
-      'Post-Traumatic Stress Disorder (PTSD)',
+    specialties: [
+      'Anxiety',
+      'Depression',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Obsessive Compulsive Disorder (OCD)'
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Anxiety',
@@ -1322,13 +1368,12 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Strength-Based', 'Psychodynamic'],
-    educationAndBackground: [
+    education: [
       'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1357,8 +1402,15 @@ const providersData = [
     name: 'Kristina Manich',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Eating Disorder (s)',
+      'Geripsych'
+    ],
     focusAreas: [
       'Anxiety',
       'Eating Disorder',
@@ -1376,11 +1428,10 @@ const providersData = [
       'Existential',
       'Motivational Interviewing'
     ],
-    educationAndBackground: [
+    education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: null,
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1388,8 +1439,7 @@ const providersData = [
     reviews: [
       `“Very thorough and professional. She really listened and did not rush me. She allowed me to discuss my concerns and gave me real, helpful guidance” - Carly A.`,
       `“Dr. Manich was so kind and welcoming. I felt immediately at ease during my first appointment. She has a patient first bedside manner. I highly recommend!” - Elizabeth G.`,
-      `“She was very kind, knowledgeable, patient and easy to talk too. I would recommend her to anyone I know who requires someone to talk too.” - Corey O.
-`
+      `“She was very kind, knowledgeable, patient and easy to talk too. I would recommend her to anyone I know who requires someone to talk too.” - Corey O.`
     ]
   },
   {
@@ -1397,8 +1447,15 @@ const providersData = [
     name: 'Kristofer Generales',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Trauma',
+      'Bipolar Disorder'
+    ],
     focusAreas: [
       'Academic Stress',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1411,15 +1468,8 @@ const providersData = [
       'Eating Disorder'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
-      'Fairfield University, Doctor of Nursing Practice'
-    ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: ['Fairfield University, Doctor of Nursing Practice'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1441,8 +1491,18 @@ const providersData = [
     name: 'Latiema Merilus',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Teens', 'Adults'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Eating Disorder',
+      'Postpartum Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
+    ],
     focusAreas: [
       'Anxiety',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1454,9 +1514,8 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Wilkes University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`Wilkes University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1476,25 +1535,29 @@ const providersData = [
     name: 'Lenny Gets',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Russian', 'Ukrainian'],
-    focusAreas: [
-      'Academic Stress',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
-      `Men's Mental Health Issues`,
+    specialties: [
       'Anxiety',
       'Depression',
-      'Performance Anxiety',
-      'Sleep Disorder'
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      `Men's Mental Health Issues`,
+      'Sleep Disorder',
+      'Performance Anxiety'
+    ],
+    focusAreas: [
+      'Anxiety',
+      'Medication Management',
+      'Prescription / Refill',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      `Men's Mental Health Issues`,
+      'Sleep Disorder',
+      'Depression',
+      'Performance Anxiety'
     ],
     treatmentApproaches: ['Integrative', 'Psychoanalytic'],
-    educationAndBackground: [`Monmouth University, Master's in Nursing`],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      `Family Psychiatric & Mental Health Nurse Practitioner`
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`Monmouth University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1512,22 +1575,27 @@ const providersData = [
     name: 'Lindon Richards',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP | PMHNP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    focusAreas: [
-      'Insomnia',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
-      'Eating Disorder',
+    specialties: [
       'Anxiety',
       'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Bipolar Disorder'
+    ],
+    focusAreas: [
+      'Anxiety',
+      'Eating Disorder',
       'Postpartum Obsessive-Compulsive Disorder (OCD)',
-      'Prescription / Refill'
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`New York University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1549,22 +1617,44 @@ const providersData = [
     name: 'Marcia Jarvis',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'DNP | PMHNP-BC | MS ',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    focusAreas: [
-      'Insomnia',
-      'Alcoholism',
-      'Medication Management',
-      'Eating Disorder',
-      'Anxiety',
+    specialties: [
+      'Substance Use Disorder (SUD)',
+      'Geripsych',
+      'Eating Disorder(s)',
+      'Maternity / Postpartum',
+      'Bipolar Disorder',
+      'Anxiety disorders',
       'Depression',
+      'Sleep disorders',
+      'PTSD',
+      'OCD',
+      'Sexual dysfunction',
+      'Stress-Related Issues',
+      'Mood disorders'
+    ],
+    focusAreas: [
+      'Alcoholism',
+      'Eating Disorder',
+      'Chronic Pain',
       'Post-Traumatic Stress Disorder (PTSD)',
-      'Prescription / Refill'
+      'Anxiety',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
     ],
     treatmentApproaches: ['Cognitive Behavioral (CBT)', 'Psychodynamic'],
-    educationAndBackground: null,
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [
+      `Capella University, Doctor of Nursing Practice`,
+      `State University of New York, Stony Brook, Post-Master's Certificate in Psychiatric-Mental Health Nursing`,
+      `Grand Canyon University, Master's in Psychology`,
+      `Grand Canyon University, Master's in Nursing`,
+      `Grand Canyon University (Bachelor's)`,
+      `Grand Canyon University (Associate's)`
+    ],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1576,22 +1666,28 @@ const providersData = [
     name: 'Lori Hume',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Medication-Assisted Treatment',
+      'Anxiety and Depression',
+      'Bipolar Disorder',
+      'Eating Disorder(s)',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
-      'Insomnia',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
-      'Eating Disorder',
       'Anxiety',
-      'Depression',
+      'Eating Disorder',
       'Postpartum Depression',
-      'Prescription / Refill'
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`New York University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1610,8 +1706,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults', 'Senior'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Geripsych',
+      'Bipolar Disorder',
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit Disorders (ADHD/ADD)',
+      'Mood Disorders'
+    ],
     focusAreas: [
       'Addiction / Substance Abuse',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1623,17 +1727,12 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychoanalytic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `Regis College, Post-Master's Certificate in Psychiatric Nursing`,
       `South University, Savannah, Master's in Adult Gerontology Nursing`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'Georgia'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Michael is a psychiatric mental health practitioner with over 20 years of experience in medicine.His approach is one that utilizes medication management in conjunction with talk-therapy. In his treatment style he views himself more of a partner who considers the "whole person" rather than strictly a medical clinician.
@@ -1647,8 +1746,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Creole'],
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Anxiety',
+      'Depression',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
+    ],
     focusAreas: [
       'Alcoholism',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1660,15 +1766,11 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychoanalytic'],
-    educationAndBackground: [
+    education: [
       `City University of New York, Hunter College, Master's in Nursing`,
       `State University of New York, Albany (Bachelor's)`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1683,21 +1785,26 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Teens', 'Adults'],
     languagesSpoken: ['English'],
-    focusAreas: [
-      'Insomnia',
-      'Post-Traumatic Stress Disorder (PTSD)',
-      'Medication Management',
-      'Eating Disorder',
+    specialties: [
       'Anxiety',
       'Depression',
-      'Prescription / Refill'
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Sleep Disorders(s)'
+    ],
+    focusAreas: [
+      'Anxiety',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management',
+      'Eating Disorder',
+      'Post-Traumatic Stress Disorder (PTSD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`Chamberlain University, Doctor of Nursing Practice`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1714,8 +1821,17 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | MS',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Eating Disorder(s)',
+      'Bipolar Disorder',
+      'Personality Disorder(s)',
+      'ADHD',
+      'Anxiety',
+      'Depression',
+      'Burnout'
+    ],
     focusAreas: [
       'Pain Management Consultation',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1727,11 +1843,10 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Transpersonal', 'Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric Mental Health Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
@@ -1754,12 +1869,19 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | MS',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Anorexia',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Post-Traumatic Stress Disorder (PTSD)',
+    specialties: [
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Chronic Pain',
+      'Genomic Testing',
+      'Bipolar Disorder',
+      'Panic Disorders',
+      'Post Traumatic Stress Disorder',
+      'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)',
+      'Obsessive Compulsive Disorder (OCD)',
+      'Depression',
       'Anxiety'
     ],
     focusAreas: [
@@ -1773,11 +1895,10 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Interpersonal'],
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric Mental Health Nursing`
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
@@ -1799,7 +1920,18 @@ const providersData = [
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English', 'Bengali'],
+    languagesSpoken: ['English'],
+    specialities: [
+      'Anxiety Disorders',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Autism Spectrum Disorder (ASD)',
+      'Gender Affirming Care',
+      'Genomic Testing',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Obsessive Compulsive Disorder (OCD)',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1816,11 +1948,8 @@ const providersData = [
       'Dialectical (DBT)',
       'Person-Centered'
     ],
-    educationAndBackground: [
-      `University of Alabama, Birmingham, Master's in Nursing`
-    ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`University of Alabama, Birmingham, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1838,17 +1967,10 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: [
-      'Children',
-      'Young adults',
-      'Seniors',
-      'Teenagers',
-      'Adults',
-      'Individuals'
-    ],
-    languagesSpoken: ['English', 'Bengali'],
-    mainFocus: [
-      'Alcoholism',
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety Disorders',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Bipolar Disorder',
       'Sleep Problems'
@@ -1864,9 +1986,8 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: ['Pace University, Master’s in Nursing'],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: ['Pace University, Master’s in Nursing'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1885,13 +2006,14 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
-    languagesSpoken: ['English'],
-    mainFocus: [
-      'Alcoholism',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Bipolar Disorder',
-      'Sleep Problems'
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Russian', 'Uzbek'],
+    specialties: [
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Suboxone Management (X Waiver)',
+      'Autism Spectrum Disorder (ASD)',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Academic Stress',
@@ -1904,10 +2026,9 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: ['New York University, Master’s in Nursing'],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    education: ['New York University, Master’s in Nursing'],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Ms. Sitora Mirsoatova is a caring, non-judgmental, and friendly adult psychiatric & mental health nurse practitioner. She helps patients facing mental health issues such as anxiety, hyperactivity disorder, bipolar disorder, post-traumatic stress disorder, and obsessive-compulsive disorder.
@@ -1926,12 +2047,11 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Adults', 'Young adults', 'Individuals'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English', 'Bengali'],
-    mainFocus: [
-      'Academic Stress',
+    specialties: [
+      'Bipolar Disorder',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Eating Disorder',
       'Anxiety',
       'Depression'
     ],
@@ -1946,9 +2066,8 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Interpersonal', 'Psychodynamic', 'Strength-Based'],
-    educationAndBackground: ['New York University, Master’s in Nursing'],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: ['New York University, Master’s in Nursing'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1967,32 +2086,31 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'NP | PMHNP-BC',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Obsessive-compulsive disorder (OCD)',
+    specialties: [
+      'Bipolar Disorder',
       'Anxiety',
-      'Post-Traumatic Stress Disorder (PTSD)'
+      'Depression',
+      'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)'
     ],
     focusAreas: [
       'Alcoholism',
       'Eating Disorder',
       'Medication Management',
       'Post-Traumatic Stress Disorder (PTSD)',
+      'Obsessive Compulsive Disorder (OCD)',
       'Anxiety',
       'Depression',
       'Panic Attack',
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
-    // specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Based out of New York and Brooklyn, NY, Ms. Trisha Joseph is an adult psychiatric and mental health nurse practitioner who provides virtual consultations at Orenda Psychiatry. She holds a master's degree in nursing from the State University of New York, Binghamton.
@@ -2011,14 +2129,14 @@ const providersData = [
     name: 'Jessica Chichester',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Anxiety',
-      'Eating Disorders',
-      'School-related anxiety',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Postpartum Depression'
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Eating Disorder(s)',
+      'Gender Affirming Care',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
     ],
     focusAreas: [
       'Anxiety',
@@ -2031,13 +2149,9 @@ const providersData = [
       'Postpartum Depression'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
-      `State University of New York, Master's in Nursing`
-    ],
-    // specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    education: [`State University of New York, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Being an experienced adult psychiatric and mental health nurse practitioner, Ms. Jessica Chichester delivers expert care through virtual consultations at Orenda Psychiatry in New York, NY.
@@ -2051,18 +2165,17 @@ const providersData = [
   },
   {
     image: providersImages.Celeste_Johnson,
-    name: 'Celeste_Johnson',
+    name: 'Celeste Johnson',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP',
-    agesSeen: ['Young adults', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      'Alcoholism',
+    specialties: [
+      'Anxiety',
       'Depression',
       'Post-Traumatic Stress Disorder (PTSD)',
       'Domestic violence',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      ''
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
     ],
     focusAreas: [
       'Alcoholism',
@@ -2075,17 +2188,15 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `Wilkes University, Master's in Psychiatric Mental Health Nursing`,
       `Monmouth University, Master's in Family Nursing`,
       `Touro College and University System, Bay Shore, Master's in Public Health`,
       `New Jersey City University (Bachelor's)`,
       `City University of New York, York College (Bachelor's)`
     ],
-    // specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
     about: `Celeste Johnson is a qualified adult psychiatric & mental health nurse practitioner who provides dedicated help to her patients by diagnosing and treating various mental health conditions, including hyperactivity disorder (ADD / ADHD), anxiety, panic attack, bipolar disorder, post-traumatic stress disorder (PTSD), and obsessive-compulsive disorder (OCD).
@@ -2104,16 +2215,17 @@ const providersData = [
     name: 'Chelsea Chaffee',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN',
-    agesSeen: ['Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
+    specialties: [
       `Women's Mental Health Issues`,
-      `Attention-Deficit / Hyperactivity Disorder (ADHD)`,
+      'Development Disorders',
       `Anxiety`,
-      `Depression`
+      `Depression`,
+      `Attention-Deficit / Hyperactivity Disorder (ADHD)`
     ],
     focusAreas: [
-      'Anxiety',
+      'Anxiety and Panic Disorders',
       'Medication Management',
       'Prescription / Refill',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -2125,9 +2237,8 @@ const providersData = [
       `Postpartum Depression`
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Columbia University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`Columbia University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -2149,14 +2260,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Young adults', 'Adults'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: [
-      `Attention-Deficit / Hyperactivity Disorder (ADHD)`,
-      `Post-Traumatic Stress Disorder (PTSD)`,
-      `Academic Stress`,
-      `Depression`,
-      `Anxiety`
+    specialties: [
+      `Geripsych`,
+      `Eating Disorder(s)`,
+      `Tics/Tourette Syndrome`,
+      `Maternity / Postpartum`,
+      `Bipolar Disorder`,
+      `Personality Disorder(s)`
     ],
     focusAreas: [
       'Academic Stress',
@@ -2169,10 +2281,9 @@ const providersData = [
       'Post-Traumatic Stress Disorder (PTSD)'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Molloy University, Master's in Nursing`],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
+    education: [`Molloy University, Master's in Nursing`],
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York', 'Georgia'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Based in Brooklyn, NY, Ms. Daferti Afflick is a dedicated adult psychiatric and mental health nurse practitioner offering virtual consultations at Orenda Psychiatry.
@@ -2193,7 +2304,7 @@ const providersData = [
     credentials: 'APRN | NP',
     agesSeen: null,
     languagesSpoken: ['English'],
-    mainFocus: null,
+    specialties: null,
     focusAreas: [
       'Illness',
       'Pain Management Consultation',
@@ -2202,15 +2313,14 @@ const providersData = [
       'Weight Loss Consultation.'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
-    specialties: ['Nurse Practitioner'],
+    education: [`New York University, Master's in Nursing`],
     boardCertification: null,
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Diana Yakubova is a dedicated and compassionate Psychiatric Nurse Practitioner with a wealth of clinical experience and a commitment to providing personalized care to patients. Fluent in both English and Russian, Diana brings a culturally sensitive approach to her practice, ensuring all patients feel heard and understood.
     
-    With a Master of Science in Nursing from New York University Rory Meyers College of Nursing and a Certification in Psychiatric Nurse Practitioner from D'Youville University, Diana is equipped with the knowledge and skills to address a wide range of mental health concerns. She is board certified by the American Nurses Credentialing Center (ANCC) as a Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC).
+    With a Master of Science in Nursing from New York University Rory Meyers College of Nursing and a Certification in Psychiatric Nurse Practitioner from D'Youville University, Diana is equipped with the knowledge and skills to address a wide range of mental health concerns. She is board certified by the ANCC (ANCC) as a Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC).
     
     Diana's clinical experience includes working in various healthcare settings, including hospitals, community health centers, and private practice. Most recently, she served as a Nurse Practitioner/Clinical Instructor at SUNY Downstate Medical Center, where she provided compassionate care to patients in the emergency department while also mentoring and educating future healthcare professionals.
     
@@ -2225,9 +2335,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: null,
+    specialties: [
+      'Weight Management',
+      'Gender Affirming Care',
+      'Maternity / Postpartum',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Anxiety',
       'Eating Disorder',
@@ -2239,20 +2355,18 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       'Hunter College, Certificate in Psychiatric Mental Health Nursing'
     ],
-    specialties: [
-      'Nurse Practitioner',
-      'Adult Psychiatric & Mental Health Nurse Practitioner'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `As a mental health care provider, I bring compassion resilience, and personal experience to my practice. I believe in the healing power of connection, empathy, and both physical and emotional well-being. My own challenges have fueled my commitment to helping others navigate tough times. My goal is to provide support and guidance, offering a safe space for exploration and resilience-building. With a deep understanding of the human mind, I aim to empower individuals to lead fulfilling lives through therapy, medication management, and lifestyle interventions.
     `,
-    reviews: null
+    reviews: [
+      `“Very effective, to the point and very knowledgeable on the situation”`
+    ]
   },
   {
     image: providersImages.Mamadou_Barry,
@@ -2260,57 +2374,79 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
-    mainFocus: null,
-    focusAreas: null,
-    treatmentApproaches: null,
-    educationAndBackground: [
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'French', 'Creole', 'Fulani'],
+    specialties: [
+      'Substance Use Disorder (SUD)',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Tics/Tourette Syndrome',
+      'Maternity / Postpartum',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
+    focusAreas: [
+      'Anxiety',
+      'Eating Disorder',
+      'Couples Therapy',
+      'Medication Management',
+      'LGBTQ+ Counseling',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression'
+    ],
+    treatmentApproaches: ['Psychodynamic'],
+    education: [
       'Hunter College, Certificate in Psychiatric Mental Health Nursing'
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: null,
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
-    about: `Mr. Barry is a psychiatric nurse practitioner with 5 years of experience in the field of mental health, including forensic psychiatry. While his background may seem impressive on paper, his critical eye sees the flaws and shortcomings in the current state of mental health care. He has witnessed first-hand the inadequacies in the system, from lack of resources and funding to stigma and discrimination against those struggling with mental illness. With a passion for helping individuals overcome their struggles and achieve optimal well-being, he brings a compassionate and empathetic approach to his practice.
-
-    His background in psychiatry has equipped him with the skills and knowledge necessary to provide high-quality care to those in need. He is committed to staying current on the latest advancements in mental health treatment and strive to create a safe and supportive environment for my patients. Trust him to provide you with the expert care and guidance you deserve on your journey to mental wellness.
-
-    Mr. Barry is a psychiatric nurse practitioner with a background in mental health. He got experience working with a variety of psychiatric conditions and helping patients navigate their mental health journey. He’s passionate about providing compassionate care and support to those struggling with mental health issues. When he’s not at work, you can find him enjoying the great outdoors, trying out new recipes in the kitchen, or catching up on the latest Netflix series. He believes in the power of therapy, medication, and self-care to help individuals lead fulfilling and balanced lives. Let's work together to prioritize your mental well-being and achieve your goals.
+    about: `I am a psychiatric nurse practitioner with 5 years of experience in the field of mental health, including forensic psychiatry. I have experience working with a variety of psychiatric conditions and helping patients navigate their mental health journey. I’m passionate about providing compassionate care and support to those struggling with mental health issues. 
+    I have witnessed first-hand the inadequacies in the system, from lack of resources and funding to stigma and discrimination against those struggling with mental illness. With a passion for helping individuals overcome their struggles and achieve optimal well-being, I bring a compassionate and empathetic approach to my practice. I am committed to staying current on the latest advancements in mental health treatment and I strive to create a safe and supportive environment for my patients. Trust me to provide you with the expert care and guidance you deserve on your journey to mental wellness.
+    
+    When not at work, I enjoy the great outdoors, trying out new recipes in the kitchen, or catching up on the latest Netflix series. I believe in the power of therapy, medication, and self-care to help individuals lead fulfilling and balanced lives.
     `,
-    reviews: null
+    reviews: [
+      `“Dr Barry as well as the lady who answers the calls/makes appointments saved my life and gave me hope this morning. Thank you”`,
+      `“Mr. Barry was very patient and had an extremely laid-back attitude. He listened to what I had to say and worked with me right away to get me back on the beds I needed. I loved how visual learning was present in some of his lessons. Can't wait for the next lesson!” - Esther L.`,
+      `“I believe that the appointment was thorough and covered all of my concerns. This provider is a good listener and explained things further when needed.” - Julia H.`
+    ]
   },
   {
     image: providersImages.Leah_Molina,
     name: 'Leah Molina',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | RN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: null,
-    focusAreas: [
-      'Addiction / Substance AbusE',
+    specialties: [
+      'Substance Use Disorder (SUD)',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Tics/Tourette Syndrome',
+      'Maternity / Postpartum',
       'Bipolar Disorder',
-      'Prescription / Refill',
+      'Personality Disorder(s)'
+    ],
+    focusAreas: [
       'Anxiety',
-      'Depression',
+      'Eating Disorder',
+      'LGBTQ+ Counseling',
+      'Medication Management',
+      'LGBTQ+ Counseling',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Eating Disorder'
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `D'Youville University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -2324,9 +2460,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'NP',
-    agesSeen: ['Individuals', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: null,
+    specialties: [
+      'Anxiety',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Depression',
+      'Addiction',
+      'Post Traumatic Stress Disorder (PTSD)'
+    ],
     focusAreas: [
       'Addiction / Substance Abuse',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -2337,13 +2479,9 @@ const providersData = [
       'Anxiety',
       'Medication Management'
     ],
-    treatmentApproaches: null,
-    educationAndBackground: [
+    treatmentApproaches: ['Psychodynamic'],
+    education: [
       `Pace University, Master's in Psychiatric and Mental Health Nursing`
-    ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: null,
     statesLicensed: ['New York'],
@@ -2351,7 +2489,10 @@ const providersData = [
     bookingLink: 'https://booking.url',
     about: `Ms. Cheryl Kelly is a psychiatric mental health nurse practitioner offering virtual consultations through Orenda Psychiatry in New York. She has over 20 years of nursing experience and specializes in treating anxiety, depression, ADHD, addiction, and PTSD. Cheryl believes in building therapeutic relationships based on kindness, compassion and respect. She is dedicated to offer psychiatric evaluations, medication management and psychotherapy in a safe and non-judgemental space to enhance mental well-being. Cheryl works in collaboration with the patient to tailor treatment plans to meet their unique needs and lifestyle to facilitate healing.
     `,
-    reviews: null
+    reviews: [
+      '“It was very smooth and Cheryl was absolutely fabulous. There was clear communication and all of the correspondence took place in a timely manner. Very happy with the service” - Kerri L.',
+      '“Helpful and thorough - would recommend!”'
+    ]
   },
   {
     image: providersImages.Barbara_Borgella,
@@ -2359,9 +2500,14 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | MSN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
-    languagesSpoken: ['English'],
-    mainFocus: null,
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Creole'],
+    specialties: [
+      'Anxiety',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Alcoholism',
       'Depression',
@@ -2373,60 +2519,19 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Molloy University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Barbara Borgella is a board-certified psychiatric mental-health nurse practitioner who focuses on long-term patient recovery with the use of evidence-based clinical practice. Patients can expect Barbara to be a knowledgeable, well-rounded and culturally competent provider. Her experience includes treating patients with ADHD, anxiety, depression obsessive-compulsive (OCD), insomnia, trauma, PTSD and mood disorders.
     `,
-    reviews: null
-  },
-  {
-    image: providersImages.Kerryann_Penny,
-    name: 'Kerryann Penny',
-    professionalTitle:
-      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
-    credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
-    mainFocus: null,
-    focusAreas: [
-      'Alcoholism',
-      'Depression',
-      'Panic Attack',
-      'Anxiety',
-      'Eating Disorder',
-      'Prescription / Refill',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management'
-    ],
-    treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
-      `Adelphi University, Master's in Psychiatric and Mental Health Nursing`
-    ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New York'],
-    availability: null,
-    bookingLink: 'https://booking.url',
-    about: `Mrs. Penny is a DNP prepared Board-Certified Psychiatric Mental Health Nurse Practitioner who obtained her MS degree from Adelphi University and doctorate degree from Chatham University. She is passionate about helping her clients achieve their mental health goals and live their best lives. Kerry Ann has a strong understanding of mental health disorders and is able to effectively diagnose and treat them. She assists her patients in pursuing healing by conducting comprehensive psychiatric assessment and focusing on her client's interpretation of optimal health.
-
-    She has worked in the field of nursing for over 11 years and is skilled in the perioperative, intensive care unit, and behavioral health field. She has worked in a variety of settings, such as residential treatment, inpatient hospitals, and outpatient community mental health centers, where she has worked with children, adolescents, and adult patients. She treats a wide range of mental health conditions, including anxiety and depressive disorders, bipolar disorder, schizophrenia and psychosis, sleep disorders, and PTSD.
-
-    Ms. Penny believes the patient-provider relationship is one that develops with trust and understanding. She comes into each new patient session without background influence and will meet you exactly where you are, in order to help you learn and grow in your mental health journey.
-`,
-    reviews: null
+    reviews: [
+      '“Very easy to speak to listened well and was clear with responses” - Matthew W.',
+      '“Great experience, my doctor was nice, the appointment went smoothly, and I would certainly book again :)” - Daniel M.'
+    ]
   },
   {
     image: providersImages.Nicole_Raczy,
@@ -2434,29 +2539,29 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | RN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
-    mainFocus: null,
-    focusAreas: [
-      'Addiction / Substance Abuse',
-      'Bipolar Disorder',
-      'Panic Attack',
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Cantonese'],
+    specialties: [
+      'Tics/Tourette Syndrome',
+      'Maternity / Postpartum',
+      'PTSD',
       'Anxiety',
       'Depression',
+      'Sleep disorders'
+    ],
+    focusAreas: [
+      'Academic Stress',
+      'Insomnia',
+      'Pre-College Fears',
       'Prescription / Refill',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: null,
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -2474,9 +2579,13 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | RN',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    mainFocus: null,
+    specialties: [
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    ],
     focusAreas: [
       'Addiction / Substance Abuse',
       'Anger Management',
@@ -2487,23 +2596,16 @@ const providersData = [
       'Attention-Deficit / Hyperactivity Disorder (ADHD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
-      `Walden University, Certificate in Psychiatric and Mental Health Nursing
-`
+    education: [
+      `Walden University, Certificate in Psychiatric and Mental Health Nursing`
     ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: null,
-    statesLicensed: null,
+    boardCertification: ['ANCC'],
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Derrick Adusei is a compassionate and dedicated mental health specialist with a profound understanding of the challenges faced by individuals dealing with mental health issues. With a passion for making a difference in people's lives, Derrick specializes in treating patients across the lifespan, from children to older adults.
 
-    Through Derrick's unwavering commitment to compassionate care and clinical excellence, he has become a trusted ally for individuals seeking support and guidance in navigating their mental health challenges. Whether it's managing ADHD, anxiety, depression, trauma, or other mental health concerns. Derrick provides a safe and supportive environment for patients to explore their emotions, develop coping strategies, and achieve their treatment goals.
-    `,
+    Through Derrick's unwavering commitment to compassionate care and clinical excellence, he has become a trusted ally for individuals seeking support and guidance in navigating their mental health challenges. Whether it's managing ADHD, anxiety, depression, trauma, or other mental health concerns. Derrick provides a safe and supportive environment for patients to explore their emotions, develop coping strategies, and achieve their treatment goals.`,
     reviews: null
   },
   {
@@ -2513,7 +2615,7 @@ const providersData = [
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
-    mainFocus: null,
+    specialties: null,
     focusAreas: [
       'Academic Stress',
       'Depression',
@@ -2525,11 +2627,8 @@ const providersData = [
       'Panic Attack'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
-      `State University of New York, Buffalo, Master's in Nursing`
-    ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
-    boardCertification: ['American Nurses Credentialing Center'],
+    education: [`State University of New York, Buffalo, Master's in Nursing`],
+    boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -2541,42 +2640,188 @@ const providersData = [
     `,
     reviews: null
   },
-  {
-    image: providersImages.Danielle_Cora,
-    name: 'Danielle Cora',
-    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
-    credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
-    mainFocus: null,
-    focusAreas: [
-      'Addiction / Substance Abuse',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Prescription / Refill',
-      'Alcoholism',
-      'Bipolar Disorder',
-      'Sleep Disorder',
-      'Anxiety',
-      'Depression'
-    ],
-    treatmentApproaches: null,
-    educationAndBackground: [
-      `Walden University, Master's in Psychiatric and Mental Health Nursing`
-    ],
-    specialties: [
-      'Adult Psychiatric & Mental Health Nurse Practitioner',
-      'Family Psychiatric & Mental Health Nurse Practitioner',
-      'Nurse Practitioner (Psychiatry)'
-    ],
-    boardCertification: ['American Nurses Credentialing Center'],
-    // statesLicensed: ['Connecticut', 'North Carolina'],
-    statesLicensed: ['New York'],
-    availability: null,
-    bookingLink: 'https://booking.url',
-    about: `Danielle is a Board-Certified Psychiatric Nurse Practitioner in Brooklyn, New York who has over 15 + years of nursing experience. She earned her Post-Masters PMHNP from Hunter college. Danielle’s service to others is what drives her passion for psychiatry. Her approach to care is simple, and that is, to listen with empathy and hold everyone in a space of love, good intention, and grace. She believes that everyone is unique, and their story must be heard. Danielle specializes in treating adults with depression, anxiety, bipolar, PTSD, ADHD, and interpersonal relationship issues.
-    `,
-    reviews: null
-  }
+  // {
+  //   image: providersImages.Amanda_Wareham,
+  //   name: 'Amanda Wareham',
+  //   professionalTitle:
+  //     'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'PMHNP-BC | NP',
+  //   agesSeen: ['Teens', 'Adults', 'Seniors'],
+  //   languagesSpoken: ['English'],
+  //   specialties: [
+  //     'Autism Spectrum Disorder (ASD)',
+  //     'Eating Disorder(s)',
+  //     'Tics/Tourette Syndrome',
+  //     'Bipolar Disorder',
+  //     'Depression',
+  //     'Anxiety',
+  //     'Obsessive Compulsive Disorder (OCD)',
+  //     'Social Anxiety Disorder'
+  //   ],
+  //   focusAreas: [
+  //     'Addiction / Substance Abuse',
+  //     'Bipolar Disorder',
+  //     'Anxiety Disorders',
+  //     'Depression',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Prescription / Refill',
+  //     'Medication Management',
+  //     'Autism Spectrum Disorder (ASD)',
+  //     'Eating Disorder(s)',
+  //     'Tics/Tourette Syndrome',
+  //     'Obsessive Compulsive Disorder (OCD)'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `Pace University, Master's in Psychiatric and Mental Health Nursing`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `Amanda is a skilled and compassionate psychiatric and mental health nurse practitioner. She offers virtual consultations to clients within New York State through Orenda Psychiatry. Amanda is skilled in the treatment of anxiety disorders, eating disorders, OCD, ADHD, PTSD, depression, and bipolar spectrum disorders. Her treatment plans include a combination of medication management and therapy to support your journey toward emotional well-being.`
+  // },
+  // {
+  //   image: providersImages.Dionne_Joseph,
+  //   name: 'Dionne Joseph',
+  //   professionalTitle:
+  //     'Family Nurse Practitioner, Adult Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'APRN | RN | PMHNP-BC',
+  //   agesSeen: ['Adults', 'Seniors'],
+  //   languagesSpoken: ['English', 'Creole'],
+  //   specialties: [
+  //     'Anxiety',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Bipolar Disorder',
+  //     'Personality Disorder(s)',
+  //     'Women’s Mental Health'
+  //   ],
+  //   focusAreas: [
+  //     'Addiction Consultation',
+  //     'Anxiety Disorder',
+  //     'Personality Disorder',
+  //     'Adolescent / Teen Issues',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     `Women's Issues Therapy`,
+  //     'Anxiety',
+  //     'Bipolar Disorder'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `Molloy University, Master's in Psychiatric and Mental Health Nursing`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `I practiced as a Family Nurse Practitioner for over a decade before choosing to continue my education and earn additional certification as a Psychiatric Nurse Practitioner in 2021. I feel psychiatry is interwoven into all aspects of health and has a great impact on the overall wellbeing of an individual. I thoroughly enjoy working together with my clients to help them meet their wellness goals. In the future I see myself continuing to work in mental health and learning more about integrative psychiatry and novel treatment options. During my free time I enjoy traveling and reading.`
+  // },
+  // {
+  //   image: providersImages.Joan_Mahoney,
+  //   name: 'Joan Mahoney',
+  //   professionalTitle:
+  //     'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'APRN | PMHNP-BC',
+  //   agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
+  //   languagesSpoken: ['English'],
+  //   specialties: [
+  //     'Substance Use Disorder (SUD)',
+  //     'Medication Assisted Treatment (MAT)',
+  //     'Suboxone Management (X Waiver)',
+  //     'Geripsych',
+  //     'Weight Management',
+  //     'Autism Spectrum Disorder (ASD)',
+  //     'Chronic Pain',
+  //     'Tics/Tourette Syndrome',
+  //     'Maternity / Postpartum',
+  //     'Bipolar Disorder'
+  //   ],
+  //   focusAreas: [
+  //     'Anxiety',
+  //     'Eating Disorder',
+  //     'Sleep Disorder',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Medication Management',
+  //     'Stress Management',
+  //     'Depression',
+  //     'Personality Disorder'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `Donald and Barbara Zucker School of Medicine at Hofstra/Northwell, Master's in Adult Gerontology Acute Care Nursing`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `Joan, a registered nurse since 1995, has dedicated 24 years of her career to the emergency department, serving both as a staff nurse and in leadership roles at Huntington Hospital. In May of 2020, she graduated from the Hofstra Northwell School of Graduate Nursing, specializing in Adult-Gerontology Acute Care Nurse Practitioner. Her journey continued at Northwell Health Long Island Jewish Medical Center where she contributed her expertise on a Behavioral Health Medical Floor. Pursuing further education, Joan underwent post-master's studies to attain dual board certification as both a Psychiatric Mental Health Nurse Practitioner and an Adult Gerontology Acute Care Nurse Practitioner. 
+    
+  //   Joan firmly believes in fostering trusting and collaborative relationships with her patients, empowering them to actively engage in their treatment journey. With a keen ear and compassionate approach, she listens attentively to their concerns and experiences, tailoring personalized treatment plans to address their unique needs and aspirations.`
+  // },
+  // {
+  //   image: providersImages.Maria_Lourdes_Bunque,
+  //   name: 'Maria Lourdes Bunque',
+  //   professionalTitle:
+  //     'Adult Psychiatric & Mental Health Nurse Practitioner, Family Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'APRN | RN | PMHNP-BC',
+  //   agesSeen: ['Teens', 'Adults', 'Seniors'],
+  //   languagesSpoken: ['English', 'Tagalog'],
+  //   specialties: ['Geripsych', 'Bipolar Disorder', 'Anxiety', 'Depression'],
+  //   focusAreas: [
+  //     'Addiction Consultation',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Medication Management',
+  //     'Alcoholism',
+  //     'Depression',
+  //     'Prescription / Refill',
+  //     'Anxiety Disorder',
+  //     'Eating Disorder'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `State University of New York Buffalo, Master's in Psychiatric and Mental Health Nursing`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `I'm an experienced Psychiatric Nurse Practitioner who aims to promote mental wellness for individuals and their families facing challenges. Please think of me as your mental health co-pilot navigating alongside you with compassion, evidence-based strategies, and a whole lot of care. I specialize in working with adolescents, adults, and geriatric populations, bringing a wealth of experience. I will partner with you to develop a personalized roadmap to optimal mental health. We'll work together to understand your unique needs and goals, and then build a customized treatment plan that gets you there. I'm a big believer in collaboration. We'll work hand-in-hand to develop your care. I am committed to staying current on the latest psychiatric research and treatment developments, so you can be sure we're using the latest tools for your journey.`
+  // },
+  // {
+  //   image: providersImages.Moises_Liriano_Fernandez,
+  //   name: 'Moises Liriano Fernandez',
+  //   professionalTitle:
+  //     'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'APRN | RN',
+  //   agesSeen: ['Adults', 'Seniors'],
+  //   languagesSpoken: ['English', 'Spanish'],
+  //   specialties: [
+  //     'Depression',
+  //     'Anxiety',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     "Men's Mental Health Issues"
+  //   ],
+  //   focusAreas: [
+  //     'Anger Management',
+  //     'Bipolar Disorder',
+  //     'Medication Management',
+  //     'Anxiety Disorder',
+  //     'Depression',
+  //     "Men's Mental Health Issues",
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Eating Disorder'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `Fairleigh Dickinson University, Master's in Psychiatric and Mental Health Nursing`,
+  //     `New Jersey City University (Bachelor's)`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `Moises, is a bilingual Board-Certified Psychiatric Nurse Practitioner who is fluent in Spanish. With over eight years of experience in mental health, he excels in medication management for various diagnoses such as Depression, PTSD, Anxiety, OCD,ADHD and sleep disorders. Moises obtained his Bachelor of Science in Nursing from New Jersey City University and his Master of Science in Nursing as a Psychiatric Mental Health Nurse Practitioner from Fairleigh Dickinson University. He is dedicated to providing quality psychiatric services through a telemedicine platform, ensuring convenient access to care from the comfort of your home or work.`
+  // }
 ];
 
 export default providersData;
