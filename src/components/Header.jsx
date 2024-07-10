@@ -127,7 +127,7 @@ const Header = () => {
                       '/privacy-policy',
                       'fa-solid fa-file-shield'
                     ],
-                    ['Contact Us', '/contact-us', 'fa-solid fa-comment-dots']
+                    ['Contact Us', '/contact', 'fa-solid fa-comment-dots']
                   ].map(([title, url, icon]) => (
                     <li
                       onClick={() => displayMenu()}
