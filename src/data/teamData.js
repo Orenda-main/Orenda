@@ -27,14 +27,15 @@ const teamData = [
     position: 'Billing Manager'
   },
   {
-    image: teamImages.darianny,
-    name: 'Darianny',
+    image: teamImages.righteous,
+    name: 'Righteous',
     position: 'Credentialing Manager'
   },
   {
-    image: teamImages.righteous,
-    name: 'Righteous',
+    image: teamImages.darianny,
+    name: 'Darianny',
     position: 'Comms Coordinator'
+    
   },
   {
     image: teamImages.sylvia,

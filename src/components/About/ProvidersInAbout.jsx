@@ -2,6 +2,7 @@ import providersData from '../../data/providersData';
 import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import imgUnavailable from '../../assets/unavailable-image-icon.png';
 
 gsap.registerPlugin(useGSAP);
 
@@ -52,7 +53,7 @@ const ProvidersInAbout = () => {
       gsap.fromTo(
         element,
         {
-          opacity: 0
+          opacity: 0.3
         },
         {
           opacity: 1,
@@ -126,25 +127,30 @@ const ProvidersInAbout = () => {
         </p>
         <div className="container mx-auto ~p-0/4 max-w-[67.75rem]">
           <div className="grid grid-cols-5 md:grid-cols-10 gap-2.5 justify-items-center">
-            {indices.map((index, i) => (
-              <div
-                key={i}
-                className="bg-[#F1F1F1] ~xs/xl:~size-[4rem]/[5.625rem] rounded-lg overflow-hidden flex flex-col justify-end"
-              >
-                <img
-                  ref={itemsRef.current[i]}
-                  src={providersData[index].image}
-                  alt={`Provider ${index}`}
-                  className={`size-full object-contain`}
-                  onLoad={() => {
-                    animateOpacity(i);
-                  }}
-                  onError={() =>
-                    console.log(`Provider image ${index} Didn't load`)
-                  }
-                />
-              </div>
-            ))}
+            {indices.map((index, i) => {
+              const provider = providersData[index];
+              return (
+                <div
+                  key={i}
+                  className="bg-[#F1F1F1] ~xs/xl:~size-[4rem]/[5.625rem] rounded-lg overflow-hidden flex flex-col justify-end"
+                >
+                  <img
+                    ref={itemsRef.current[i]}
+                    src={provider.image}
+                    alt={provider.name}
+                    className={`size-full object-contain`}
+                    onLoad={() => {
+                      animateOpacity(i);
+                    }}
+                    onError={(event) => {
+                      event.target.src = imgUnavailable;
+                      event.onerror = null;
+                      console.log(`${provider.name} image Didn't load`);
+                    }}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
