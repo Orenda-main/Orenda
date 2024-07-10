@@ -17,6 +17,16 @@ const ProviderInfo = () => {
 
   const provider = providersData[index];
 
+  const offersTalkTherapy = [
+    'Maria Lourdes Bunque',
+    'Cassandra Williams',
+    'Nwamaka Onyeogo',
+    'Victoria Lanzara',
+    'Olga Kosichenko',
+    'Mamadou Barry',
+    'Sarah Sakirsky'
+  ];
+
   const showStatesLicensed = (states) => {
     if (states) {
       return states.map((state, index) => {
@@ -39,25 +49,25 @@ const ProviderInfo = () => {
         const divider = index === array.length - 1 ? '.' : ', ';
 
         if (category === 'Children') {
-          return `${category} (<13)${divider}`;
-        } else if (category === 'Teenagers') {
-          return `${category} (13-17)${divider}`;
-        } else if (category === 'Young Adults') {
-          return `${category} (18-24)${divider}`;
+          return `${category} (<13 yrs)${divider}`;
+        } else if (category === 'Teens') {
+          return `${category} (13-17 yrs)${divider}`;
         } else if (category === 'Adults') {
-          return `${category} (25-64)${divider}`;
+          return `${category} (18-64 yrs)${divider}`;
         } else if (category === 'Seniors') {
-          return `${category} (65+)${divider}`;
+          return `${category} (65+ yrs)${divider}`;
         } else {
           return `${category}${divider}`;
         }
       });
+    } else {
+      return 'Nil';
     }
   };
 
   return (
     <>
-      <main className="px-4 font-dm-sans ~mt-7/[5.5rem]">
+      <main className="px-4 sm:~px-6/10 font-dm-sans ~mt-7/[5.5rem]">
         <div className="max-w-7xl mx-auto">
           <div className="rounded-lg sm:border sm:border-[#EFEBDF]">
             <div className="flex flex-col md:rounded-t-lg md:flex-row md:~gap-0/[3.5rem] sm:border md:border-[#EFEBDF]">
@@ -68,7 +78,7 @@ const ProviderInfo = () => {
                   </div>
                 )}
                 <img
-                  className="mx-auto ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto ~/md:~max-w-[80%]/[22rem] block"
+                  className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block`}
                   src={provider?.image}
                   alt={provider?.name}
                 />
@@ -77,16 +87,16 @@ const ProviderInfo = () => {
                 <h1 className="~text-base/[2rem] font-bold ~mt-[0.63rem]/[2.56rem] mb-2">
                   {provider?.name}
                 </h1>
-                <p className="flex flex-col sm:flex-row md:flex-col xl:flex-row gap-2 text-[#7C7C7C] ~text-xs/sm font-bold">
-                  <span className="text-left word">
-                    {provider?.credentials}
-                  </span>
+                <p className="flex flex-col gap-1 text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
+                  <span>{provider?.credentials}</span>
                   <span>{provider?.professionalTitle}</span>
                 </p>
-                <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~mb-5/6 ~text-xs/sm text-nowrap">
-                  Specialising in geriatric care
-                </p>
-                <p className="whitespace-pre-line ~text-sm/base">
+                {offersTalkTherapy.includes(provider?.name) && (
+                  <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~text-xs/sm text-nowrap">
+                    Offers Talk Therapy Sessions
+                  </p>
+                )}
+                <p className="whitespace-pre-line ~text-sm/base ~mt-5/6 ">
                   {provider?.about}
                 </p>
               </div>
@@ -96,23 +106,25 @@ const ProviderInfo = () => {
 
             <div className="sm:flex sm:border border-t-0 sm:border-[#EFEBDF]">
               <div className="flex flex-col gap-6 sm:gap-0 sm:basis-1/2">
-                <div className="sm:border-b sm:border-[#EFEBDF] sm:~px-3/6 sm:~py-4/8">
+                <div className="sm:border-b sm:border-[#EFEBDF] sm:~px-2/4 sm:~py-3/6">
                   <h2 className="font-bold ~text-sm/xl ~mb-2/4">Ages Seen</h2>
-                  <p>{showAgesSeen(provider?.agesSeen)}</p>
+                  <p className="~text-sm/lg">
+                    {showAgesSeen(provider?.agesSeen)}
+                  </p>
                 </div>
                 <div className="flex flex-col sm:items-center gap-6 sm:gap-0 sm:~px-2/4 sm:~py-3/6 sm:flex-row sm:border-y sm:border-[#EFEBDF]">
                   <div>
                     <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                       Practice Name
                     </h2>
-                    <p>Orenda Psychiatry</p>
+                    <p className="~text-sm/lg">Orenda Psychiatry</p>
                   </div>
                   <div className="hidden sm:block h-[80%] max-h-[3.5rem] w-[2px] rounded-lg bg-[#D0D0D0] mx-7"></div>
                   <div>
                     <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                       Languages Spoken
                     </h2>
-                    <p>
+                    <p className="~text-sm/lg">
                       {provider?.languagesSpoken.map(
                         (language, index, languages) => {
                           if (index === languages.length - 1) {
@@ -129,23 +141,25 @@ const ProviderInfo = () => {
                   <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                     States Licensed
                   </h2>
-                  <p>{showStatesLicensed(provider?.statesLicensed)}</p>
+                  <p className="~text-sm/lg">
+                    {showStatesLicensed(provider?.statesLicensed)}
+                  </p>
                 </div>
-                <div className="hidden space-y-4 sm:block sm:~px-2/4 sm:~py-3/6">
+                <div className="hidden ~space-y-6/10 sm:block sm:~px-2/4 sm:~py-3/6">
                   <ProviderInfoUl
-                    h2="Education & Background"
-                    listArray={provider?.educationAndBackground}
-                    classes={{ mb: 1.31, lineHeight: 'normal' }}
-                  />
-                  <ProviderInfoUl
-                    h2="Specialties"
-                    listArray={provider?.specialties}
-                    classes={{ mb: 1.06, lineHeight: 'normal' }}
+                    h2="Education"
+                    listArray={provider?.education}
+                    classes={{ mb: 1.31 }}
                   />
                   <ProviderInfoUl
                     h2="Board Certification"
-                    listArray={provider?.boardCertification}
-                    classes={{ mb: 1.06, lineHeight: 'normal' }}
+                    listArray={provider?.boardCertifications}
+                    classes={{ mb: 1.06 }}
+                  />
+                  <ProviderInfoUl
+                    h2="Treatment Approaches"
+                    listArray={provider?.treatmentApproaches}
+                    classes={{ mb: 1.06 }}
                   />
 
                   <HR />
@@ -157,50 +171,56 @@ const ProviderInfo = () => {
               <div className="sm:border-l space-y-4 sm:space-y-0 mb-4 sm:mb-0 sm:border-[#EFEBDF] sm:basis-1/2">
                 <div className="sm:border-b  sm:border-[#EFEBDF] sm:~px-4/8 sm:~py-5/10">
                   <ProviderInfoUl
-                    h2="Focus Areas"
-                    listArray={provider?.focusAreas}
-                    classes={{ mb: 1.06, lineHeight: 'normal' }}
+                    h2="Specialties"
+                    listArray={provider?.specialties}
+                    classes={{ mb: 1.06 }}
                   />
                 </div>
                 <div className="sm:~px-4/8 sm:~py-5/10">
                   <ProviderInfoUl
-                    h2="Treatment Approaches"
-                    listArray={provider?.treatmentApproaches}
-                    classes={{ mb: 1.06, lineHeight: 'normal' }}
+                    h2="Focus Areas"
+                    listArray={provider?.focusAreas}
+                    classes={{ mb: 1.06 }}
                   />
                 </div>
               </div>
-              <div className="sm:hidden space-y-4">
+              <div className="sm:hidden ~space-y-4/8">
                 <ProviderInfoUl
                   h2="Education & Background"
-                  listArray={provider?.educationAndBackground}
-                  classes={{ mb: 1.31, lineHeight: 'normal' }}
-                />
-                <ProviderInfoUl
-                  h2="Specialties"
-                  listArray={provider?.specialties}
-                  classes={{ mb: 1.06, lineHeight: 'normal' }}
+                  listArray={provider?.education}
+                  classes={{ mb: 1.31 }}
                 />
                 <ProviderInfoUl
                   h2="Board Certification"
-                  listArray={provider?.boardCertification}
-                  classes={{ mb: 1.06, lineHeight: 'normal' }}
+                  listArray={provider?.boardCertifications}
+                  classes={{ mb: 1.06 }}
                 />
-
+                <ProviderInfoUl
+                  h2="Treatment Approaches"
+                  listArray={provider?.treatmentApproaches}
+                  classes={{ mb: 1.06 }}
+                />
                 <HR />
               </div>
             </div>
 
             {provider?.reviews && (
-              <div className="sm:~px-3/6 ~py-4/8">
-                <h2 className="font-bold ~text-sm/xl ~mb-2/4">
+              <div className="sm:~px-3/6 ~py-4/8 max-w-[80ch] mx-auto">
+                <h2 className="font-bold ~text-sm/xl ~mb-2/4 md:text-center">
                   Reviews from Clients
                 </h2>
-                <Swiper modules={[Navigation, Pagination]} spaceBetween={50}>
+                <Swiper
+                  spaceBetween={50}
+                  breakpoints={{
+                    768: {
+                      autoHeight: true
+                    }
+                  }}
+                >
                   {provider?.reviews.map((review) => (
                     <SwiperSlide className="swiper-no-swiping">
                       <div>
-                        <blockquote className=" ~text-sm/base leading-7">
+                        <blockquote className=" ~text-sm/base leading-7 text-justify">
                           {review}
                         </blockquote>
                       </div>
@@ -220,9 +240,12 @@ const ProviderInfo = () => {
               <button className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors">
                 Write a Review
               </button>
-              <button className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors">
+              <a
+                href={provider?.bookingLink}
+                className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors text-center"
+              >
                 Book
-              </button>
+              </a>
             </div>
           </div>
         </div>
