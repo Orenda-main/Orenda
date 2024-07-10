@@ -40,7 +40,7 @@ const Assessment1 = () => {
         </div>
 
         <div className="assessment1-right">
-          <FormControl>
+          <FormControl className='tts'>
             <InputLabel id="demo-simple-select-helper-label">Select age range</InputLabel>
             <Select
               labelId="demo-simple-select-helper-label"
