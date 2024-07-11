@@ -9,7 +9,7 @@ const Handle = () => {
       <div className="handle">
             <p>All of our providers are trained and licensed to handle several issues, if you’re not sure, please call to confirm each provider’s specialty.</p>
 
-            <button><img src={call} alt="" className="colored-img"/>Call Now</button>
+            <a href="tel:+1(347) 707-7735"><button><img src={call} alt="" className="colored-img"/>Call Now</button></a>
           </div>
       </div>
     </div>

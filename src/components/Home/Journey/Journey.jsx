@@ -8,6 +8,7 @@ import call from "../../../assets/call.png";
 import text from "../../../assets/text.png";
 import mail from "../../../assets/mail.png";
 import callpurple from "../../../assets/callpurple.png";
+import { Link } from "react-router-dom";
 
 const Journey = () => {
   return (
@@ -49,25 +50,34 @@ const Journey = () => {
             <img src={undraw} alt="" className="~w-[2.5rem]/[9rem]" />
             <h2>New Patient?</h2>
             <p>To schedule your first appointment;</p>
-            <button className="one">
-              <img src={callpurple} alt=""  className="color-img"/>
-              Call
-            </button>
-            <button className="two">Book Online</button>
+            <a href="tel:+1(347) 707-7735">
+              <button className="one">
+                <img src={callpurple} alt=""  className="color-img"/>
+                Call
+              </button>
+            </a>
+            <Link to="/our team"><button className="two">Book Online</button></Link>
           </div>
           <div className="existing-patient">
             <h2>Existing patient?</h2>
             <p>To schedule a follow-up appointment;</p>
-            <button className="call">
-              <img src={call} alt="" />
-              Call
-            </button>
-            <button className="text">
-              Text <img src={text} alt="" />
-            </button>
-            <button className="mail">
-              Email <img src={mail} alt="" />
-            </button>
+            <a href="tel:+1(347) 707-7735">
+              <button className="call">
+                <img src={call} alt="" />
+                Call
+              </button>
+            </a>
+            <a href="tel:+1(347) 707-7735">
+              <button className="text">
+                Text <img src={text} alt="" />
+              </button>
+            </a>
+            <a href="mailto:admin@orendapsych.com">
+              <button className="mail">
+                Email <img src={mail} alt="" />
+              </button>
+            </a>
+            
           </div>
         </div>
       </div>

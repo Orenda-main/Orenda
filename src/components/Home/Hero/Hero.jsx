@@ -5,6 +5,7 @@ import plus from "../../../assets/plus.png";
 import faces from "../../../assets/faces.png";
 import Icon from "../../../assets/Icon.png"
 import user from "../../../assets/user.png"
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -18,7 +19,7 @@ const Hero = () => {
               Therapy
             </h1>
             <p className="font-dm-sans">Providing Mental Health Care with Convenience.</p>
-            <button>Book Now</button>
+            <Link to='/Our Team'><button>Book Now</button></Link>
           </div>
           <div className="items">
             <div className="items-right">

@@ -78,6 +78,6 @@ button:hover .colored-img {
   }
 
   .handle button {
-    width: 85% !important;
+    width: 100%;
   }
 }

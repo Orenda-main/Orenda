@@ -27,26 +27,27 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 
 function App() {
   return (
-    <ScrollToTop>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home/>} />
-          <Route path="About" element={<About />} />
-          <Route path="Our Team" element={<OurTeam/>} /> 
-          <Route path="contact" element={<ContactUsPage />} />
-          <Route path="Insurance" element={<Insurance />} />
-          <Route path="privacypolicy" element={<Privacy/>} />
-          <Route path="Provider/:index" element={<ProviderInfo/>} />
-          <Route path="blogs" element={<Blog />} />
-          <Route path="blog info" element={<Bloginfo />} />
-          <Route path="becomeprovider" element={<BecomeProviderPage />} />
-        </Route>
-        <Route path="/Assessment1" element={<Assessment1/>} />
-        <Route path="/Assessment2" element={<Assessment2/>} />
-        <Route path="/Assessment3" element={<Assessment3/>} />
-        <Route path="/Assessment4" element={<Assessment4/>} />
-      </Routes>
-    </ScrollToTop>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home/>} />
+            <Route path="About" element={<About />} />
+            <Route path="Our Team" element={<OurTeam/>} /> 
+            <Route path="contact" element={<ContactUsPage />} />
+            <Route path="Insurance" element={<Insurance />} />
+            <Route path="privacypolicy" element={<Privacy/>} />
+            <Route path="Provider/:index" element={<ProviderInfo/>} />
+            <Route path="blogs" element={<Blog />} />
+            <Route path="blog info" element={<Bloginfo />} />
+            <Route path="becomeprovider" element={<BecomeProviderPage />} />
+          </Route>
+          <Route path="/Assessment1" element={<Assessment1/>} />
+          <Route path="/Assessment2" element={<Assessment2/>} />
+          <Route path="/Assessment3" element={<Assessment3/>} />
+          <Route path="/Assessment4" element={<Assessment4/>} />
+        </Routes>
+      </ScrollToTop>
+      
   );
 }
 

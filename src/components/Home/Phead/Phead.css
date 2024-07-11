@@ -41,6 +41,11 @@
     
 }
 
+.phead-button button:hover{
+    background-color: white;
+    color: #2e0086;
+}
+
 @media screen and (max-width: 942px){
     .phead-wrapper{
         justify-content: center;

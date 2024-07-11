@@ -3,6 +3,7 @@ import "./Frequent.css";
 import QA from "./Question";
 import callpurple from "../../../assets/callpurple.png";
 import mailpurple from "../../../assets/mailpurple.png";
+import { Link } from "react-router-dom";
 
 const Frequent = () => {
     const [faqs, setFaqs] = useState([
@@ -81,16 +82,20 @@ const Frequent = () => {
           <p>Can’t find your question?</p>
           <div className="freq-text">
             <div className="freq-prop">
-              <p>
-                <img src={mailpurple} alt="" /> Send a message
-              </p>
+              <Link to="/contact">
+                <p>
+                  <img src={mailpurple} alt="" /> Send a message
+                </p>
+              </Link>
             </div>
             <p>or</p>
             <div className="freq-prop">
-              <p>
-                <img src={callpurple} alt="" />
-                Call to ask
-              </p>
+              <a href="tel:+1(347) 707-7735">
+                <p>
+                  <img src={callpurple} alt="" />
+                  Call to ask
+                </p>
+              </a>
             </div>
           </div>
         </div>

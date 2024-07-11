@@ -129,6 +129,13 @@ hr {
   gap: 0.4em;
   transition: background-color 0.3s;
 }
+
+.existing-patient a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .existing-patient button:hover {
   background-color: #2e0086;
   border: #2e0086;
@@ -155,7 +162,14 @@ hr {
   font-weight: 500;
   font-size: 15px;
 }
-.new-patient button {
+
+.new-patient a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.new-patient  button {
   font-family: "open sans";
   font-size: 13px;
   font-weight: 500;
