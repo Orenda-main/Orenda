@@ -107,12 +107,13 @@ h6 {
   padding: .3em .5em !important;
   border-radius: .5em !important;
   width: 100% !important;
+  margin-left: unset !important;
+  margin-right: unset !important;
 }
 
 .css-1h7anqn{
   gap: 1.3em;
-  margin-left: unset !important;
-  margin-right: unset !important;
+  
 }
 
 .css-ahj2mt-MuiTypography-root{
