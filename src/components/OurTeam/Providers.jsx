@@ -6,6 +6,7 @@ import { useRef, useState } from 'react';
 import providersData from '../../data/providersData';
 import ProviderCard from './ProviderCard';
 import { Link } from 'react-router-dom';
+import { fetchCustomData } from '../../APIS/ProviderApi';
 
 const Providers = ({ itemsPerPage, numberOfColumns }) => {
   const [itemOffset, setItemOffset] = useState(0);

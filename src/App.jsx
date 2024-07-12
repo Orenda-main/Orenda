@@ -23,6 +23,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import ConsumerTest from './components/ConsumerTest/ConsumerTest';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path="/Assessment2" element={<Assessment2/>} />
           <Route path="/Assessment3" element={<Assessment3/>} />
           <Route path="/Assessment4" element={<Assessment4/>} />
+          <Route path="/consumer" element={<ConsumerTest/>} />
         </Routes>
       </ScrollToTop>
       
