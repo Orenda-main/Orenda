@@ -111,6 +111,8 @@ h6 {
 
 .css-1h7anqn{
   gap: 1.3em;
+  margin-left: unset !important;
+  margin-right: unset !important;
 }
 
 .css-ahj2mt-MuiTypography-root{
