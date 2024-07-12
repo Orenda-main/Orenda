@@ -13,6 +13,8 @@ import anthem from "../../assets/anthem.png";
 import tricare from "../../assets/tricare.png";
 import compsych from "../../assets/compsych.png";
 import multiplan from "../../assets/multiplan.png";
+import fidelis from "../../assets/fidelis-care-logo-vector.png"
+
 
 const Network = () => {
   // const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900);
@@ -44,24 +46,25 @@ const Network = () => {
             <img src={compsych} alt="" />
             <img src={tricare} alt="" />
             <img src={multiplan} alt="" />
-            <img src={oscar} alt="" />
           </Marquee>
         </div>
         <div className={Style.texts}>
           <h4>Out of network</h4>
         </div>
         <div className={Style.nets}>
-          <img src={metro} alt="" />
-          <img src={emblem} alt="" />
-          <img src={cms} alt="" />
-          <img src={ghi} alt="" />
+          <img src={emblem} alt=""  className="max-w-[10rem]"/>
+          <img src={cms} alt="" style={{padding: 8}}  className="max-w-[3rem]"/>
+          <img src={fidelis} alt=""  className="max-w-[5rem]"/>
+          <img src={ghi} alt=""  className="max-w-[3rem]"/>
+          <img src={metro} alt=""  className="max-w-[10rem]"/>
         </div>
         <div className={Style.netss}>
           <Marquee className={Style.marquee_main_mob} play={true} speed={150}>
-            <div className="marq" style={{paddingRight: "3em"}}><img src={metro} alt="" /></div>
-            <div className="marq" style={{paddingRight: "3em"}}><img src={emblem} alt="" /></div>
-            <div className="marq" style={{paddingRight: "3em"}}><img src={cms} alt="" /></div>
-            <div className="marq" style={{paddingRight: "3em"}}><img src={ghi} alt="" /> </div>
+            <div className="marq" style={{paddingRight: "3em"}}><img src={metro} alt="" className="max-w-[10rem]"/></div>
+            <div className="marq" style={{paddingRight: "3em"}}><img src={emblem} alt="" className="max-w-[10rem]"/></div>
+            <div className="marq" style={{paddingRight: "3em"}}><img src={cms} alt="" className="max-w-[3rem]"/></div>
+            <div className="marq" style={{paddingRight: "3em"}}><img src={ghi} alt="" className="max-w-[3rem]"/> </div>
+            <div className="marq" style={{paddingRight: "3em"}}><img src={fidelis} alt="" className="max-w-[3rem]"/> </div>
           </Marquee>
         </div>
       </div>

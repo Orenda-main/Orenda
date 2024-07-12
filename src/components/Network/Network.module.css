@@ -8,18 +8,18 @@
 }
 
 .network_container {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .network_wrapper {
   display: flex;
   flex-direction: column;
   background-image: url("../../assets/dotted.png"); /* Update the path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 4em 1rem; /* Adjust padding as needed */
-  position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 1rem 1rem 1rem; /* Adjust padding as needed */
+    position: relative;
 }
 
 .slider .marquee_main {
@@ -47,7 +47,7 @@
   font-family: OggBold;
   font-size: 25px;
   color: #AEAEAE;
-  margin-bottom: 2em;
+  margin-bottom: 1.3rem;
 }
 
 .text {
@@ -62,7 +62,7 @@
   display: flex;
   align-items: center;
   gap: 6em;
-  margin-bottom: 2.7em;
+  margin-bottom: 1.3rem;
 }
 .netss {
   display: none;
@@ -101,7 +101,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
   }
   .netss .marquee_main_mob img{
     margin-left: 4em;
