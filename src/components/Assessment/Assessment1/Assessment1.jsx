@@ -5,7 +5,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Assessment1 = () => {
   const [age, setAge] = useState('');
@@ -26,10 +26,12 @@ const Assessment1 = () => {
     <div className="assessment1-container">
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <div className="homepage">
-            <ArrowBackIosIcon style={{ color: 'white' }} />
-            <p style={{ color: 'white' }}>Homepage</p>
-          </div>
+          <Link to="/">
+            <div className="homepage">
+              <ArrowBackIosIcon style={{ color: 'white' }} />
+              <p style={{ color: 'white' }}>Homepage</p>
+            </div>
+          </Link>
 
           <div className="question">
             <p className="q-no">Question 1 of 4</p>

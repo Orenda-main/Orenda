@@ -6,7 +6,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Assessment2 = () => {
 
@@ -29,10 +29,12 @@ const Assessment2 = () => {
     <div className="assessment1-container">
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <div className="homepage">
-            <ArrowBackIosIcon style={{ color: 'white' }} />
-            <p style={{ color: 'white' }}>Homepage</p>
-          </div>
+          <Link to="/">
+            <div className="homepage">
+              <ArrowBackIosIcon style={{ color: 'white' }} />
+              <p style={{ color: 'white' }}>Homepage</p>
+            </div>
+          </Link>
 
           <div className="question">
             <p className='q-no'>Question 2 of 4</p>

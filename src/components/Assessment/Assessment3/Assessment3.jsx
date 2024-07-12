@@ -10,7 +10,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Assessment3 = () => {
   const [location, setLocation] = useState('');
@@ -57,10 +57,12 @@ const Assessment3 = () => {
     <div className="assessment1-container">
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <div className="homepage">
-            <ArrowBackIosIcon style={{ color: 'white' }} />
-            <p style={{ color: 'white' }}>Homepage</p>
-          </div>
+          <Link to="/">
+            <div className="homepage">
+              <ArrowBackIosIcon style={{ color: 'white' }} />
+              <p style={{ color: 'white' }}>Homepage</p>
+            </div>
+          </Link>
 
           <div className="question">
             <p className="q-no">Question 3 of 4</p>
