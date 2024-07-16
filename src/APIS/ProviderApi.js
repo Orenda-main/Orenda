@@ -1,5 +1,5 @@
 export const fetchCustomData = async () => {
-    const endpoint = 'https://03a0-105-113-89-69.ngrok-free.app';
+    const endpoint = 'https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags,subregion,tld,currencies,languages,borders';
     const response = await fetch(endpoint);
     if (!response.ok) {
         throw new Error('Network response was not ok');

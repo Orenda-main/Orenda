@@ -16,6 +16,7 @@ import Newsletter from './Newsletter';
 import Input from '../Input';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import './contactcss.css'
 
 const ContactUsPage = () => {
   const {
@@ -52,24 +53,30 @@ const ContactUsPage = () => {
                   communication
                 </p>
                 <div className="grid gap-4 mt-8  max-w-[27.5rem] mx-auto md:mx-0">
-                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl">
-                    <span>
-                      <img className="w-6" src={call} alt="call icon" />
-                    </span>
-                    Call
-                  </button>
-                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
-                    Text
-                    <span>
-                      <img src={text} alt="text icon" />
-                    </span>
-                  </button>
-                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
-                    Email
-                    <span>
-                      <img src={email} alt="email icon" />
-                    </span>
-                  </button>
+                  <a href="tel:+1(347) 707-7735" className='callcss'>
+                    <button className="callcss font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl">
+                      <span>
+                        <img className="w-6" src={call} alt="call icon" />
+                      </span>
+                      Call
+                    </button>
+                  </a>
+                  <a href="sms:+13477077735" className='callcss'>
+                    <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
+                      Text
+                      <span>
+                        <img src={text} alt="text icon" />
+                      </span>
+                    </button>
+                  </a>
+                  <a href="mailto:admin@orendapsych.com" className='callcss'>
+                    <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
+                      Email
+                      <span>
+                        <img src={email} alt="email icon" />
+                      </span>
+                    </button>
+                  </a>
                 </div>
               </div>
               <div className="hidden md:block ~mt-10/16 ~space-y-10/12">
@@ -103,6 +110,7 @@ const ContactUsPage = () => {
                 <h2 className="font-bold font-dm-sans ~mb-2/4 ~text-lg/[1.75rem]">
                   Send Us a Message
                 </h2>
+                
                 <Input
                   key="yourName"
                   label="Your Name"

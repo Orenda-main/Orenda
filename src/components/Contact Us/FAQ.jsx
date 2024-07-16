@@ -76,7 +76,7 @@ const FAQ = () => {
               </svg>
               <a
                 className="underline text-orenda-purple font-open-sans"
-                href="#"
+                href="tel:+1(347) 707-7735"
               >
                 Call to ask
               </a>
