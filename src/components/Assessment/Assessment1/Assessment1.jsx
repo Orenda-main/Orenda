@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Assessment1.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import InputLabel from '@mui/material/InputLabel';
@@ -6,10 +6,13 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { Link, NavLink } from 'react-router-dom';
+import Footer from '../../Footer/Footer';
+import Header from '../../Header';
 
 const Assessment1 = () => {
   const [age, setAge] = useState('');
   const [error, setError] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -22,8 +25,27 @@ const Assessment1 = () => {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 693) {
+        setShowFooter(true);
+      } else {
+        setShowFooter(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="assessment1-container">
+      {showFooter && <Header/>}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
           <Link to="/">
@@ -73,6 +95,7 @@ const Assessment1 = () => {
           </div>
         </div>
       </div>
+      {showFooter && <Footer />} {/* Conditionally render the Footer component */}
     </div>
   );
 };

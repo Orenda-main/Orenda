@@ -121,10 +121,10 @@ const Header = () => {
                     ['Our Team', '/Our Team', 'fa-solid fa-people-group'],
                     ['Insurance', '/insurance', 'fa-solid fa-hands-bound'],
                     ['About', '/about', 'fa-solid fa-address-card'],
-                    ['Blog', '/', 'fa-solid fa-blog'],
+                    ['Blog', '/blogs', 'fa-solid fa-blog'],
                     [
                       'Privacy Policy',
-                      '/privacy-policy',
+                      '/privacypolicy',
                       'fa-solid fa-file-shield'
                     ],
                     ['Contact Us', '/contact', 'fa-solid fa-comment-dots']

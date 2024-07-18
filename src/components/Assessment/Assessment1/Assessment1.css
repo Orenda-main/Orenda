@@ -84,3 +84,64 @@
     border-radius: 2em;
     cursor: pointer;
 }
+
+@media screen and (max-width: 795px){
+    .question .main-q{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 693px){
+    .assessment1-wrapper{
+        flex-direction: column;
+        min-height: unset;
+        margin-bottom: 6em;
+    }
+
+    .assessment1-left{
+        padding: 4em ;
+    }
+
+    .assessment1-left{
+        background-color: white;
+    }
+
+    .question{
+        color: black;
+        text-align: center;
+        padding-bottom: 1.5em;
+    }
+
+    .question .q-no{
+        font-weight: 500;
+    }
+
+    .question{
+        gap: 1em;
+    }
+
+    .next-prev{
+        align-self: center !important;
+        flex-direction: column;
+    }
+
+    .next{
+        width: 300px;
+    }
+
+    
+
+    .css-ahj2mt-MuiTypography-root{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .assessment1-left{
+        padding: 3em 2em 0em 2em;
+    }
+
+    .assessment1-right{
+        padding: 0 1em;
+    }
+}

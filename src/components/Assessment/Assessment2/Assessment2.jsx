@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import '../Assessment1/Assessment1.css';
 import './Assessment2.css';
@@ -7,11 +7,15 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import { Link, NavLink } from 'react-router-dom';
+import Header from '../../Header';
+import Footer from '../../Footer/Footer';
+
 
 const Assessment2 = () => {
 
   const [session, setSession] = useState('');
   const [error, setError] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
 
   const handleChange = (event) => {
     const { value } = event.target;
@@ -25,8 +29,27 @@ const Assessment2 = () => {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 693) {
+        setShowFooter(true);
+      } else {
+        setShowFooter(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="assessment1-container">
+      {showFooter && <Header/>}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
           <Link to="/">
@@ -49,14 +72,14 @@ const Assessment2 = () => {
               <FormControlLabel
                 className='assessment2-right-checkbox'
                 control={<Radio />}
-                label="Medication Management (this includes talk therapy)"
-                value="Medication Management (this includes talk therapy)"
+                label="Medication Management (with brief talk therapy)"
+                value="Medication Management (with brief talk therapy)"
               />
               <FormControlLabel
                 className='assessment2-right-checkbox'
                 control={<Radio />}
-                label="Weekly/Bi-weekly Talk Therapy"
-                value="Weekly/Bi-weekly Talk Therapy"
+                label="Weekly/Bi-weekly Talk Therapy only"
+                value="Weekly/Bi-weekly Talk Therapy only"
               />
               <FormControlLabel
                 className='assessment2-right-checkbox'
@@ -81,6 +104,7 @@ const Assessment2 = () => {
           </div>
         </div>
       </div>
+      {showFooter && <Footer/> }
     </div>
   );
 }

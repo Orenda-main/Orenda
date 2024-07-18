@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import '../Assessment1/Assessment1.css';
 import '../Assessment2/Assessment2.css';
@@ -13,18 +13,21 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import { Link, NavLink } from 'react-router-dom';
+import Header from '../../Header';
+import Footer from '../../Footer/Footer';
 
 const Assessment4 = () => {
   const [condition, setCondition] = useState('');
   const [error, setError] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
 
   const radioOptions = [
-    'Weight Management',
-    'Medication Assisted Treatment',
+    'Anxiety/Depression',
+    'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)',
+    'Sleep Disorders',
+    'Eating Disorders',
     'Substance Use Disorder',
-    'Tics / Tourettes Syndrome',
     'Genomic Testing',
-    'Eating Disorder',
   ];
 
   const selectOptions = [
@@ -55,8 +58,27 @@ const Assessment4 = () => {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 693) {
+        setShowFooter(true);
+      } else {
+        setShowFooter(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="assessment1-container">
+      {showFooter && <Header/>}
       <div className="assessment1-wrapper">
         <div className="assessment1-left"> 
           <Link to="/">
@@ -108,7 +130,9 @@ const Assessment4 = () => {
           </FormControl>
           {error && <p className="error-message">Please select a condition before proceeding.</p>}
           <div className="next-prev">
-            <div className="prev">Previous</div>
+            <NavLink to='/Assessment3'> 
+              <div className="prev">Previous</div>
+            </NavLink>
             {condition ? (
               <NavLink to='/#'> {/* Replace '/NextPage' with the actual path */}
                 <div className="next">Next</div>
@@ -119,6 +143,7 @@ const Assessment4 = () => {
           </div>
         </div>
       </div>
+      {showFooter && <Footer/>}
     </div>
   );
 };

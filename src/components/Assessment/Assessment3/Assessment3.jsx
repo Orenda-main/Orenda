@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import '../Assessment1/Assessment1.css';
 import '../Assessment2/Assessment2.css';
@@ -11,10 +11,14 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import { Link, NavLink } from 'react-router-dom';
+import { Headphones } from '@mui/icons-material';
+import Header from '../../Header';
+import Footer from '../../Footer/Footer';
 
 const Assessment3 = () => {
   const [location, setLocation] = useState('');
   const [error, setError] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
 
   const radioOptions = [
     'New York',
@@ -24,11 +28,56 @@ const Assessment3 = () => {
   ];
 
   const selectOptions = [
-    { label: '5 - 13 yrs', value: '5 - 13 yrs' },
-    { label: '13 - 17 yrs', value: '13 - 17 yrs' },
-    { label: '18 - 24 yrs', value: '18 - 24 yrs' },
-    { label: '25 - 64 yrs', value: '25 - 64 yrs' },
-    { label: '65+ yrs', value: '65+ yrs' },
+    { label: 'Alabama', value: 'Alabama' },
+    { label: 'Alaska', value: 'Alaska' },
+    { label: 'Arizona', value: 'Arizona' },
+    { label: 'Arkansas', value: 'Arkansas' },
+    { label: 'California', value: 'California' },
+    { label: 'Colorado', value: 'Colorado' },
+    { label: 'Connecticut', value: 'Connecticut' },
+    { label: 'Delaware', value: 'Delaware' },
+    { label: 'Florida', value: 'Florida' },
+    { label: 'Georgia', value: 'Georgia' },
+    { label: 'Hawaii', value: 'Hawaii' },
+    { label: 'Idaho', value: 'Idaho' },
+    { label: 'Illinois', value: 'Illinois' },
+    { label: 'Indiana', value: 'Indiana' },
+    { label: 'Iowa', value: 'Iowa' },
+    { label: 'Kansas', value: 'Kansas' },
+    { label: 'Kentucky', value: 'Kentucky' },
+    { label: 'Louisiana', value: 'Louisiana' },
+    { label: 'Maine', value: 'Maine' },
+    { label: 'Maryland', value: 'Maryland' },
+    { label: 'Massachusetts', value: 'Massachusetts' },
+    { label: 'Michigan', value: 'Michigan' },
+    { label: 'Minnesota', value: 'Minnesota' },
+    { label: 'Mississippi', value: 'Mississippi' },
+    { label: 'Missouri', value: 'Missouri' },
+    { label: 'Montana', value: 'Montana' },
+    { label: 'Nebraska', value: 'Nebraska' },
+    { label: 'Nevada', value: 'Nevada' },
+    { label: 'New Hampshire', value: 'New Hampshire' },
+    { label: 'New Jersey', value: 'New Jersey' },
+    { label: 'New Mexico', value: 'New Mexico' },
+    { label: 'New York', value: 'New York' },
+    { label: 'North Carolina', value: 'North Carolina' },
+    { label: 'North Dakota', value: 'North Dakota' },
+    { label: 'Ohio', value: 'Ohio' },
+    { label: 'Oklahoma', value: 'Oklahoma' },
+    { label: 'Oregon', value: 'Oregon' },
+    { label: 'Pennsylvania', value: 'Pennsylvania' },
+    { label: 'Rhode Island', value: 'Rhode Island' },
+    { label: 'South Carolina', value: 'South Carolina' },
+    { label: 'South Dakota', value: 'South Dakota' },
+    { label: 'Tennessee', value: 'Tennessee' },
+    { label: 'Texas', value: 'Texas' },
+    { label: 'Utah', value: 'Utah' },
+    { label: 'Vermont', value: 'Vermont' },
+    { label: 'Virginia', value: 'Virginia' },
+    { label: 'Washington', value: 'Washington' },
+    { label: 'West Virginia', value: 'West Virginia' },
+    { label: 'Wisconsin', value: 'Wisconsin' },
+    { label: 'Wyoming', value: 'Wyoming' }
   ];
 
   const handleRadioChange = (event) => {
@@ -53,8 +102,27 @@ const Assessment3 = () => {
 
   const isRadioOptionSelected = radioOptions.includes(location);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 693) {
+        setShowFooter(true);
+      } else {
+        setShowFooter(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="assessment1-container">
+      {showFooter && <Header/>}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
           <Link to="/">
@@ -119,6 +187,7 @@ const Assessment3 = () => {
           </div>
         </div>
       </div>
+      {showFooter && <Footer/>}
     </div>
   );
 };
