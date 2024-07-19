@@ -4,6 +4,7 @@ import { PageNumberContext } from './Insurance/Insurance';
 const Input = ({ before, label, type, id, register, watch, errors }) => {
   const [isFocus, setIsFocus] = useState(false);
   const handleFocus = () => setIsFocus(true);
+  const notRequired = ['address2', 'groupNumber'];
 
   const handleBlur = () => {
     if (watch(label) === '') {
@@ -22,14 +23,7 @@ const Input = ({ before, label, type, id, register, watch, errors }) => {
   } else {
     pattern = false;
   }
-  const { name, ref, onChange, onBlur } = register(label, {
-    onBlur: handleBlur,
-    required: {
-      value: true,
-      message: 'This field is required'
-    },
-    pattern: pattern
-  });
+
   const pageNumber = useContext(PageNumberContext);
 
   useEffect(() => handleBlur(), [pageNumber, watch(label)]);
@@ -38,29 +32,37 @@ const Input = ({ before, label, type, id, register, watch, errors }) => {
     <div className="relative text-justify bg-inherit">
       {type == 'textarea' ? (
         <textarea
-          id={id}
-          name={name}
-          ref={ref}
-          onFocus={handleFocus}
-          onChange={onChange}
-          onBlur={onBlur}
-          className={`~text-sm/lg outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
           type={type}
+          {...register(label, {
+            onBlur: () => handleBlur(),
+            required: {
+              value: true,
+              message: 'This field is required'
+            },
+            pattern: pattern
+          })}
+          id={id}
+          onFocus={handleFocus}
+          className={`~text-sm/lg outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
         />
       ) : (
         <input
-          id={id}
-          name={name}
-          ref={ref}
-          onFocus={handleFocus}
-          onChange={onChange}
-          onBlur={onBlur}
-          className={`~text-sm/lg outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
           type={type}
+          {...register(label, {
+            onBlur: () => handleBlur(),
+            required: {
+              value: !notRequired.includes(id),
+              message: 'This field is required'
+            },
+            pattern: pattern
+          })}
+          id={id}
+          onFocus={handleFocus}
+          className={`~text-sm/lg outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
         />
       )}
       <label
-        className={`block font-medium font-dm-sans ~text-sm/xl bg-inherit h-[0.1rem] text-[#0F0F0F] absolute top-0 right-0 left-0 transition-all peer-autofill:-translate-y-6 before:overflow-visible peer-autofill:text-[#616161] peer-autofill:~text-xs/sm duration-300 pb-8 peer-autofill:pb-0 peer-autofill:before:hidden peer-autofill:shadow-blue-300 ${
+        className={`block font-medium font-dm-sans ~text-sm/xl bg-inherit h-[0.1rem] text-[#0F0F0F] absolute top-0 right-0 left-0 transition-all peer-autofill:-translate-y-6 before:overflow-visible peer-autofill:text-[#616161] peer-autofill:~text-xs/sm duration-300 pb-6 sm:pb-8 peer-autofill:pb-0 peer-autofill:before:hidden peer-autofill:shadow-blue-300 ${
           before === 'email' && 'before:content-email before:mr-2'
         } ${
           before === 'phone' && 'before:content-phone before:mr-2 before:mt-4'

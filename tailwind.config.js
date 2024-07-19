@@ -14,7 +14,7 @@ export default {
         'md-footer':
           "url('/src/assets/md_footer_bg_bl.png'),url('/src/assets/md_footer_bg_tr.png'),url('/src/assets/md_footer_bg_r.png')",
         arrow: 'url(/src/assets/select.svg)',
-        logo: 'url(/src/assets/logo-circle.png)'
+        logo: 'url(/src/assets/logo-circle-0.15.png)'
       },
       backgroundPosition: {
         'footer-positions': 'top left, bottom right, bottom right',
@@ -48,22 +48,18 @@ export default {
         dot: 'url("/src/assets/disc.svg")'
       },
       screens: {
-        forLabel: '23.75rem',
         xs: '20rem',
+        forLabel: '23.75rem',
+        forNav: '',
         forProviders: '70rem'
-      }
-    },
-    container: {
-      center: false,
-      padding: false,
-      screens: {
-        sm: '100%',
-        md: '100%',
-        lg: '100%',
-        xl: '100%',
-        '2xl': '100%'
       }
     }
   },
-  plugins: [fluid]
+  plugins: [
+    fluid,
+    require('tailwind-scrollbar')({
+      nocompatible: true,
+      preferredStrategy: 'pseudoelements'
+    })
+  ]
 };
