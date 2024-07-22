@@ -21,7 +21,7 @@ const Home = () => {
             <Hero/>
             <Network/>
             <Phead/>
-            <Providers itemsPerPage={10} numberOfColumns={5}/>
+            <Providers itemsPerPage={10} numberOfColumns={5} forHome={true}/>
             <Meet/>
             <Treat/>
             <Handle/>
