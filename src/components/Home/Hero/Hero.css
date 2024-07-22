@@ -7,37 +7,80 @@
   src: url(../../../fonts/OggText-Bold-BF646c18fc4aabb.ttf);
 }
 
+/* .hero-container {
+  margin-bottom: 2rem;
+  background: url(../../../assets/homepage.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+} */
 .hero-container {
-  margin-bottom: 7em;
+  position: relative;
+  margin-bottom: 2rem;
+  color: #fff;
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow the container */
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../../../assets/homepage.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: 1; /* Places the image behind the overlay */
+}
+
+.hero-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity to make it darker or lighter */
+  z-index: 1; /* Places the overlay behind the content but above the image */
+}
+
+.hero-container > * {
+  position: relative;
+  z-index: 3; /* Ensures the content is above the background and overlay */
 }
 
 .hero-wrapper {
-  display: flex;
   justify-content: space-between;
   gap: 16px;
 }
 
 .hero-wrapper .hero-content {
-  max-width: 710px;
+  max-width: 90rem;
   margin-left: clamp(1rem, 3vw, 5rem);
-  margin-top: 5em;
+  padding: 10rem 0 4rem 0;
 }
 .hero-wrapper .texts h1 {
   font-family: OggExtraBold;
   font-size: clamp(30px, 4vw, 47px);
   /* line-height: 60px; */
-  padding-bottom: 0.6em;
-  color: #070707;
+  padding-bottom: 0.2rem;
+  color: #fff;
   max-width: 680px;
 }
 .hero-wrapper .texts p {
-  padding-bottom: 0.8em;
+  padding-bottom: 0.2em;
   line-height: 67px;
   font-size: clamp(16px, 5vw, 22px);
 }
 
 .hero-content button {
-  background-color: white;
+  background-color: #2e0086;
   outline: none;
   padding: 0.4em 0.9em;
   font-size: 1rem;
@@ -45,14 +88,14 @@
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.3s, color 0.3s;
-  color: #2e0086;
+  color: white;
   border: 1px solid #2e0086;
   font-family: "open sans";
-  margin-bottom: 2em;
+  margin-bottom: 2.4rem;
 }
 .hero-content button:hover {
-  background-color: #2e0086;
-  color: #fff;
+  background-color: white;
+  color: #2e0086;
 }
 .hero-wrapper img {
   max-width: 572px;
@@ -134,23 +177,9 @@
 
 /* MEDIA QUERY */
 
-@media screen and (max-width: 942px) {
-  .hero-wrapper .hero-content{
-    margin-top: 0em;
-  }
-
-  .hero-wrapper{
-    margin-top: 4em;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .hero-container {
     margin-bottom: 2em;
-  }
-
-  .hero-wrapper{
-    margin-top: 0;
   }
 
   .hero-wrapper {
@@ -160,14 +189,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 4em 1rem; /* Adjust padding as needed */
+    /* Adjust padding as needed */
     position: relative;
   }
   .hero-wrapper .hero-content {
+    margin-top: 3em !important;
     display: flex;
     flex-direction: column;
   }
-
   .hero-wrapper img {
     max-width: 200px;
   }
@@ -204,11 +233,8 @@
     margin-top: 3em;
     align-self: center;
   }
-  .items-mobile p{
-    color: #fff;
-  }
-
-  .items-mobile h1{
+  .items-mobile p,
+  h1 {
     color: #fff;
   }
 
@@ -281,11 +307,40 @@
   }
 }
 
+@media screen and (max-width: 750px) {
+  .hero-wrapper .hero-content {
+    padding: 0 0 4rem 0;
+  }
+  .hero-wrapper .texts h1 {
+    line-height: 48px;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero-wrapper .texts h1 {
+      line-height: 38px;
+      margin-bottom: .8rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  .hero-wrapper .texts p {
+      line-height: 25px;
+      margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero-wrapper .texts p {
+      font-size: clamp(17px, 4vw, 22px);
+  }
+}
+
 @media screen and (max-width: 420px) {
   .hero-wrapper .texts h1 {
-    font-size: clamp(20px, 3vw, 30px);
-    font-weight: 300;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 400;
     font-family: OggBold;
+    line-height: 30px;
   }
   .hero-wrapper img {
     max-width: 143px;

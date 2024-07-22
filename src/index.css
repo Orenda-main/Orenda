@@ -21,6 +21,29 @@ html *::after {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Ogg Text TRIAL';
+  src: url('./assets/fonts/Ogg Text TRIAL regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400; /* Regular */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ogg Text TRIAL';
+  src: url('./assets/fonts/Ogg Text TRIAL medium.otf');
+  font-style: normal;
+  font-weight: 500; /* Medium */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogg Text TRIAL';
+  src: url('./assets/fonts/Ogg Text TRIAL medium-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600; /* Semi-bold or Medium-Bold */
+  font-display: swap;
+}
+
 @layer base {
   html {
     color: #070707;
@@ -55,8 +78,6 @@ html *::after {
   }
 }
 
-
-
 h1,
 h2,
 h3,
@@ -65,7 +86,6 @@ h5,
 h6 {
   font-size: 16px;
 }
-
 
 @layer components {
   main p,
@@ -87,22 +107,16 @@ h6 {
   }
 }
 
-
-.css-dmmspl-MuiFormGroup-root{
+.css-dmmspl-MuiFormGroup-root {
   display: flex !important;
   gap: 1.5em !important;
- 
 }
 
-/* .css-13sljp9{
-  width: 100% !important;
-} */
-
-.tts{
+.tts {
   width: 100% !important;
 }
 
-.assessment2-right-checkbox{
+.assessment2-right-checkbox {
   border: 1px solid #C9C9C9 !important;
   padding: .3em .5em !important;
   border-radius: .5em !important;
@@ -111,16 +125,16 @@ h6 {
   margin-right: unset !important;
 }
 
-.css-1h7anqn{
+.css-1h7anqn {
   gap: 1.3em;
 }
 
-.css-ahj2mt-MuiTypography-root{
+.css-ahj2mt-MuiTypography-root {
   font-size: 1.2rem !important;
 }
 
-@media screen and (max-width: 693px){
-  .css-ahj2mt-MuiTypography-root{
-      font-size: 1rem !important;
+@media screen and (max-width: 693px) {
+  .css-ahj2mt-MuiTypography-root {
+    font-size: 1rem !important;
   }
 }

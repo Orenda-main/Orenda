@@ -43,8 +43,8 @@ const ContactUsPage = () => {
           <h1 className="heading">Contact Us</h1>
           <div className="~mt-8/[3.75rem] text-center md:text-left md:flex gap-10">
             <div className="md:flex-1">
-            <div>
-                <h2 className="font-heading ~text-lg/[1.375rem] mb-4">
+              <div>
+                <h2 className="font-heading font-bold ~text-lg/[1.375rem] mb-4">
                   Providing Mental Healthcare with Convenience
                 </h2>
                 <p className="~leading-6/8 max-w-[32.13rem] mx-auto md:mx-0 text-center md:text-justify">
@@ -81,7 +81,7 @@ const ContactUsPage = () => {
               </div>
               <div className="hidden md:block ~mt-10/16 ~space-y-10/12">
                 <div>
-                  <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
+                  <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                     Operating Hours
                   </h2>
                   <div>
@@ -95,7 +95,7 @@ const ContactUsPage = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
+                  <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                     Emergency Contact Information{' '}
                   </h2>
                   <p className="max-w-[32rem] ~text-sm/lg">
@@ -183,7 +183,7 @@ const ContactUsPage = () => {
           <div className="text-center md:text-left mt-6 space-y-10 md:flex mb-10 sm:~gap-0/[21rem]">
             <div className="md:hidden sm:flex gap-20 items-start">
               <div className="flex-shrink-0">
-                <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
+                <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                   Operating Hours
                 </h2>
                 <div className="~leading-6/8">
@@ -197,7 +197,7 @@ const ContactUsPage = () => {
                 </div>
               </div>
               <div className="mt-10 sm:mt-0">
-                <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
+                <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                   Emergency Contact Information{' '}
                 </h2>
                 <p className="text-center md:text-left">
@@ -218,7 +218,7 @@ const ContactUsPage = () => {
             </div>
             <div className="flex-shrink-0">
               <div>
-                <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
+                <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                   Main Contact Information
                 </h2>
                 <div>
@@ -271,7 +271,7 @@ const ContactUsPage = () => {
             </div>
             <div>
               <div className="~mb-6/10">
-                <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
+                <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                   Appointment Scheduling
                 </h2>
                 <p className="text-center md:text-left">
@@ -285,7 +285,7 @@ const ContactUsPage = () => {
                 </p>
               </div>
               <div>
-                <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
+                <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                   Insurance and Payment Information
                 </h2>
                 <p className="text-center md:text-left">
