@@ -13,6 +13,7 @@ import Frequent from './Frequent/Frequent'
 import Providers from '../OurTeam/Providers'
 import Phead from './Phead/Phead'
 import Hear from './Hear/Hear'
+import HearClients from './HearClients/HearClients'
 
 const Home = () => {
   return (
@@ -26,7 +27,8 @@ const Home = () => {
             <Treat/>
             <Handle/>
             <Available/>
-            <Hear/>
+            {/* <Hear/> */}
+            <HearClients/>
             <Journey/>
             <Location/>
             <Frequent/>

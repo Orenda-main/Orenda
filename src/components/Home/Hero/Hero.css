@@ -233,8 +233,11 @@
     margin-top: 3em;
     align-self: center;
   }
-  .items-mobile p,
-  h1 {
+  .items-mobile p {
+    color: #fff;
+  }
+
+  .items-mobile h1{
     color: #fff;
   }
 
