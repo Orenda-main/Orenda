@@ -67,7 +67,7 @@ const Journey = () => {
                 Call
               </button>
             </a>
-            <a href="tel:+1(347) 707-7735">
+            <a href="sms:+13477077735">
               <button className="text">
                 Text <img src={text} alt="" />
               </button>
@@ -77,7 +77,6 @@ const Journey = () => {
                 Email <img src={mail} alt="" />
               </button>
             </a>
-            
           </div>
         </div>
       </div>
