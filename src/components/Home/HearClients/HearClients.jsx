@@ -56,7 +56,7 @@ const HearClients = () => {
         <h1 className="hear-heading">Hear from our Clients!</h1>
 
         <div className="main-hear">
-          <img src={quote} alt="" />
+          {/* <img src={quote} alt="" /> */}
 
           <div className="text-arrow custom-slick-slider">
             <Slider ref={slider} {...settings}>
