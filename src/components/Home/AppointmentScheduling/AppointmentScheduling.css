@@ -11,13 +11,13 @@
 
 .appointment-wrapper{
     width: 90%;
-    background-color: #FBF5EA;
+    background-color: #F8F8FF;
     padding: 2em 2em;
     display: flex;
     gap: 1em;
     align-items: flex-start;
     border-radius: 1em;
-    border: 1.5px solid #D3A056;
+    border: 1.5px solid #2E0086;
 }
 
 .appointment-main h3{

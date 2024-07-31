@@ -5,11 +5,10 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { Link, NavLink } from 'react-router-dom';
 import Footer from '../../Footer/Footer';
 import Header from '../../Header';
 
-const Assessment1 = () => {
+const Assessment1 = ({ nextQuestion }) => {
   const [age, setAge] = useState('');
   const [error, setError] = useState(false);
   const [showFooter, setShowFooter] = useState(false);
@@ -20,7 +19,9 @@ const Assessment1 = () => {
   };
 
   const handleNextClick = () => {
-    if (!age) {
+    if (age) {
+      nextQuestion();
+    } else {
       setError(true);
     }
   };
@@ -45,15 +46,13 @@ const Assessment1 = () => {
 
   return (
     <div className="assessment1-container">
-      {showFooter && <Header/>}
+      {showFooter && <Header />}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <Link to="/">
-            <div className="homepage">
-              <ArrowBackIosIcon style={{ color: 'white' }} />
-              <p style={{ color: 'white' }}>Homepage</p>
-            </div>
-          </Link>
+          <div className="homepage">
+            <ArrowBackIosIcon style={{ color: 'white' }} />
+            <p style={{ color: 'white' }}>Homepage</p>
+          </div>
 
           <div className="question">
             <p className="q-no">Question 1 of 4</p>
@@ -85,17 +84,11 @@ const Assessment1 = () => {
           </FormControl>
           {error && <p className="error-message">Please select an age range before proceeding.</p>}
           <div className="next-prev">
-            {age ? (
-              <NavLink to='/Assessment2'>
-                <div className="next">Next</div>
-              </NavLink>
-            ) : (
-              <button className="next" onClick={handleNextClick}>Next</button>
-            )}
+            <button className="next" onClick={handleNextClick}>Next</button>
           </div>
         </div>
       </div>
-      {showFooter && <Footer />} {/* Conditionally render the Footer component */}
+      {showFooter && <Footer />}
     </div>
   );
 };

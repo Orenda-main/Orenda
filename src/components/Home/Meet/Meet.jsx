@@ -14,7 +14,7 @@ const Meet = () => {
             Take this assessment and we'll help pair you to the right provider.
           </p>
           <div>
-            <NavLink to="/Assessment1">
+            <NavLink to="/Assessment">
               <button>Take Assessment</button>
             </NavLink>
             

@@ -10,12 +10,10 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
-import { Link, NavLink } from 'react-router-dom';
-import { Headphones } from '@mui/icons-material';
 import Header from '../../Header';
 import Footer from '../../Footer/Footer';
 
-const Assessment3 = () => {
+const Assessment3 = ({ nextQuestion, prevQuestion }) => {
   const [location, setLocation] = useState('');
   const [error, setError] = useState(false);
   const [showFooter, setShowFooter] = useState(false);
@@ -84,20 +82,24 @@ const Assessment3 = () => {
     const { value } = event.target;
     setLocation(value);
     setError(false); // Reset the error state on change
-    console.log(value);
   };
 
   const handleSelectChange = (event) => {
     const { value } = event.target;
     setLocation(value);
     setError(false); // Reset the error state on change
-    console.log(value);
   };
 
   const handleNextClick = () => {
-    if (!location) {
+    if (location) {
+      nextQuestion();
+    } else {
       setError(true);
     }
+  };
+
+  const handlePrevClick = () => {
+    prevQuestion();
   };
 
   const isRadioOptionSelected = radioOptions.includes(location);
@@ -122,15 +124,13 @@ const Assessment3 = () => {
 
   return (
     <div className="assessment1-container">
-      {showFooter && <Header/>}
+      {showFooter && <Header />}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <Link to="/">
-            <div className="homepage">
-              <ArrowBackIosIcon style={{ color: 'white' }} />
-              <p style={{ color: 'white' }}>Homepage</p>
-            </div>
-          </Link>
+          <div className="homepage" onClick={handlePrevClick}>
+            <ArrowBackIosIcon style={{ color: 'white' }} />
+            <p style={{ color: 'white' }}>Homepage</p>
+          </div>
 
           <div className="question">
             <p className="q-no">Question 3 of 4</p>
@@ -174,20 +174,12 @@ const Assessment3 = () => {
           </FormControl>
           {error && <p className="error-message">Please select a location before proceeding.</p>}
           <div className="next-prev">
-            <NavLink to='/Assessment2'>
-                <div className="prev">Previous</div>
-            </NavLink>
-            {location ? (
-              <NavLink to='/Assessment4'>
-                <div className="next">Next</div>
-              </NavLink>
-            ) : (
-              <button className="next" onClick={handleNextClick}>Next</button>
-            )}
+            <button className="prev" onClick={handlePrevClick}>Previous</button>
+            <button className="next" onClick={handleNextClick}>Next</button>
           </div>
         </div>
       </div>
-      {showFooter && <Footer/>}
+      {showFooter && <Footer />}
     </div>
   );
 };

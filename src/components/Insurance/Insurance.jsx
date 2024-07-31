@@ -4,7 +4,6 @@ import { useRef, useState, createContext, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useForm } from 'react-hook-form';
-import Network from '../Network/Network';
 import Network2 from '../Network/Network2';
 import AppointmentScheduling from '../Home/AppointmentScheduling/AppointmentScheduling';
 
@@ -12,15 +11,14 @@ gsap.registerPlugin(useGSAP);
 
 export const PageNumberContext = createContext();
 
+const InsuranceSchedule = {
+  heading: "Insurance Information Disclaimer",
+  title1: "Please note that we do not have full access to all details regarding your insurance coverage. While we strive to assist you in understanding your benefits, certain specifics—such as deductibles, co-pays, and coverage limits may require direct confirmation from your insurance carrier.",
+  title2: "We recommend that you contact your insurance provider for detailed information and clarification on your coverage, including any potential out-of-pocket expenses. This will help ensure that you are fully informed about your benefits and financial responsibilities.",
+  title3: "We appreciate your understanding and are here to support you with any general questions or assistance you may need."
+};
+
 const Insurance = () => {
-  const Insurance = {
-    heading: "Insurance Information Disclaimer",
-    title1: "Please note that we do not have full access to all details regarding your insurance coverage. While we strive to assist you in understanding your benefits, certain specifics—such as deductibles, co-pays, and coverage limits may require direct confirmation from your insurance carrier.",
-    title2: "We recommend that you contact your insurance provider for detailed information and clarification on your coverage, including any potential out-of-pocket expenses. This will help ensure that you are fully informed about your benefits and financial responsibilities.",
-    title3: "We appreciate your understanding and are here to support you with any general questions or assistance you may need."
-  };
-
-
   //React Hook Form
   const {
     register,
@@ -155,24 +153,14 @@ const Insurance = () => {
             </div>
           </div>
         )}
-        <div className="mt-0">
+        <div className="mt-0"></div>
+        <main className="px-5 ~pb-[3.31rem]/[10rem] ~mt-12/28">
+          <h1 className="heading">Let's check your plan!</h1>
           <Network2 />
-        </div>
-
-
-        <main className="px-5 ~pb-[3.31rem]/[10rem] ~mt-10/20">
-          <h1 className="heading ~mb-2/4">Let's check your plan!</h1>
-          <p className="max-w-[38.32rem] mx-auto text-center">
+          <p className="w-4/5 max-w-[38.32rem] mx-auto text-center">
             Please complete this form to verify if your insurance is in network
             and what your Co-pay will be.
           </p>
-
-          <AppointmentScheduling
-            app_heading={Insurance.heading}
-            app_tittle1={Insurance.title1}
-            app_tittle2={Insurance.title2}
-            app_tittle3={Insurance.title3}
-          />
 
           <div className="~mt-8/16">
             <form
@@ -223,6 +211,12 @@ const Insurance = () => {
               </div>
             </form>
           </div>
+          <AppointmentScheduling
+            app_heading={InsuranceSchedule.heading}
+            app_tittle1={InsuranceSchedule.title1}
+            app_tittle2={InsuranceSchedule.title2}
+            app_tittle3={InsuranceSchedule.title3}
+          />
         </main>
       </div>
     </PageNumberContext.Provider>

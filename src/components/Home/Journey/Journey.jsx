@@ -9,6 +9,14 @@ import text from "../../../assets/text.png";
 import mail from "../../../assets/mail.png";
 import callpurple from "../../../assets/callpurple.png";
 import { Link } from "react-router-dom";
+import AppointmentScheduling from "../AppointmentScheduling/AppointmentScheduling";
+
+const Appointment = {
+  heading: "Appointment Scheduling Disclaimer",
+  title1: "Please note that all appointments are confirmed on a first-come, first-served basis. While we do our utmost best to accommodate your preferred schedule and provider, availability may vary due to high demand.",
+  title2: "Our dedicated support team is always here to assist you in finding the right provider and scheduling a convenient appointment time. We are committed to ensuring that your intake process is smooth and that you receive the care you need in a timely manner.",
+  title3: "If you encounter any scheduling conflicts or have specific needs, please don't hesitate to reach out to our support team."
+};
 
 const Journey = () => {
   return (
@@ -45,6 +53,12 @@ const Journey = () => {
           </div>
         </div>
         <hr />
+        <AppointmentScheduling
+          app_heading={Appointment.heading}
+          app_tittle1={Appointment.title1}
+          app_tittle2={Appointment.title2}
+          app_tittle3={Appointment.title3}
+        />
         <div className="patient">
           <div className="new-patient">
             <img src={undraw} alt="" className="~w-[2.5rem]/[9rem]" />
@@ -52,7 +66,7 @@ const Journey = () => {
             <p>To schedule your first appointment;</p>
             <a href="tel:+1(347) 707-7735">
               <button className="one">
-                <img src={callpurple} alt=""  className="color-img"/>
+                <img src={callpurple} alt="" className="color-img" />
                 Call
               </button>
             </a>

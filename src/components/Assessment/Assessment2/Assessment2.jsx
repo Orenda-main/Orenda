@@ -6,13 +6,10 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import { Link, NavLink } from 'react-router-dom';
 import Header from '../../Header';
 import Footer from '../../Footer/Footer';
 
-
-const Assessment2 = () => {
-
+const Assessment2 = ({ nextQuestion, prevQuestion }) => {
   const [session, setSession] = useState('');
   const [error, setError] = useState(false);
   const [showFooter, setShowFooter] = useState(false);
@@ -24,9 +21,15 @@ const Assessment2 = () => {
   };
 
   const handleNextClick = () => {
-    if (!session) {
+    if (session) {
+      nextQuestion();
+    } else {
       setError(true);
     }
+  };
+
+  const handlePrevClick = () => {
+    prevQuestion();
   };
 
   useEffect(() => {
@@ -49,15 +52,13 @@ const Assessment2 = () => {
 
   return (
     <div className="assessment1-container">
-      {showFooter && <Header/>}
+      {showFooter && <Header />}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <Link to="/">
-            <div className="homepage">
-              <ArrowBackIosIcon style={{ color: 'white' }} />
-              <p style={{ color: 'white' }}>Homepage</p>
-            </div>
-          </Link>
+          <div className="homepage" onClick={handlePrevClick}>
+            <ArrowBackIosIcon style={{ color: 'white' }} />
+            <p style={{ color: 'white' }}>Homepage</p>
+          </div>
 
           <div className="question">
             <p className='q-no'>Question 2 of 4</p>
@@ -91,20 +92,12 @@ const Assessment2 = () => {
           </FormControl>
           {error && <p className="error-message">Please select a session focus before proceeding.</p>}
           <div className="next-prev">
-          <NavLink to='/Assessment1'>
-            <div className="prev">Previous</div>
-          </NavLink>
-            {session ? (
-              <NavLink to='/Assessment3'>
-                <div className="next">Next</div>
-              </NavLink>
-            ) : (
-              <button className="next" onClick={handleNextClick}>Next</button>
-            )}
+            <button className="prev" onClick={handlePrevClick}>Previous</button>
+            <button className="next" onClick={handleNextClick}>Next</button>
           </div>
         </div>
       </div>
-      {showFooter && <Footer/> }
+      {showFooter && <Footer />}
     </div>
   );
 }
