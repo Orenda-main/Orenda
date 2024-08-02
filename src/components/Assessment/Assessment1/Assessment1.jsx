@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './Assessment1.css';
+import React, { useEffect, useState } from 'react';
+import { useFormContext, Controller } from 'react-hook-form';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import './Assessment1.css';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -9,20 +10,16 @@ import Footer from '../../Footer/Footer';
 import Header from '../../Header';
 
 const Assessment1 = ({ nextQuestion }) => {
-  const [age, setAge] = useState('');
-  const [error, setError] = useState(false);
+  const { control, setValue, watch, formState: { errors } } = useFormContext();
   const [showFooter, setShowFooter] = useState(false);
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-    setError(false); // Reset the error state on change
-  };
+  const age = watch('question1');
 
   const handleNextClick = () => {
     if (age) {
       nextQuestion();
     } else {
-      setError(true);
+      setValue('question1', '', { shouldValidate: true }); // Trigger validation
     }
   };
 
@@ -49,7 +46,7 @@ const Assessment1 = ({ nextQuestion }) => {
       {showFooter && <Header />}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <div className="homepage">
+          <div className="homepage" onClick={() => console.log('Homepage Clicked')}>
             <ArrowBackIosIcon style={{ color: 'white' }} />
             <p style={{ color: 'white' }}>Homepage</p>
           </div>
@@ -64,25 +61,36 @@ const Assessment1 = ({ nextQuestion }) => {
 
         <div className="assessment1-right">
           <FormControl className='tts'>
-            <InputLabel id="demo-simple-select-helper-label">Select age range</InputLabel>
-            <Select
-              labelId="demo-simple-select-helper-label"
-              id="demo-simple-select-helper"
-              value={age}
-              label="Select age range"
-              onChange={handleChange}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value="5 - 13 yrs">5 - 13 yrs</MenuItem>
-              <MenuItem value="13 - 17 yrs">13 - 17 yrs</MenuItem>
-              <MenuItem value="18 - 24 yrs">18 - 24 yrs</MenuItem>
-              <MenuItem value="25 - 64 yrs">25 - 64 yrs</MenuItem>
-              <MenuItem value="65+ yrs">65+ yrs</MenuItem>
-            </Select>
+            <InputLabel id="age-range-label">Select age range</InputLabel>
+            <Controller
+              name="question1"
+              control={control}
+              defaultValue=""
+              rules={{ required: 'Please select an age range before proceeding.' }}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  labelId="age-range-label"
+                  id="age-range-select"
+                  label="Select age range"
+                  onChange={(e) => {
+                    field.onChange(e);
+                    setValue('question1', e.target.value);
+                  }}
+                >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
+                  <MenuItem value="5 - 13 yrs">5 - 13 yrs</MenuItem>
+                  <MenuItem value="13 - 17 yrs">13 - 17 yrs</MenuItem>
+                  <MenuItem value="18 - 24 yrs">18 - 24 yrs</MenuItem>
+                  <MenuItem value="25 - 64 yrs">25 - 64 yrs</MenuItem>
+                  <MenuItem value="65+ yrs">65+ yrs</MenuItem>
+                </Select>
+              )}
+            />
+            {errors.question1 && <p className="error-message">{errors.question1.message}</p>}
           </FormControl>
-          {error && <p className="error-message">Please select an age range before proceeding.</p>}
           <div className="next-prev">
             <button className="next" onClick={handleNextClick}>Next</button>
           </div>

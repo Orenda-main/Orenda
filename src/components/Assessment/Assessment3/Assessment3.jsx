@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useFormContext, Controller } from 'react-hook-form';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import '../Assessment1/Assessment1.css';
 import '../Assessment2/Assessment2.css';
@@ -14,9 +15,10 @@ import Header from '../../Header';
 import Footer from '../../Footer/Footer';
 
 const Assessment3 = ({ nextQuestion, prevQuestion }) => {
-  const [location, setLocation] = useState('');
-  const [error, setError] = useState(false);
+  const { control, setValue, watch, formState: { errors } } = useFormContext();
   const [showFooter, setShowFooter] = useState(false);
+
+  const location = watch('question3');
 
   const radioOptions = [
     'New York',
@@ -78,23 +80,11 @@ const Assessment3 = ({ nextQuestion, prevQuestion }) => {
     { label: 'Wyoming', value: 'Wyoming' }
   ];
 
-  const handleRadioChange = (event) => {
-    const { value } = event.target;
-    setLocation(value);
-    setError(false); // Reset the error state on change
-  };
-
-  const handleSelectChange = (event) => {
-    const { value } = event.target;
-    setLocation(value);
-    setError(false); // Reset the error state on change
-  };
-
   const handleNextClick = () => {
     if (location) {
       nextQuestion();
     } else {
-      setError(true);
+      setValue('question3', '', { shouldValidate: true }); // Trigger validation
     }
   };
 
@@ -141,38 +131,65 @@ const Assessment3 = ({ nextQuestion, prevQuestion }) => {
 
         <div className="assessment2-right">
           <FormControl className="a2r">
-            <RadioGroup value={location} onChange={handleRadioChange}>
-              {radioOptions.map((option) => (
-                <FormControlLabel
-                  key={option}
-                  className="assessment2-right-checkbox"
-                  control={<Radio />}
-                  label={option}
-                  value={option}
-                />
-              ))}
-            </RadioGroup>
+            <Controller
+              name="question3"
+              control={control}
+              defaultValue=""
+              rules={{ required: 'Please select a location before proceeding.' }}
+              render={({ field }) => (
+                <RadioGroup
+                  {...field}
+                  value={field.value}
+                  onChange={(e) => {
+                    field.onChange(e);
+                    setValue('question3', e.target.value);
+                  }}
+                >
+                  {radioOptions.map((option) => (
+                    <FormControlLabel
+                      key={option}
+                      className="assessment2-right-checkbox"
+                      control={<Radio />}
+                      label={option}
+                      value={option}
+                    />
+                  ))}
+                </RadioGroup>
+              )}
+            />
           </FormControl>
           <FormControl className="sel3">
             <InputLabel id="demo-simple-select-helper-label">Other (select)</InputLabel>
-            <Select
-              labelId="demo-simple-select-helper-label"
-              id="demo-simple-select-helper"
-              value={isRadioOptionSelected ? '' : location}
-              label="Other (select)"
-              onChange={handleSelectChange}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              {selectOptions.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </Select>
+            <Controller
+              name="question3"
+              control={control}
+              defaultValue=""
+              rules={{ required: 'Please select a location before proceeding.' }}
+              render={({ field }) => (
+                <Select
+                  labelId="demo-simple-select-helper-label"
+                  id="demo-simple-select-helper"
+                  {...field}
+                  value={isRadioOptionSelected ? '' : field.value}
+                  label="Other (select)"
+                  onChange={(e) => {
+                    field.onChange(e);
+                    setValue('question3', e.target.value);
+                  }}
+                >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
+                  {selectOptions.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </Select>
+              )}
+            />
           </FormControl>
-          {error && <p className="error-message">Please select a location before proceeding.</p>}
+          {errors.question3 && <p className="error-message">{errors.question3.message}</p>}
           <div className="next-prev">
             <button className="prev" onClick={handlePrevClick}>Previous</button>
             <button className="next" onClick={handleNextClick}>Next</button>

@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @tailwind base;
@@ -76,6 +78,22 @@ html *::after {
     appearance: none;
     margin: 0;
   }
+
+  input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background: url('/src/assets/xmark-solid.svg') no-repeat 50% 50%;
+    background-size: contain;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  input[type='search']:focus::-webkit-search-cancel-button {
+    opacity: 0.5;
+    pointer-events: all;
+  }
 }
 
 h1,
@@ -99,11 +117,15 @@ h6 {
     @apply font-bold ~text-[1.35rem]/[2.625rem] text-center font-heading;
   }
   .footer__heading {
-    @apply font-bold ~sm/xl:~text-sm/lg text-justify ~mb-2/4;
+    @apply font-bold ~sm/xl:~text-sm/lg text-left ~mb-2/4;
   }
 
   .fieldset {
     @apply border border-[#D6D6D6] font-dm-sans rounded-2xl ~pt-6/[1.69rem] ~pb-[3.25rem]/[4.06rem] ~pl-4/[3.63rem] ~pr-4/[4.75rem];
+  }
+
+  .card__shadow {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   }
 }
 

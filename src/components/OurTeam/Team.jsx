@@ -1,4 +1,4 @@
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Keyboard } from 'swiper/modules';
 import teamData from '../../data/teamData';
 import NavButtons from './NavButtons';
 import TeamMemberCard from './TeamMemberCard';
@@ -7,27 +7,13 @@ import { useRef, useState } from 'react';
 import TeamMembersSection from './TeamMembersSection';
 
 const Team = ({ itemsPerPage }) => {
-  const [itemOffset, setItemOffset] = useState(0);
-  const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
   const numberOfSlides = Math.ceil(teamData.length / itemsPerPage);
   const teamSwiperHanger = useRef();
 
-  const nextSlide = () => {
-    setItemOffset((prevOffset) => prevOffset + itemsPerPage);
-    setEndOffSet((prevOffset) => prevOffset + itemsPerPage);
-  };
-  const prevSlide = () => {
-    setItemOffset((prevOffset) => prevOffset - itemsPerPage);
-    setEndOffSet((prevOffset) => prevOffset - itemsPerPage);
-  };
-
+  const [activeIndex, setActiveIndex] = useState(1);
   const handleSlideChange = (swiper) => {
     teamSwiperHanger?.current.scrollIntoView(true);
-    if (swiper.activeIndex > swiper.previousIndex) {
-      nextSlide();
-    } else {
-      prevSlide();
-    }
+    setActiveIndex(swiper.activeIndex + 1);
   };
 
   return (
@@ -44,18 +30,34 @@ const Team = ({ itemsPerPage }) => {
             spaceBetween={50}
             slidesPerView={1}
             autoHeight={true}
+            keyboard={{
+              enabled: true
+            }}
+            modules={[Keyboard]}
           >
-            {[...Array(numberOfSlides)].map((_, index) => (
-              <SwiperSlide spaceBetween={50} key={index}>
-                <TeamMembersSection
-                  itemOffset={itemOffset}
-                  endOffset={endOffset}
-                />
-              </SwiperSlide>
-            ))}
+            {teamData
+              .reduce((slidesArray, member, index) => {
+                const slideIndex = Math.floor(index / itemsPerPage);
+
+                if (!slidesArray[slideIndex]) {
+                  slidesArray[slideIndex] = [];
+                }
+
+                slidesArray[slideIndex].push(member);
+
+                return slidesArray;
+              }, [])
+              .map((slide, index) => (
+                <SwiperSlide spaceBetween={50} key={index}>
+                  <TeamMembersSection slide={slide} />
+                </SwiperSlide>
+              ))}
 
             <div className="max-w-[13.7rem] ms-auto flex justify-end mt-8">
-              <NavButtons numberOfSlides={numberOfSlides} />
+              <NavButtons
+                activeIndex={activeIndex}
+                numberOfSlides={numberOfSlides}
+              />
             </div>
           </Swiper>
         </div>

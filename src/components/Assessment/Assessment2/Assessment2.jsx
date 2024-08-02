@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useFormContext, Controller } from 'react-hook-form';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import '../Assessment1/Assessment1.css';
 import './Assessment2.css';
@@ -10,21 +11,20 @@ import Header from '../../Header';
 import Footer from '../../Footer/Footer';
 
 const Assessment2 = ({ nextQuestion, prevQuestion }) => {
-  const [session, setSession] = useState('');
-  const [error, setError] = useState(false);
+  const { control, formState: { errors }, setValue, watch } = useFormContext();
   const [showFooter, setShowFooter] = useState(false);
 
+  const session = watch('question2');
+
   const handleChange = (event) => {
-    const { value } = event.target;
-    setSession(value);
-    setError(false); // Reset the error state on change
+    setValue('question2', event.target.value);
   };
 
   const handleNextClick = () => {
     if (session) {
       nextQuestion();
     } else {
-      setError(true);
+      setValue('question2', '', { shouldValidate: true }); // Trigger validation
     }
   };
 
@@ -69,37 +69,52 @@ const Assessment2 = ({ nextQuestion, prevQuestion }) => {
 
         <div className="assessment2-right">
           <FormControl className='a2r'>
-            <RadioGroup value={session} onChange={handleChange}>
-              <FormControlLabel
-                className='assessment2-right-checkbox'
-                control={<Radio />}
-                label="Medication Management (with brief talk therapy)"
-                value="Medication Management (with brief talk therapy)"
-              />
-              <FormControlLabel
-                className='assessment2-right-checkbox'
-                control={<Radio />}
-                label="Weekly/Bi-weekly Talk Therapy only"
-                value="Weekly/Bi-weekly Talk Therapy only"
-              />
-              <FormControlLabel
-                className='assessment2-right-checkbox'
-                control={<Radio />}
-                label="Combined (A mix of both)"
-                value="Combined (A mix of both)"
-              />
-            </RadioGroup>
+            <Controller
+              name="question2"
+              control={control}
+              defaultValue=""
+              rules={{ required: 'Please select a session focus before proceeding.' }}
+              render={({ field }) => (
+                <RadioGroup
+                  {...field}
+                  value={field.value}
+                  onChange={(e) => {
+                    field.onChange(e);
+                    handleChange(e);
+                  }}
+                >
+                  <FormControlLabel
+                    className='assessment2-right-checkbox'
+                    control={<Radio />}
+                    label="Counseling"
+                    value="Counseling"
+                  />
+                  <FormControlLabel
+                    className='assessment2-right-checkbox'
+                    control={<Radio />}
+                    label="Support Groups"
+                    value="Support Groups"
+                  />
+                  <FormControlLabel
+                    className='assessment2-right-checkbox'
+                    control={<Radio />}
+                    label="Workshops"
+                    value="Workshops"
+                  />
+                </RadioGroup>
+              )}
+            />
           </FormControl>
-          {error && <p className="error-message">Please select a session focus before proceeding.</p>}
+          {errors.question2 && <p className='error-message'>{errors.question2.message}</p>}
           <div className="next-prev">
-            <button className="prev" onClick={handlePrevClick}>Previous</button>
-            <button className="next" onClick={handleNextClick}>Next</button>
+            <button className="prev" type="button" onClick={handlePrevClick}>Previous</button>
+            <button className="next" type="button" onClick={handleNextClick}>Next</button>
           </div>
         </div>
       </div>
       {showFooter && <Footer />}
     </div>
   );
-}
+};
 
 export default Assessment2;

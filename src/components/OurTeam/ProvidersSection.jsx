@@ -1,26 +1,20 @@
-import providersData from '../../data/providersData';
-import ProviderCard from './ProviderCard';
+import ProviderCardSmall from './ProviderCardSmall';
 
-const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
-  const sectionProvidersData = providersData.slice(itemOffset, endOffset);
-
-  let gridClasses = `grid auto-cols-fr grid-cols-1 ${
-    numberOfColumns === 5
-      ? 'gap-x-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'
-      : '~gap-x-0/7 sm:grid-cols-2 lg:grid-cols-3 forProviders:grid-cols-4'
-  } gap-y-10 justify-items-center items-stretch pb-6`;
-
+const ProvidersSection = ({ slide, numberOfColumns, setProvidersData }) => {
   return (
-    <div className={gridClasses}>
-      {sectionProvidersData.map((provider) => {
-        const index = providersData.findIndex(
-          (obj) => obj.name === provider?.name
-        );
+    <div
+      className={`grid ${
+        numberOfColumns === 5
+          ? 'gap-x-4 grid-cols-autofill'
+          : '~gap-x-0/7 sm:grid-cols-2 lg:grid-cols-3 forProviders:grid-cols-4'
+      } gap-y-10 justify-items-center items-stretch pb-6`}
+    >
+      {slide.map((provider) => {
         return (
-          <ProviderCard
-            numberOfColumns={numberOfColumns}
+          <ProviderCardSmall
+            key={provider.id}
             provider={provider}
-            index={index}
+            setProvidersData={setProvidersData}
           />
         );
       })}

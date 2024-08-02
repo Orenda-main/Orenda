@@ -1,9 +1,7 @@
 import { useSwiper } from 'swiper/react';
 
-const NavButtons = ({ numberOfSlides }) => {
+const NavButtons = ({ activeIndex, numberOfSlides }) => {
   const swiper = useSwiper();
-
-  let activeIndex = swiper.activeIndex + 1;
 
   return (
     <div className="max-w-7xl mx-auto">
