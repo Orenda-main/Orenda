@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import ScrollToTop from './ScrollToTop';
 import OurTeam from './components/OurTeam/OurTeam';
-import ProviderInfo from './components/OurTeam/Provider Info/ProviderInfo';
+import ProviderInfo from './components/Provider Info/ProviderInfo';
 import Insurance from './components/Insurance/Insurance';
 import Privacy from './components/Privacy/PrivacyPolicy';
 import Assessment1 from './components/Assessment/Assessment1/Assessment1';
@@ -38,7 +38,7 @@ function App() {
             <Route path="contact" element={<ContactUsPage />} />
             <Route path="Insurance" element={<Insurance />} />
             <Route path="privacypolicy" element={<Privacy/>} />
-            <Route path="Provider/:index" element={<ProviderInfo/>} />
+            <Route path="Provider/:name" element={<ProviderInfo/>} />
             <Route path="blogs" element={<Blog />} />
             <Route path="blog info" element={<Bloginfo />} />
             <Route path="becomeprovider" element={<BecomeProviderPage />} />
