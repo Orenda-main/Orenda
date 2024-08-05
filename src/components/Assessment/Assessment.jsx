@@ -4,9 +4,16 @@ import Assessment1 from './Assessment1/Assessment1';
 import Assessment2 from './Assessment2/Assessment2';
 import Assessment3 from './Assessment3/Assessment3';
 import Assessment4 from './Assessment4/Assessment4';
+import { useProviders } from '../../services/queries';
+import Providers from '../OurTeam/Providers';
+import ProviderModal from './ProviderModal/ProviderModal';
 
 const Assessment = () => {
   const [question, setQuestion] = useState(0);
+  const providers = useProviders();
+  const [providersData, setProvidersData] = useState(providers.data);
+  const [modalVisible, setModalVisible] = useState(false);
+ 
 
   const methods = useForm({
     defaultValues: {
@@ -29,6 +36,7 @@ const Assessment = () => {
   const onSubmit = (data) => {
     console.log(data);
     // Handle form submission
+    setModalVisible(true);
   };
 
   return (
@@ -48,6 +56,7 @@ const Assessment = () => {
             )}
           </form>
         </FormProvider>
+        {modalVisible && <ProviderModal providers={providersData} onClose={() => setModalVisible(false)} />}
       </div>
     </div>
   );

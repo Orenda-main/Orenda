@@ -59,7 +59,7 @@ const Header = () => {
                   ['Insurance', '/insurance'],
                   ['About', '/about'],
                   ['Blog', '/blogs'],
-                  ['Privacypolicy', '/privacypolicy'],
+                  ['Privacy policy', '/privacypolicy'],
                   ['Contact Us', '/contact'],
                   ['Join Our Team', '/becomeprovider']
                 ].map(([title, url]) => (
@@ -138,7 +138,7 @@ const Header = () => {
                     ['About', '/about', 'fa-solid fa-address-card'],
                     ['Blog', '/blogs', 'fa-solid fa-blog'],
                     [
-                      'Privacypolicy',
+                      'Privacy policy',
                       '/privacypolicy',
                       'fa-solid fa-file-shield'
                     ],

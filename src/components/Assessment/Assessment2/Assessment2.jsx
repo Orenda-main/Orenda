@@ -86,20 +86,20 @@ const Assessment2 = ({ nextQuestion, prevQuestion }) => {
                   <FormControlLabel
                     className='assessment2-right-checkbox'
                     control={<Radio />}
-                    label="Counseling"
-                    value="Counseling"
+                    label="Medication Management (with brief talk therapy)"
+                    value="Medication Management (with brief talk therapy)"
                   />
                   <FormControlLabel
                     className='assessment2-right-checkbox'
                     control={<Radio />}
-                    label="Support Groups"
-                    value="Support Groups"
+                    label="Weekly/Bi-weekly Talk Therapy only"
+                    value="Weekly/Bi-weekly Talk Therapy only"
                   />
                   <FormControlLabel
                     className='assessment2-right-checkbox'
                     control={<Radio />}
-                    label="Workshops"
-                    value="Workshops"
+                    label="Combined (A mix of both)"
+                    value="Combined (A mix of both)"
                   />
                 </RadioGroup>
               )}

@@ -31,11 +31,51 @@ const Assessment4 = ({ prevQuestion, handleSubmit }) => {
   ];
 
   const selectOptions = [
-    { label: '5 - 13 yrs', value: '5 - 13 yrs' },
-    { label: '13 - 17 yrs', value: '13 - 17 yrs' },
-    { label: '18 - 24 yrs', value: '18 - 24 yrs' },
-    { label: '25 - 64 yrs', value: '25 - 64 yrs' },
-    { label: '65+ yrs', value: '65+ yrs' },
+    { label: 'Anger Management', value: 'Anger Management' },
+    { label: 'Autism/Autism Spectrum Disorders (ASD)', value: 'Autism/Autism Spectrum Disorders (ASD)' },
+    { label: 'Bipolar Disorder', value: 'Bipolar Disorder' },
+    { label: 'Body Image', value: 'Body Image' },
+    { label: 'CBT', value: 'CBT' },
+    { label: 'Chronic Pain', value: 'Chronic Pain' },
+    { label: 'Couples', value: 'Couples' },
+    { label: 'Depression', value: 'Depression' },
+    { label: 'Family Trauma', value: 'Family Trauma' },
+    { label: 'Fetal Loss', value: 'Fetal Loss' },
+    { label: 'Gender Affirming Care', value: 'Gender Affirming Care' },
+    { label: 'Generalized Anxiety Disorder (GAD)', value: 'Generalized Anxiety Disorder (GAD)' },
+    { label: 'Grief/Grief Therapy', value: 'Grief/Grief Therapy' },
+    { label: 'Group therapy', value: 'Group therapy' },
+    { label: 'Infertility/Fertility Challenges', value: 'Infertility/Fertility Challenges' },
+    { label: 'Insomnia', value: 'Insomnia' },
+    { label: 'Issues with Self Esteem', value: 'Issues with Self Esteem' },
+    { label: 'LGBTQ+ Care', value: 'LGBTQ+ Care' },
+    { label: 'Life Transitions in Young Adulthood', value: 'Life Transitions in Young Adulthood' },
+    { label: 'Major Depressive Disorder (MDD)', value: 'Major Depressive Disorder (MDD)' },
+    { label: 'Maternity / Post Partum', value: 'Maternity / Post Partum' },
+    { label: 'Medication-Assisted Treatment', value: 'Medication-Assisted Treatment' },
+    { label: 'Menopause', value: 'Menopause' },
+    { label: 'Men\'s Health', value: 'Men\'s Health' },
+    { label: 'Mood Disorders', value: 'Mood Disorders' },
+    { label: 'OCD', value: 'OCD' },
+    { label: 'Oppositional Defiant Disorder', value: 'Oppositional Defiant Disorder' },
+    { label: 'Panic Disorders (DOS)', value: 'Panic Disorders (DOS)' },
+    { label: 'Personality Disorders', value: 'Personality Disorders' },
+    { label: 'Post-Partum Depression (PPD)', value: 'Post-Partum Depression (PPD)' },
+    { label: 'Premenstrual Dysphoric Disorder (PMDD)', value: 'Premenstrual Dysphoric Disorder (PMDD)' },
+    { label: 'Premenstrual Syndrome (PMS)', value: 'Premenstrual Syndrome (PMS)' },
+    { label: 'Psychosis', value: 'Psychosis' },
+    { label: 'Psychotherapy', value: 'Psychotherapy' },
+    { label: 'PTSD', value: 'PTSD' },
+    { label: 'Relationships', value: 'Relationships' },
+    { label: 'Schizophrenia', value: 'Schizophrenia' },
+    { label: 'Sexual Dysfunction', value: 'Sexual Dysfunction' },
+    { label: 'Social Anxiety', value: 'Social Anxiety' },
+    { label: 'Stress-related', value: 'Stress-related' },
+    { label: 'Talk Therapy', value: 'Talk Therapy' },
+    { label: 'Tics/Tourette Syndrome', value: 'Tics/Tourette Syndrome' },
+    { label: 'Trauma', value: 'Trauma' },
+    { label: 'Weight Management', value: 'Weight Management' },
+    { label: 'Women\'s Health', value: 'Women\'s Health' }
   ];
 
   const handlePrevClick = () => {
@@ -66,7 +106,7 @@ const Assessment4 = ({ prevQuestion, handleSubmit }) => {
     <div className="assessment1-container">
       {showFooter && <Header />}
       <div className="assessment1-wrapper">
-        <div className="assessment1-left">
+        <div className="assessment1-left assessment4-left">
           <div className="homepage" onClick={handlePrevClick}>
             <ArrowBackIosIcon style={{ color: 'white' }} />
             <p style={{ color: 'white' }}>Homepage</p>
@@ -79,7 +119,7 @@ const Assessment4 = ({ prevQuestion, handleSubmit }) => {
           </div>
         </div>
 
-        <div className="assessment2-right">
+        <div className="assessment2-right assessment4-right">
           <FormControl className="a2r">
             <Controller
               name="question4"

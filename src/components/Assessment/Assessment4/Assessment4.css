@@ -1,0 +1,10 @@
+.assessment4-right{
+    padding-top: 2em ;
+    padding-bottom: 2em;
+}
+
+.assessment4-left{
+    height: 100vh;
+    top: 0px;
+    position: sticky;
+}
