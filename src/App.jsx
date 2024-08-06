@@ -25,9 +25,20 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import ConsumerTest from './components/ConsumerTest/ConsumerTest';
 import Assessment from './components/Assessment/Assessment';
+import { useEffect } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
+import { getProviders } from './services/api';
 
 
 function App() {
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    queryClient.prefetchQuery({
+      queryKey: ['providers'],
+      queryFn: getProviders
+    });
+  }, []);
   return (
       <ScrollToTop>
         <Routes>

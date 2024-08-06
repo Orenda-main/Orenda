@@ -2,6 +2,8 @@ import { useForm } from 'react-hook-form';
 import newsletter from '../../assets/newsletter.svg';
 import Input from '../Input';
 import { useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const Newsletter = () => {
   const {
@@ -9,11 +11,29 @@ const Newsletter = () => {
     handleSubmit,
     watch,
     reset,
-    formState: { errors, isSubmitSuccessful }
+    formState: { errors, isSubmitting, isSubmitSuccessful }
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const templateParams = {
+      from: 'Orenda',
+      section: 'Newsletter',
+      firstName: data['First Name'],
+      lastName: data['Last Name'],
+      email: data['Email*']
+    };
+    try {
+      await emailjs.send(
+        'service_d7svcgq',
+        'template_mktb9jd',
+        templateParams,
+        'f_xOBciJvcABV_wmq'
+      );
+      toast.success('You have successfully subscribed to our newsletter!');
+    } catch (error) {
+      console.log(`Email not sent. Error ${error}`);
+      toast.error('Failed to subscribe. Please try again later.');
+    }
   };
 
   useEffect(() => {
@@ -25,7 +45,12 @@ const Newsletter = () => {
     <div className="~py-10/14 px-5 mb-8">
       <div className="max-w-7xl mx-auto bg-[#f5f5f5] flex flex-col sm:flex-row ~px-5/28 pb-14 pt-8 items-center gap-6 sm:gap-10">
         <div className="sm:order-last flex-shrink-0">
-          <img className="~size-[8.1875rem]/[25.525rem]" src={newsletter}></img>
+          <img
+            className="~size-[8.1875rem]/[25.525rem]"
+            width={100}
+            height={100}
+            src={newsletter}
+          ></img>
         </div>
         <div className="text-center sm:text-justify">
           <h2 className="heading sm:py-1 mb-3 ~text-xl/[2.625rem] sm:text-left">
@@ -67,7 +92,10 @@ const Newsletter = () => {
               errors={errors}
             />
 
-            <button className="font-open-sans w-full max-w-[16.31rem] mx-auto sm:mx-0 block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg">
+            <button
+              disabled={isSubmitting}
+              className="font-open-sans w-full max-w-[16.31rem] mx-auto sm:mx-0 block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg"
+            >
               Subscribe
             </button>
           </form>

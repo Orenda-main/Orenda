@@ -1,5 +1,4 @@
 import Team from '../OurTeam/Team';
-import ContactUs from '../OurTeam/ContactUs';
 import call from '../../assets/call.svg';
 import text from '../../assets/text.svg';
 import email from '../../assets/email.svg';
@@ -16,20 +15,38 @@ import Newsletter from './Newsletter';
 import Input from '../Input';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import './contactcss.css'
-
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 const ContactUsPage = () => {
   const {
     register,
     handleSubmit,
     watch,
     reset,
-    formState: { errors, isSubmitSuccessful }
-  } = useForm({
-    reValidateMode: 'onChange'
-  });
-  const onSubmit = (data) => {
-    console.log(data);
+    formState: { errors, isSubmitting, isSubmitSuccessful }
+  } = useForm();
+  const onSubmit = async (data) => {
+    const templateParams = {
+      from: 'Orenda',
+      section: 'Contact Us',
+      name: data['Your Name'],
+      email: data['Email Address'],
+      phone: data['Phone Number'],
+      subject: data['Subject'],
+      message: data['Message']
+    };
+    try {
+      await emailjs.send(
+        'service_d7svcgq',
+        'template_h74ln0c',
+        templateParams,
+        'f_xOBciJvcABV_wmq'
+      );
+      toast.success('Your message has been sent successfully!');
+    } catch (error) {
+      console.log(`Email not sent. Error ${error}`);
+      toast.error('Failed to send your message. Please try again later.');
+    }
   };
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -53,30 +70,24 @@ const ContactUsPage = () => {
                   communication
                 </p>
                 <div className="grid gap-4 mt-8  max-w-[27.5rem] mx-auto md:mx-0">
-                  <a href="tel:+1(347) 707-7735" className='callcss'>
-                    <button className="callcss font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl">
-                      <span>
-                        <img className="w-6" src={call} alt="call icon" />
-                      </span>
-                      Call
-                    </button>
-                  </a>
-                  <a href="sms:+13477077735" className='callcss'>
-                    <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
-                      Text
-                      <span>
-                        <img src={text} alt="text icon" />
-                      </span>
-                    </button>
-                  </a>
-                  <a href="mailto:admin@orendapsych.com" className='callcss'>
-                    <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
-                      Email
-                      <span>
-                        <img src={email} alt="email icon" />
-                      </span>
-                    </button>
-                  </a>
+                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl">
+                    <span>
+                      <img className="w-6" src={call} alt="call icon" />
+                    </span>
+                    Call
+                  </button>
+                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
+                    Text
+                    <span>
+                      <img src={text} alt="text icon" />
+                    </span>
+                  </button>
+                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
+                    Email
+                    <span>
+                      <img src={email} alt="email icon" />
+                    </span>
+                  </button>
                 </div>
               </div>
               <div className="hidden md:block ~mt-10/16 ~space-y-10/12">
@@ -113,11 +124,6 @@ const ContactUsPage = () => {
                     </span>{' '}
                     (nationwide), or go directly to your nearest emergency room.
                   </p>
-                  {/* <p className="max-w-[22.44rem]">
-                    If you are in immediate danger, call{' '}
-                    <span className="text-red-900 font-semibold">911</span> or
-                    visit your nearest emergency room
-                  </p> */}
                 </div>
               </div>
             </div>
@@ -174,7 +180,10 @@ const ContactUsPage = () => {
                   watch={watch}
                   errors={errors}
                 />
-                <button className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg">
+                <button
+                  disabled={isSubmitting}
+                  className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg"
+                >
                   Submit
                 </button>
               </form>
