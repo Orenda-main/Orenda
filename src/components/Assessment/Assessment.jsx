@@ -4,6 +4,7 @@ import Assessment1 from './Assessment1/Assessment1';
 import Assessment2 from './Assessment2/Assessment2';
 import Assessment3 from './Assessment3/Assessment3';
 import Assessment4 from './Assessment4/Assessment4';
+import './Assessment.css'
 import { useProviders } from '../../services/queries';
 import Providers from '../OurTeam/Providers';
 import ProviderModal from './ProviderModal/ProviderModal';
@@ -56,7 +57,7 @@ const Assessment = () => {
             )}
           </form>
         </FormProvider>
-        {modalVisible && <ProviderModal providers={providersData} onClose={() => setModalVisible(false)} />}
+        {modalVisible && <ProviderModal providers={providersData}  isOpen={setModalVisible} onClose={() => setModalVisible(false)} />}
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import QA from "./Question";
 import callpurple from "../../../assets/callpurple.png";
 import mailpurple from "../../../assets/mailpurple.png";
 import { Link } from "react-router-dom";
+import CantFind from "../CantFind/CantFind";
 
 const Frequent = () => {
     const [faqs, setFaqs] = useState([
@@ -79,25 +80,7 @@ const Frequent = () => {
               <QA faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
             ))}
           </div>
-          <p>Can’t find your question?</p>
-          <div className="freq-text">
-            <div className="freq-prop">
-              <Link to="/contact">
-                <p>
-                  <img src={mailpurple} alt="" /> Send a message
-                </p>
-              </Link>
-            </div>
-            <p>or</p>
-            <div className="freq-prop">
-              <a href="tel:+1(347) 707-7735">
-                <p>
-                  <img src={callpurple} alt="" />
-                  Call to ask
-                </p>
-              </a>
-            </div>
-          </div>
+          <CantFind/>
         </div>
       );
 }

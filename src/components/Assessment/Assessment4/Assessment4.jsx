@@ -26,11 +26,11 @@ const Assessment4 = ({ prevQuestion, handleSubmit }) => {
     'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)',
     'Sleep Disorders',
     'Eating Disorders',
-    'Substance Use Disorder',
-    'Genomic Testing',
   ];
 
   const selectOptions = [
+    { label: 'Substance Use Disorder', value: 'Substance Use Disorder' },
+    { label: 'Genomic Testing', value: 'Genomic Testing' },
     { label: 'Anger Management', value: 'Anger Management' },
     { label: 'Autism/Autism Spectrum Disorders (ASD)', value: 'Autism/Autism Spectrum Disorders (ASD)' },
     { label: 'Bipolar Disorder', value: 'Bipolar Disorder' },

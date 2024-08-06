@@ -131,7 +131,7 @@ const PrivacyPolicy = () => {
               notifications about required intake documents, and other
               service-related information. Patients are able to also opt out of
               text/sms communication here: {' '} 
-              <Link to='/contact' className="underline font-bold">https://www.orendapsych.com/contact</Link>.
+              <Link to='/contact-us' className="underline font-bold">https://www.orendapsych.com/contact</Link>.
             </p>
           </div>
           <div>
@@ -140,7 +140,7 @@ const PrivacyPolicy = () => {
             </h2>
             <p>
               Texts/SMS will be used to convey information related to
-              appointment times / dates / reminders, intake documentatuon
+              appointment times / dates / reminders, intake documentation
               completion, and non-clinical administrative matters.
             </p>
           </div>

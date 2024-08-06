@@ -15,6 +15,7 @@ import Phead from './Phead/Phead'
 // import Hear from './Hear/Hear'
 import HearClients from './HearClients/HearClients'
 import AppointmentScheduling from './AppointmentScheduling/AppointmentScheduling'
+import FAQ from '../Contact Us/FAQ'
 
 
 
@@ -24,7 +25,6 @@ const Home = () => {
             <div className="home_wrapper mx-auto">
                 <Hero/>
                 <Network/>
-                
                 <Phead/>
                 <Providers itemsPerPage={10} numberOfColumns={5} forHome={true}/>
                 <Meet/>
@@ -33,9 +33,9 @@ const Home = () => {
                 <Available/> {/* <Hear/> */}
                 <HearClients/>
                 <Journey/>
-                
                 <Location/>
-                <Frequent/>
+                {/* <Frequent/> */}
+                <FAQ/>
             </div>
         </div>
     )
