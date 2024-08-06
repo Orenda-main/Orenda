@@ -8,6 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Footer from '../../Footer/Footer';
 import Header from '../../Header';
+import { NavLink } from 'react-router-dom';
 
 const Assessment1 = ({ nextQuestion }) => {
   const { control, setValue, watch, formState: { errors } } = useFormContext();
@@ -46,11 +47,13 @@ const Assessment1 = ({ nextQuestion }) => {
       {showFooter && <Header />}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <div className="homepage" onClick={() => console.log('Homepage Clicked')}>
-            <ArrowBackIosIcon style={{ color: 'white' }} />
-            <p style={{ color: 'white' }}>Homepage</p>
-          </div>
-
+          <NavLink to="/">
+            <div className="homepage">
+              <ArrowBackIosIcon style={{ color: 'white' }} />
+              <p style={{ color: 'white' }}>Homepage</p>
+            </div>
+          </NavLink>
+          
           <div className="question">
             <p className="q-no">Question 1 of 4</p>
             <h1>What is your age?</h1>

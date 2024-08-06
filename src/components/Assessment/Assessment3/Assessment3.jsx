@@ -13,6 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import Header from '../../Header';
 import Footer from '../../Footer/Footer';
+import { NavLink } from 'react-router-dom';
 
 const Assessment3 = ({ nextQuestion, prevQuestion }) => {
   const { control, setValue, watch, formState: { errors } } = useFormContext();
@@ -117,10 +118,12 @@ const Assessment3 = ({ nextQuestion, prevQuestion }) => {
       {showFooter && <Header />}
       <div className="assessment1-wrapper">
         <div className="assessment1-left">
-          <div className="homepage" onClick={handlePrevClick}>
-            <ArrowBackIosIcon style={{ color: 'white' }} />
-            <p style={{ color: 'white' }}>Homepage</p>
-          </div>
+          <NavLink to="/">
+            <div className="homepage">
+              <ArrowBackIosIcon style={{ color: 'white' }} />
+              <p style={{ color: 'white' }}>Homepage</p>
+            </div>
+          </NavLink>
 
           <div className="question">
             <p className="q-no">Question 3 of 4</p>
