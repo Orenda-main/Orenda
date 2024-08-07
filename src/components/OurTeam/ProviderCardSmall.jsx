@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ProviderCard = ({ provider, setProvidersData }) => {
+const ProviderCard = ({ provider, setProvidersData, assessment }) => {
   const showStatesLicensed = (states) => {
     if (states && states.length === 1) {
       return `${states[0]}`;
@@ -55,7 +55,7 @@ const ProviderCard = ({ provider, setProvidersData }) => {
           }))
         )
       }
-      className={`pb-[0.94rem] max-w-[18.625rem] h-[23.5rem] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
+      className={`pb-[0.94rem] max-w-[18.625rem] h-[23.5rem] ${assessment ? 'md:h-[24rem] max-w-[100%]' : 'md:h-[unset]'} w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
     >
       <div
         className={`absolute inset-0 bg-black opacity-0 md:hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col gap-1 px-3 py-4 md:visible md:animate-none ${

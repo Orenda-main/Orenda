@@ -1,0 +1,36 @@
+.custom-slick-slider-assessment{
+    width: 90%;
+}
+
+.pop{
+    display: flex;
+    max-width: 100%;
+}
+
+.slick-slide{
+    margin-right: 1em;
+    padding: 1em 0;
+    max-width: 276px !important;
+}
+
+.slick-slider {
+    max-width: 100%;
+  }
+
+.py-4{
+    padding: 0;
+}
+
+.slick-list{
+    padding: 0 !important;
+}
+
+
+@media screen and (max-width: 860px){
+    .slick-slide{
+        max-width: 423px !important;
+    }    
+    /* .slick-slide{
+        max-width: 100% !important;
+    }     */
+}
