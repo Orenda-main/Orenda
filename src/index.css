@@ -50,7 +50,7 @@ html *::after {
   html {
     color: #070707;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     accent-color: #333;
   }
 
