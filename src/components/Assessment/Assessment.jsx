@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import Assessment1 from './Assessment1/Assessment1';
 import Assessment2 from './Assessment2/Assessment2';
 import Assessment3 from './Assessment3/Assessment3';
 import Assessment4 from './Assessment4/Assessment4';
-import './Assessment.css'
-import { useProviders } from '../../services/queries';
-import Providers from '../OurTeam/Providers';
+import './Assessment.css';
 import ProviderModal from './ProviderModal/ProviderModal';
 
 const Assessment = () => {
   const [question, setQuestion] = useState(0);
-  const providers = useProviders();
-  const [providersData, setProvidersData] = useState(providers.data);
   const [modalVisible, setModalVisible] = useState(false);
- 
+  const [assessmentData, setAssessmentData] = useState(null);
 
   const methods = useForm({
     defaultValues: {
@@ -25,18 +21,20 @@ const Assessment = () => {
     }
   });
 
-  const { handleSubmit, getValues } = methods;
-
-  useEffect(() => {
-    console.log(getValues());
-  }, [getValues]);
+  const { handleSubmit } = methods;
 
   const nextQuestion = () => setQuestion((prev) => Math.min(prev + 1, 3));
   const prevQuestion = () => setQuestion((prev) => Math.max(prev - 1, 0));
 
   const onSubmit = (data) => {
     console.log(data);
-    // Handle form submission
+    // Save the form data to state
+    setAssessmentData({
+      age_group: data.question1,
+      focus_areas1: data.question2,
+      licensed_state: data.question3,
+      focus_areas2: data.question4,
+    });
     setModalVisible(true);
   };
 
@@ -57,7 +55,13 @@ const Assessment = () => {
             )}
           </form>
         </FormProvider>
-        {modalVisible && <ProviderModal providers={providersData}  isOpen={setModalVisible} onClose={() => setModalVisible(false)} />}
+        {modalVisible && (
+          <ProviderModal
+            isOpen={modalVisible}
+            onClose={() => setModalVisible(false)}
+            assessmentAnswers={assessmentData} // Pass the assessment data to ProviderModal
+          />
+        )}
       </div>
     </div>
   );

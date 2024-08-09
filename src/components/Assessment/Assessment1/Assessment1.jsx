@@ -84,11 +84,11 @@ const Assessment1 = ({ nextQuestion }) => {
                   <MenuItem value="">
                     <em>None</em>
                   </MenuItem>
-                  <MenuItem value="5 - 13 yrs">5 - 13 yrs</MenuItem>
+                  <MenuItem value="5 - 12 yrs">5 - 12 yrs</MenuItem>
                   <MenuItem value="13 - 17 yrs">13 - 17 yrs</MenuItem>
-                  <MenuItem value="18 - 24 yrs">18 - 24 yrs</MenuItem>
+                  <MenuItem value="18 - 64 yrs">18 - 64 yrs</MenuItem>
                   <MenuItem value="25 - 64 yrs">25 - 64 yrs</MenuItem>
-                  <MenuItem value="65+ yrs">65+ yrs</MenuItem>
+                  <MenuItem value="65 + yrs">65 + yrs</MenuItem>
                 </Select>
               )}
             />
