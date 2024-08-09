@@ -1,29 +1,24 @@
 .providermodal-container{
     background-color: #070707B2;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 30px;
+    height: max-content;
+    position: absolute;
+    top: 0px;
     right: 0;
     left: 0;
     bottom: 0px;
     z-index: 1;
-    overflow: hidden;
 }
 
 .providermodal-wrapper{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .providermodal-flex{
-    min-width: 80%;
-    max-width: 1000px;
+    max-width: 950px;
     background-color: white;
- 
-    padding: 2.5em 1em;
+    padding: 2em 1em;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -33,6 +28,8 @@
     font-family: "DM sans";
     border-radius: 1em;
     scale: .83;
+    top: 0;
+    margin-top: -25px;
 }
 
 .close{
@@ -72,8 +69,87 @@
     padding: .2em 0;
 }
 
-@media screen and (max-width: 860px){
+@media screen and (max-width: 810px){
+    .providermodal-flex{
+        max-width: 750px;
+    }
+}
+
+
+@media screen and (max-width: 694px){
+    .providermodal-container{
+        top: 80px;
+    }
+}
+
+@media screen and (max-width: 649px){
+    .providermodal-flex{
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .providermodal-flex{
+        max-width: 550px;
+    }
+}
+
+@media screen and (max-width: 491px){
+    .providermodal-flex{
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* @media screen and (max-width: 644px){
+    .providermodal-flex{
+        max-width: 750px;
+    }
+} */
+
+/* @media screen and (max-width: 860px){
     .providermodal-flex{
         max-width: 800px;
     }
+
+    .providermodal-container{
+        height: 100dvh;
+    }
 }
+
+@media screen and (max-width: 675px){
+    .providermodal-container{
+        top: 5% !important;
+    }
+}
+
+@media screen and (max-width: 636px){
+    .providermodal-text p{
+        max-width: 500px;
+    }
+
+    .close{
+        top: 5%;
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 542px){
+    .close{
+        top: 5%;
+        right: 20% !important;
+    }
+}
+
+@media screen and (max-width: 524px){
+    .providermodal-flex{
+        scale: 1;
+    }
+
+    .providermodal-container{
+        max-width: 100%;
+    }
+} */
+

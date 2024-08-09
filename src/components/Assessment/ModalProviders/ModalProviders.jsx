@@ -26,28 +26,31 @@ const ModalProviders = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
-    initialSlide: 0,
-    adaptiveHeight: true,
    
     responsive: [
       {
-        breakpoint: 860,
+        breakpoint: 773,
+        mobileFirst:true,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
-          dots: false
+          initialSlide: 1
+          
         }
       },
       {
-        breakpoint: 400,
+        breakpoint: 491,
+        mobileFirst:true,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          initialSlide: 1
         }
       }
     ]
   };
+  
+   
 
   return (
     <>
