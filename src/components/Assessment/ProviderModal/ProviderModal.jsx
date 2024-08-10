@@ -2,6 +2,7 @@ import React from 'react';
 import close2 from '../../../assets/close2.png';
 import './ProviderModal.css';
 import ModalProviders from '../ModalProviders/ModalProviders';
+import { NavLink } from 'react-router-dom';
 
 const ProviderModal = ({ onClose, isOpen, assessmentAnswers }) => {
   return (
@@ -19,7 +20,7 @@ const ProviderModal = ({ onClose, isOpen, assessmentAnswers }) => {
           </div>
           {/* Filter providers based on assessmentAnswers */}
           <ModalProviders assessmentAnswers={assessmentAnswers} />
-          <button className="providermodal-btn">See more providers</button>
+          <NavLink to="/Our Team" className="providermodal-btn-link"><button className="providermodal-btn">See more providers</button></NavLink>
         </div>
       </div>
     </div>

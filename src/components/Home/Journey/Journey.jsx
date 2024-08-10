@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import "./Journey.css";
 import video from "../../../assets/video.png";
 import support from "../../../assets/support.png";
@@ -19,6 +20,36 @@ const Appointment = {
 };
 
 const Journey = () => {
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
+  
+    // Zoom In Bounce
+    tl.from(".video", {
+      scale: 1.1, // Start from scale 0 (completely zoomed out)
+      duration: 1, // Animation duration
+      ease: "bounce.out", // Bounce effect as it zooms in
+    })
+  
+      // Zoom Out Bounce
+      .to(".video", {
+        scale: 1.7, // End at scale 0 (completely zoomed out)
+        duration: 1, // Animation duration
+        ease: "bounce.in", // Bounce effect as it zooms out
+      });
+  }, []);
+  
+   useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
+  
+    tl.fromTo(
+      ".booking", 
+      { scale: 1.1 }, // Initial state: slightly zoomed out
+      { scale: 1.5, duration: 1, ease: "power2.inOut" } // Zoom in
+    )
+      .to(".booking", { rotate: -45, duration: .5, ease: "power2.inOut" }) // Rotate left by 45 degrees
+      .to(".booking", { rotate: 45, duration: .5, ease: "power2.inOut" }) // Rotate right by 45 degrees
+      .to(".booking", { scale: 1, duration: 1, ease: "power2.inOut" }); // Zoom out
+  }, []);
   return (
     <div className="journey-container">
       <div className="journey-wrapper">
@@ -26,7 +57,7 @@ const Journey = () => {
         <div className="icon-cards">
           <div className="icon-prop">
             <div className="icon">
-              <img src={booking} alt="" />
+              <img className="booking" src={booking} alt="" />
             </div>
             <h3>Book your first appointment</h3>
             <p>
@@ -36,7 +67,7 @@ const Journey = () => {
           </div>
           <div className="icon-prop">
             <div className="icon">
-              <img src={video} alt="" />
+              <img className="video" src={video} alt="" />
             </div>
             <h3>Meet with your provider</h3>
             <p>Connect with your provider over a video call.</p>
