@@ -47,7 +47,7 @@ function App() {
             <Route path="About" element={<About />} />
             <Route path="Our Team" element={<OurTeam/>} /> 
             <Route path="contact" element={<ContactUsPage />} />
-            <Route path="Insurance" element={<Insurance />} />
+            {/* <Route path="Insurance" element={<Insurance />} /> */}
             <Route path="privacypolicy" element={<Privacy/>} />
             <Route path="Provider/:name" element={<ProviderInfo/>} />
             <Route path="blogs" element={<Blog />} />

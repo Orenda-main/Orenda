@@ -56,7 +56,7 @@ const Header = () => {
                 {[
                   ['Home', '/'],
                   ['Meet Our Team', '/Our Team'],
-                  ['Insurance', '/insurance'],
+                  // ['Insurance', '/insurance'],
                   ['About', '/about'],
                   ['Blog', '/blogs'],
                   ['Privacy Policy', '/privacypolicy'],
@@ -134,7 +134,7 @@ const Header = () => {
                   {[
                     ['Home', '/', 'fa-solid fa-house'],
                     ['Meet Our Team', '/Our Team', 'fa-solid fa-people-group'],
-                    ['Insurance', '/insurance', 'fa-solid fa-hands-bound'],
+                    // ['Insurance', '/insurance', 'fa-solid fa-hands-bound'],
                     ['About', '/about', 'fa-solid fa-address-card'],
                     ['Blog', '/blogs', 'fa-solid fa-blog'],
                     [

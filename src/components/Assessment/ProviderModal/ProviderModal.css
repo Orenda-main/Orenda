@@ -1,6 +1,6 @@
 .providermodal-container{
     background-color: #070707B2;
-    height: 100dvh;
+    height: 100vh;
     position: absolute;
     top: 0px;
     right: 0;
@@ -12,12 +12,14 @@
 .providermodal-wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center ;
+    height: 100%;
 }
 
 .providermodal-flex{
     max-width: 950px;
     background-color: white;
+
     padding: 2em 1em;
     position: relative;
     display: flex;
@@ -96,7 +98,11 @@
 
 @media screen and (max-width: 491px){
     .providermodal-flex{
-        max-width: 100%;
+        max-width: 400px;
+    }
+
+    .providermodal-container{
+        height: 110vh;
     }
 }
 

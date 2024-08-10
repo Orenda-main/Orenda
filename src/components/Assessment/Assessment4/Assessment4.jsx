@@ -23,7 +23,8 @@ const Assessment4 = ({ prevQuestion, handleSubmit }) => {
   const condition = watch('question4');
 
   const radioOptions = [
-    'Anxiety/Depression',
+    'Anxiety',
+    'Depression',
     'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)',
     'Sleep Disorders',
     'Eating Disorders',
@@ -39,7 +40,6 @@ const Assessment4 = ({ prevQuestion, handleSubmit }) => {
     { label: 'CBT', value: 'CBT' },
     { label: 'Chronic Pain', value: 'Chronic Pain' },
     { label: 'Couples', value: 'Couples' },
-    { label: 'Depression', value: 'Depression' },
     { label: 'Family Trauma', value: 'Family Trauma' },
     { label: 'Fetal Loss', value: 'Fetal Loss' },
     { label: 'Gender Affirming Care', value: 'Gender Affirming Care' },
