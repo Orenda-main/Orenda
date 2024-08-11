@@ -17,6 +17,7 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const ContactUsPage = () => {
   const {
@@ -26,6 +27,8 @@ const ContactUsPage = () => {
     reset,
     formState: { errors, isSubmitting, isSubmitSuccessful }
   } = useForm();
+
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     const templateParams = {
       from: 'Orenda',
@@ -43,10 +46,10 @@ const ContactUsPage = () => {
         templateParams,
         'f_xOBciJvcABV_wmq'
       );
-      toast.success('Your message has been sent successfully!');
+      navigate('/contact-us/message-sent');
     } catch (error) {
-      console.log(`Email not sent. Error ${error}`);
-      toast.error('Failed to send your message. Please try again later.');
+      console.log(`Email not sent. Error: ${JSON.stringify(error)}}`);
+      toast.error('Error!. Please try again');
     }
   };
   useEffect(() => {
@@ -96,12 +99,12 @@ const ContactUsPage = () => {
                     className="text-orenda-purple font-open-sans flex items-center gap-1"
                     href="mailto:admin@orendapsych.com"
                   >
-                  <button className="w-full font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
-                    Email
-                    <span>
-                      <img src={email} alt="email icon" />
-                    </span>
-                  </button>
+                    <button className="w-full font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
+                      Email
+                      <span>
+                        <img src={email} alt="email icon" />
+                      </span>
+                    </button>
                   </a>
                 </div>
               </div>

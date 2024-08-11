@@ -28,6 +28,7 @@ import Assessment from './components/Assessment/Assessment';
 import { useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { getProviders } from './services/api';
+import Contacted from './components/Contact Us/Contacted';
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
             <Route path="blogs" element={<Blog />} />
             <Route path="blog info" element={<Bloginfo />} />
             <Route path="becomeprovider" element={<BecomeProviderPage />} />
+            <Route path="contact-us/message-sent" element={<Contacted/>} />
           </Route>
           <Route path="/Assessment1" element={<Assessment1/>} />
           <Route path="/Assessment2" element={<Assessment2/>} />
