@@ -17,6 +17,7 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+
 const ContactUsPage = () => {
   const {
     register,
@@ -70,24 +71,38 @@ const ContactUsPage = () => {
                   communication
                 </p>
                 <div className="grid gap-4 mt-8  max-w-[27.5rem] mx-auto md:mx-0">
-                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl">
-                    <span>
-                      <img className="w-6" src={call} alt="call icon" />
-                    </span>
-                    Call
-                  </button>
-                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
-                    Text
-                    <span>
-                      <img src={text} alt="text icon" />
-                    </span>
-                  </button>
-                  <button className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
+                  <a className="text-orenda-purple font-open-sans flex items-center gap-1"
+                    href="tel:+13477077735"
+                  >
+                    <button className=" w-full font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl">
+                      <span>
+                        <img className="w-6" src={call} alt="call icon" />
+                      </span>
+                      Call
+                    </button>
+                  </a>
+                  <a
+                    className="text-orenda-purple font-open-sans flex items-center gap-1"
+                    href="sms:+13477077735"
+                  >
+                    <button className="w-full font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
+                      Text
+                      <span>
+                        <img src={text} alt="text icon" />
+                      </span>
+                    </button>
+                  </a>
+                  <a
+                    className="text-orenda-purple font-open-sans flex items-center gap-1"
+                    href="mailto:admin@orendapsych.com"
+                  >
+                  <button className="w-full font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
                     Email
                     <span>
                       <img src={email} alt="email icon" />
                     </span>
                   </button>
+                  </a>
                 </div>
               </div>
               <div className="hidden md:block ~mt-10/16 ~space-y-10/12">
