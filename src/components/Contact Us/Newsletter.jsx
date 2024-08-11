@@ -24,10 +24,10 @@ const Newsletter = () => {
     };
     try {
       await emailjs.send(
-        'service_d7svcgq',
-        'template_mktb9jd',
+        'service_29p9a1p',
+        'template_tvlg3pe',
         templateParams,
-        'f_xOBciJvcABV_wmq'
+        'Wv61Pn9AOeH61J_Jm'
       );
       toast.success('You have successfully subscribed to our newsletter!');
     } catch (error) {
