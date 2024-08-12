@@ -46,7 +46,7 @@ const ContactUsPage = () => {
         templateParams,
         'f_xOBciJvcABV_wmq'
       );
-      navigate('/contact-us/message-sent');
+      navigate('/contact/message-sent');
     } catch (error) {
       console.log(`Email not sent. Error: ${JSON.stringify(error)}}`);
       toast.error('Error!. Please try again');

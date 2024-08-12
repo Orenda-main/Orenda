@@ -54,7 +54,7 @@ function App() {
             <Route path="blogs" element={<Blog />} />
             <Route path="blog info" element={<Bloginfo />} />
             <Route path="becomeprovider" element={<BecomeProviderPage />} />
-            <Route path="contact-us/message-sent" element={<Contacted/>} />
+            <Route path="contact/message-sent" element={<Contacted/>} />
           </Route>
           <Route path="/Assessment1" element={<Assessment1/>} />
           <Route path="/Assessment2" element={<Assessment2/>} />
