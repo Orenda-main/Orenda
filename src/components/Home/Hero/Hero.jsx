@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
             <div className="line"></div>
             <div className="it-mobile-right">
-              <h1>16k <span>+</span></h1>
+              <h1>20k <span>+</span></h1>
               <p>Lives Changed</p>
               <img src={user} alt="" />
             </div>

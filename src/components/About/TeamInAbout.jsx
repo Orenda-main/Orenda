@@ -3,8 +3,9 @@ import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import imgUnavailable from '../../assets/unavailable-image-icon.png';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const TeamInAbout = () => {
   const numImages = 10;
@@ -23,6 +24,7 @@ const TeamInAbout = () => {
   const shuffledIndicesRef = useRef([]);
   const currentIndexRef = useRef(0);
   const intervalRef = useRef(null);
+  const tl = useRef(null);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -113,21 +115,53 @@ const TeamInAbout = () => {
     };
   }, [teamData.length]);
 
+  useGSAP(() => {
+    gsap.defaults({ duration: 0.7 });
+
+    tl.current = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.team_image',
+        start: 'top 70%'
+      }
+    });
+
+    tl.current
+      .from('.about_team_title', {
+        opacity: 0,
+        y: 50
+      })
+      .from(
+        '.team_image',
+        {
+          opacity: 0,
+          x: 500,
+          duration: 1.5,
+          stagger: {
+            amount: 1,
+            grid: 'auto'
+          }
+        },
+        '-=0.6'
+      );
+  }, []);
+
   return (
     <div className="mb-[5rem] text-center px-5 sm:~px-8/12">
       <div className="max-w-[67.75rem] mx-auto ">
-        <h2 className="heading ~mb-6/8">Meet The Team</h2>
-        <div className="grid grid-cols-5 md:grid-cols-10 gap-3 justify-items-center">
+        <h2 className="heading ~mb-6/8 about_team_title">Meet The Team</h2>
+        <div className="grid grid-cols-5 md:grid-cols-10 gap-3 justify-items-center overflow-x-hidden">
           {indices.map((index, i) => {
             const member = teamData[index];
             return (
               <div
                 key={i}
-                className="rounded-lg overflow-hidden ~xs/xl:~size-[4rem]/[5.625rem] bg-[#F1F1F1]"
+                className="rounded-lg overflow-hidden ~xs/xl:~size-[4rem]/[5.625rem] bg-[#F1F1F1] team_image"
               >
                 <img
                   ref={itemsRef.current[i]}
                   className="w-full h-full object-cover"
+                  width={64}
+                  height={64}
                   src={member.image}
                   alt={member.name}
                   onLoad={() => {

@@ -5,7 +5,7 @@ const ScrollToTop = (props) => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll instantly to the top
+        window.scrollTo(0, 0); 
     }, [pathname]);
 
     return <>{props.children}</>;
