@@ -13,11 +13,16 @@ import multiplan from '../../assets/multiplan_insurance.png';
 import FAQ from './FAQ';
 import Newsletter from './Newsletter';
 import Input from '../Input';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import Successful from './Successful';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ContactUsPage = () => {
   const {
@@ -28,7 +33,9 @@ const ContactUsPage = () => {
     formState: { errors, isSubmitting, isSubmitSuccessful }
   } = useForm();
 
-  const navigate = useNavigate();
+  const container = useRef(null);
+  const [modal, setModal] = useState(false);
+
   const onSubmit = async (data) => {
     const templateParams = {
       from: 'Orenda',
@@ -39,6 +46,7 @@ const ContactUsPage = () => {
       subject: data['Subject'],
       message: data['Message']
     };
+
     try {
       await emailjs.send(
         'service_d7svcgq',
@@ -46,20 +54,79 @@ const ContactUsPage = () => {
         templateParams,
         'f_xOBciJvcABV_wmq'
       );
-      navigate('/contact/message-sent');
+      setModal(true);
     } catch (error) {
       console.log(`Email not sent. Error: ${JSON.stringify(error)}}`);
       toast.error('Error!. Please try again');
     }
   };
+
   useEffect(() => {
     if (isSubmitSuccessful) {
       reset();
     }
   }, [isSubmitSuccessful]);
+
+  useGSAP(
+    () => {
+      const subHeadings = gsap.utils.toArray('h2');
+      const paragraphs = gsap.utils.toArray('p');
+      const links = gsap.utils.toArray('a');
+      const buttons = gsap.utils.toArray('button');
+      const inputs = gsap.utils.toArray(
+        'form .relative.text-justify.bg-inherit'
+      );
+
+      const elements = [...subHeadings, ...paragraphs, ...buttons, ...links];
+
+      elements.forEach((el) => {
+        gsap.from(el, {
+          opacity: 0,
+          y: 100,
+          scrollTrigger: {
+            trigger: el,
+            start: 'bottom bottom'
+          }
+        });
+      });
+
+      inputs.forEach((input) => {
+        gsap.from(input, {
+          xPercent: -150,
+          scrollTrigger: {
+            trigger: input,
+            start: 'bottom bottom'
+          }
+        });
+      });
+
+      gsap.from('#insuranceProviders span', {
+        x: 500,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: '#insuranceProviders',
+          start: 'bottom bottom'
+        },
+        stagger: {
+          amount: 1,
+          grid: 'auto'
+        }
+      });
+    },
+    { dependencies: [], scope: container }
+  );
+
   return (
     <>
-      <main className="px-5 md:~px-10/14 ~mt-8/[7.5rem]">
+      {modal && (
+        <Successful
+          title="Message Sent!"
+          content="Your message has been successfully sent. We will send you a response
+          shortly!"
+          setModal={setModal}
+        />
+      )}
+      <main ref={container} className="px-5 md:~px-10/14 ~mt-8/[7.5rem]">
         <div className="max-w-7xl mx-auto">
           <h1 className="heading">Contact Us</h1>
           <div className="~mt-8/[3.75rem] text-center md:text-left md:flex gap-10">
@@ -74,37 +141,34 @@ const ContactUsPage = () => {
                   communication
                 </p>
                 <div className="grid gap-4 mt-8  max-w-[27.5rem] mx-auto md:mx-0">
-                  <a className="text-orenda-purple font-open-sans flex items-center gap-1"
+                  <a
                     href="tel:+13477077735"
+                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl cursor-pointer"
                   >
-                    <button className=" w-full font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl">
-                      <span>
-                        <img className="w-6" src={call} alt="call icon" />
-                      </span>
-                      Call
-                    </button>
+                    <span>
+                      <img className="w-6" src={call} alt="call icon" />
+                    </span>
+                    Call
                   </a>
                   <a
-                    className="text-orenda-purple font-open-sans flex items-center gap-1"
                     href="sms:+13477077735"
+                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl transition-colors relative overflow-hidden group cursor-pointer z-[1]"
                   >
-                    <button className="w-full font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
-                      Text
-                      <span>
-                        <img src={text} alt="text icon" />
-                      </span>
-                    </button>
+                    <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-indigo-300 transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                    Text
+                    <span>
+                      <img src={text} alt="text icon" />
+                    </span>
                   </a>
                   <a
-                    className="text-orenda-purple font-open-sans flex items-center gap-1"
                     href="mailto:admin@orendapsych.com"
+                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl transition-colors relative overflow-hidden group cursor-pointer z-[1]"
                   >
-                    <button className="w-full font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:bg-indigo-300 transition-colors">
-                      Email
-                      <span>
-                        <img src={email} alt="email icon" />
-                      </span>
-                    </button>
+                    <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-indigo-300 transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                    Email
+                    <span>
+                      <img src={email} alt="email icon" />
+                    </span>
                   </a>
                 </div>
               </div>
@@ -147,7 +211,7 @@ const ContactUsPage = () => {
             </div>
             <div className="flex-1">
               <form
-                className="text-justify bg-[#fafafa] border rounded-2xl ~px-[1.69rem]/10 ~space-y-10/[3.5rem] ~pt-[2.38rem]/10 ~pb-[2.81rem]/20 mt-10 md:mt-0"
+                className="text-justify bg-[#fafafa] border rounded-2xl ~px-[1.69rem]/10 ~space-y-10/[3.5rem] ~pt-[2.38rem]/10 ~pb-[2.81rem]/20 mt-10 md:mt-0 overflow-hidden"
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <h2 className="font-bold font-dm-sans ~mb-2/4 ~text-lg/[1.75rem]">
@@ -200,14 +264,17 @@ const ContactUsPage = () => {
                 />
                 <button
                   disabled={isSubmitting}
-                  className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg"
+                  className={`font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg relative z-[1] overflow-hidden group ${
+                    isSubmitting ? 'italic' : ''
+                  }`}
                 >
-                  Submit
+                  <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
                 </button>
               </form>
             </div>
           </div>
-          <div className="text-center md:text-left mt-6 space-y-10 md:flex mb-10 sm:~gap-0/[21rem]">
+          <div className="text-center md:text-left mt-6 space-y-10 md:flex mb-10 ~md/2xl:~gap-8/[15rem]">
             <div className="md:hidden sm:flex gap-20 items-start">
               <div className="flex-shrink-0">
                 <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
@@ -285,7 +352,7 @@ const ContactUsPage = () => {
                     intake@orendapsych.com
                   </a>
                 </p>
-                <p className="flex flex-col text-center md:text-left">
+                <p className="flex flex-col text-center md:text-left overflow-hidden">
                   <strong>For billing questions, please email: </strong>
                   <a
                     className="underline"
@@ -318,7 +385,10 @@ const ContactUsPage = () => {
                 <p className="text-center md:text-left">
                   We accept the following insurance providers:
                 </p>
-                <div className="flex flex-wrap gap-6 items-center justify-center md:justify-start mt-8">
+                <div
+                  id="insuranceProviders"
+                  className="flex flex-wrap gap-6 items-center justify-center md:justify-start mt-8 overflow-x-hidden"
+                >
                   <span className="max-w-[8.54rem]">
                     <img
                       src={uhc}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ProviderCard = ({ provider, setProvidersData, assessment }) => {
+const ProviderCard = ({ provider, setProvidersData }) => {
   const showStatesLicensed = (states) => {
     if (states && states.length === 1) {
       return `${states[0]}`;
@@ -55,7 +55,7 @@ const ProviderCard = ({ provider, setProvidersData, assessment }) => {
           }))
         )
       }
-      className={`pb-[0.94rem] max-w-[100%] h-[23.5rem] ${assessment ? 'md:h-[24rem] max-w-[100%] ' : 'md:h-[unset]'} w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
+      className={`pb-[0.94rem] max-w-[18.625rem] h-[23.5rem] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
     >
       <div
         className={`absolute inset-0 bg-black opacity-0 md:hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col gap-1 px-3 py-4 md:visible md:animate-none ${
@@ -74,6 +74,7 @@ const ProviderCard = ({ provider, setProvidersData, assessment }) => {
         </div>
         <div className={`grid gap-2`}>
           <a
+            target="_blank"
             href={provider?.booking_link}
             className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium text-center"
           >
@@ -132,6 +133,7 @@ const ProviderCard = ({ provider, setProvidersData, assessment }) => {
             </span>
           )}
           <a
+            target="_blank"
             href={provider?.booking_link}
             className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans py-2 min-w-[7.5rem] ~px-2/3`}
           >

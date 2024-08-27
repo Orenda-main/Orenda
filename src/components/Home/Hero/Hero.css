@@ -185,7 +185,7 @@
   .hero-wrapper {
     display: flex;
     justify-content: center;
-    background-image: url("../../../assets/heromobile.png"); /* Update the path */
+    /* Update the path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

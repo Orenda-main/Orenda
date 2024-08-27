@@ -69,9 +69,7 @@ const BPStepTwo = ({ register, errors, setFile }) => {
               <img src={upload} alt="upload file" />
             </label>
             <p className="~text-sm/base">Upload your CV/Resume</p>
-            <small className="~text-xs/sm text-[#626262]">
-              Pdf & Docx only
-            </small>
+            <small className="~text-xs/sm text-[#626262]">Pdf only</small>
             <label
               htmlFor="uploadCV"
               className="border border-orenda-purple px-4 py-[0.62rem] rounded-3xl text-orenda-purple font-semibold ~text-sm/lg cursor-pointer hover:bg-orenda-purple hover:text-white transition-colors duration-300"
@@ -83,7 +81,7 @@ const BPStepTwo = ({ register, errors, setFile }) => {
                 {uploadedFileName}
               </p>
             )}
-            <p className="text-sm text-red-500 mt-2">
+            <p className="text-sm text-red-500 mt-2 text-center max-w-[25.5rem] px-6">
               {errors?.['CV/Resume']?.message}
             </p>
             <input
@@ -100,13 +98,14 @@ const BPStepTwo = ({ register, errors, setFile }) => {
                 required: { value: true, message: 'Please add your CV/Resume' },
                 validate: {
                   acceptedFormats: (files) =>
-                    [
-                      'application/pdf',
-                      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-                    ].includes(files[0]?.type) || 'Pdf & Docx Only!'
+                    ['application/pdf'].includes(files[0]?.type) ||
+                    'Please submit file in pdf format only. You can use a file converter to convert to pdf format.',
+                  // moreThan2MB: (files) =>
+                  //   Math.round(files[0]?.size / (1024 * 1024)) < 2 ||
+                  //   'File size limit should be 2MB'
                 }
               })}
-              accept="application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              accept="application/pdf"
             />
           </div>
         </div>

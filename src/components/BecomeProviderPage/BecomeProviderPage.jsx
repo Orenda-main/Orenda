@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import BPStepOne from './BPStepOne';
 import BPStepTwo from './BPStepTwo';
 import BPApplied from './BPApplied';
 import BPNav from './BPNav';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const BecomeProviderPage = () => {
   const [formStep, setFormStep] = useState(1);
+  const [formComplete, setFormComplete] = useState(false);
   const [file, setFile] = useState(null);
   const {
     register,
@@ -15,11 +17,11 @@ const BecomeProviderPage = () => {
     watch,
     clearErrors,
     resetField,
-    formState: { errors, isDirty, isValid }
+    formState: { errors, isDirty, isValid, isSubmitting }
   } = useForm();
 
   const onSubmit = async (data) => {
-    if (formStep === 3) {
+    if (formComplete) {
       console.log(data);
 
       const reader = new FileReader();
@@ -51,9 +53,12 @@ const BecomeProviderPage = () => {
             'Wv61Pn9AOeH61J_Jm'
           );
           console.log('Email sent successfully');
+          setFormStep(3);
         } catch (error) {
+          toast.error('Error! Please try again');
           console.log(`Email not sent. Error ${JSON.stringify(error)}`);
-          console.log(reader.result, templateParams);
+        } finally {
+          setFormComplete(false);
         }
       };
     }
@@ -61,14 +66,18 @@ const BecomeProviderPage = () => {
 
   const handlePrev = () => {
     window.scrollTo(0, 100);
-    setFormStep((step) => step - 1);
+    setFormStep(1);
   };
 
   const handleNext = () => {
     if (isValid && isDirty) {
-      setFormStep((step) => step + 1);
-      setTimeout(() => clearErrors(), 1);
-      window.scrollTo(0, 100);
+      if (formStep === 2) {
+        setFormComplete(true);
+      } else {
+        setFormStep(2);
+        setTimeout(() => clearErrors(), 1);
+        window.scrollTo(0, 100);
+      }
     }
   };
 
@@ -110,6 +119,8 @@ const BecomeProviderPage = () => {
             {formStep === 3 && <BPApplied />}
 
             <BPNav
+              isSubmitting={isSubmitting}
+              formComplete={formComplete}
               formStep={formStep}
               handleNext={handleNext}
               handlePrev={handlePrev}

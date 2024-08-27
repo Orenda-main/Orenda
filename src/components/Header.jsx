@@ -1,11 +1,9 @@
 import { NavLink, Link } from 'react-router-dom';
-import Logo from './Logo';
+import logo from '../assets/logo1.png';
 import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-
-gsap.registerPlugin(useGSAP);
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -21,9 +19,9 @@ const Header = () => {
     timeline.current.fromTo(
       [navMenuLayer, navMenu],
       {
-        x: '110vw'
+        xPercent: 110
       },
-      { x: 0, duration: 0.6, stagger: 0.1, ease: 'power1.inOut' }
+      { xPercent: 0, duration: 0.6, stagger: 0.1, ease: 'power1.inOut' }
     );
   });
 
@@ -36,7 +34,7 @@ const Header = () => {
       document.body.classList.toggle('no-scroll');
     }
 
-    setNavOpen(!navOpen);
+    setNavOpen((prev) => !prev);
   };
 
   return (
@@ -49,19 +47,21 @@ const Header = () => {
       )}
       <header className="p-5 text-center ~text-sm/[1.1rem] font-dm-sans sticky bg-white top-0 z-10">
         <div className="max-w-[90rem] mx-auto flex justify-between items-center">
-          <Logo />
+          <div className={`~w-20/[6.8125rem] flex-shrink-0`}>
+            <img width={150} height={100} src={logo} alt="Orenda Psychiatry" />
+          </div>
           <div className=" hidden forProviders:block">
             <nav>
               <ul className="flex items-center justify-between ~forProviders/2xl:~gap-6/12 transition duration-1000 ">
                 {[
                   ['Home', '/'],
-                  ['Meet Our Team', '/Our Team'],
+                  ['Meet Our Team', '/our-team/1'],
                   // ['Insurance', '/insurance'],
                   ['About', '/about'],
-                  ['Blog', '/blogs'],
-                  ['Privacy Policy', '/privacypolicy'],
-                  ['Contact Us', '/contact'],
-                  ['Join Our Team', '/becomeprovider']
+                  // ['Blog', '/'],
+                  ['Privacy Policy', '/privacy-policy'],
+                  ['Contact Us', '/contact-us'],
+                  ['Join Our Team', '/become-a-provider']
                 ].map(([title, url]) => (
                   <li key={title}>
                     <NavLink
@@ -90,8 +90,9 @@ const Header = () => {
           <a
             target="_blank"
             href="https://www.zocdoc.com/wl/orendapsych/search?address=10016&after_5pm=false&before_10am=false&day_filter=AnyDay&dr_specialty=405&filters=%7B%7D&gender=-1&insurance_carrier=-1&insurance_plan=-1&language=-1&offset=0&parentSearchRequestId=5ad6e11b-e197-4dc6-8576-3101647da281&ppsSelectionId=f697582c-2de0-4006-ab39-53b075bb2ef4&reason_visit=493&searchOriginator=SearchBar&searchQueryGuid=8d62bd4a-fe91-43fa-bbec-391fc97eecdb&searchType=specialty&search_query=Adult+Psychiatric+%26+Mental+Health+Nurse+Practitioner&sees_children=false&sort_type=Default&visitType=inPersonAndVirtualVisits"
-            className="text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors px-4 py-2 border border-orenda-purple rounded-3xl font-semibold hidden forProviders:block"
+            className="text-orenda-purple hover:text-white transition-colors px-4 py-2 border hover:border-none border-orenda-purple rounded-3xl font-semibold hidden forProviders:block relative group z-1 overflow-hidden"
           >
+            <span className="block absolute top-0 left-0 bottom-0 w-0 group-hover:w-full bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
             Book Now
           </a>
           <div className="~xs/xl:~size-6/8 relative forProviders:hidden">
@@ -133,19 +134,19 @@ const Header = () => {
                 <ul className="grid gap-1 justify-items-start">
                   {[
                     ['Home', '/', 'fa-solid fa-house'],
-                    ['Meet Our Team', '/Our Team', 'fa-solid fa-people-group'],
+                    ['Meet Our Team', '/our-team/1', 'fa-solid fa-people-group'],
                     // ['Insurance', '/insurance', 'fa-solid fa-hands-bound'],
                     ['About', '/about', 'fa-solid fa-address-card'],
-                    ['Blog', '/blogs', 'fa-solid fa-blog'],
+                    // ['Blog', '/', 'fa-solid fa-blog'],
                     [
                       'Privacy Policy',
-                      '/privacypolicy',
+                      '/privacy-policy',
                       'fa-solid fa-file-shield'
                     ],
-                    ['Contact Us', '/contact', 'fa-solid fa-comment-dots'],
+                    ['Contact Us', '/contact-us', 'fa-solid fa-comment-dots'],
                     [
                       'Join Our Team',
-                      '/becomeprovider',
+                      '/become-a-provider',
                       'fa-solid fa-person-circle-plus'
                     ]
                   ].map(([title, url, icon]) => (

@@ -8,7 +8,7 @@ const Phead = () => {
         <div className="phead-wrapper">
             <h1>Meet Our Providers</h1>
             <div className="phead-button">
-              <NavLink to="/Our Team"><button>See all providers</button></NavLink>
+              <NavLink to="/our-team/1"><button>See all providers</button></NavLink>
             </div>
         </div>
     </div>

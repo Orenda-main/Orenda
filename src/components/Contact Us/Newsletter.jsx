@@ -1,10 +1,12 @@
 import { useForm } from 'react-hook-form';
 import newsletter from '../../assets/newsletter.svg';
 import Input from '../Input';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import Successful from './Successful';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Newsletter = () => {
   const {
@@ -16,6 +18,8 @@ const Newsletter = () => {
   } = useForm();
 
   const [modal, setModal] = useState(false);
+  const container = useRef(null);
+  const tl = useRef(null);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -47,6 +51,38 @@ const Newsletter = () => {
       reset();
     }
   }, [isSubmitSuccessful]);
+
+  useGSAP(
+    () => {
+      tl.current = gsap.timeline({
+        delay: 0.1,
+        yoyo: true,
+        scrollTrigger: {
+          trigger: '.newsletter_img',
+          start: 'top center'
+        }
+      });
+
+      tl.current
+        .from('.newsletter_img', {
+          rotateZ: 360
+        })
+        .to('.newsletter_img', {
+          scale: 1.2,
+          rotateZ: 20,
+          ease: 'back'
+        })
+        .to('.newsletter_img', {
+          rotateZ: -20
+        })
+        .to('.newsletter_img', {
+          rotateZ: 0,
+          scale: 1
+        });
+    },
+    { dependencies: [], scope: container }
+  );
+
   return (
     <>
       {modal && (
@@ -56,9 +92,9 @@ const Newsletter = () => {
           setModal={setModal}
         />
       )}
-      <div className="~py-10/14 px-5 mb-8">
+      <div ref={container} className="~py-10/14 px-5 mb-8">
         <div className="max-w-7xl mx-auto bg-[#f5f5f5] flex flex-col sm:flex-row ~px-5/28 pb-14 pt-8 items-center gap-6 sm:gap-10">
-          <div className="sm:order-last flex-shrink-0">
+          <div className="sm:order-last flex-shrink-0 newsletter_img">
             <img
               className="~size-[8.1875rem]/[25.525rem]"
               width={100}
@@ -130,9 +166,12 @@ const Newsletter = () => {
 
               <button
                 disabled={isSubmitting}
-                className="font-open-sans w-full max-w-[16.31rem] mx-auto sm:mx-0 block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] ~mt-10/12 rounded-3xl font-bold ~text-sm/lg"
+                className={`font-open-sans w-full max-w-[16.31rem] mx-auto sm:mx-0 block border border-orenda-purple text-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] ~mt-10/12 rounded-3xl font-bold ~text-sm/lg relative overflow-hidden group z-[1] ${
+                  isSubmitting ? 'italic' : ''
+                }`}
               >
-                Subscribe
+                <span className="inline-block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 z-[-1] rounded-3xl border hover:border-orenda-purple" />
+                {isSubmitting ? 'Submitting...' : 'Subscribe'}
               </button>
             </form>
           </div>

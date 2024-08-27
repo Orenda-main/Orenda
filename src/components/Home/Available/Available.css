@@ -14,11 +14,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
   padding-top: 5rem;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   padding-left: 2em;
   padding-right: 2em;
+  margin-bottom: 4em;
 }
 
 .available-wrapper h1 {
@@ -36,12 +37,16 @@
   text-align: left;
 }
 
+.locations {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
 .avail-img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     gap: 1.5em;
-    margin-top: 2em;
 }
 .avail-img img {
     width: 100%;

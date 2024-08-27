@@ -46,14 +46,14 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home/>} />
             <Route path="About" element={<About />} />
-            <Route path="Our Team" element={<OurTeam/>} /> 
-            <Route path="contact" element={<ContactUsPage />} />
+            <Route path="our-team/:slide/" element={<OurTeam/>} /> 
+            <Route path="contact-us" element={<ContactUsPage />} />
             {/* <Route path="Insurance" element={<Insurance />} /> */}
-            <Route path="privacypolicy" element={<Privacy/>} />
+            <Route path="privacy-policy" element={<Privacy/>} />
             <Route path="Provider/:name" element={<ProviderInfo/>} />
-            <Route path="blogs" element={<Blog />} />
-            <Route path="blog info" element={<Bloginfo />} />
-            <Route path="becomeprovider" element={<BecomeProviderPage />} />
+            {/* <Route path="blogs" element={<Blog />} />
+            <Route path="blog info" element={<Bloginfo />} /> */}
+            <Route path="become-a-provider" element={<BecomeProviderPage />} />
             <Route path="contact/message-sent" element={<Contacted/>} />
           </Route>
           <Route path="/Assessment1" element={<Assessment1/>} />
