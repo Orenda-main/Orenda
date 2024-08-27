@@ -137,7 +137,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* HERO MOBILE SECTION */}
+          {/* HERO MOBILE SECTIONS */}
           <div className="items-mobile bord-Animation">
             <div className="it-mobile-left">
               <div>
