@@ -18,7 +18,6 @@ import Blog from './components/Blog/Blogs';
 import Bloginfo from './components/Blog/Bloginfo';
 import BecomeProviderPage from './components/BecomeProviderPage/BecomeProviderPage';
 
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -29,7 +28,11 @@ import { useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { getProviders } from './services/api';
 import Contacted from './components/Contact Us/Contacted';
-
+import AdminLayout from './admin/components/AdminLayout';
+import SignUp from './admin/components/SignUp/SignUp';
+import Login from './admin/components/Login/Login';
+import ResetPassword from './admin/components/ResetPassword/ResetPassword';
+import NewPassword from './admin/components/NewPassword/NewPassword';
 
 function App() {
   const queryClient = useQueryClient();
@@ -41,30 +44,35 @@ function App() {
     });
   }, []);
   return (
-      <ScrollToTop>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home/>} />
-            <Route path="About" element={<About />} />
-            <Route path="our-team/:slide/" element={<OurTeam/>} /> 
-            <Route path="contact-us" element={<ContactUsPage />} />
-            {/* <Route path="Insurance" element={<Insurance />} /> */}
-            <Route path="privacy-policy" element={<Privacy/>} />
-            <Route path="Provider/:name" element={<ProviderInfo/>} />
-            {/* <Route path="blogs" element={<Blog />} />
+    <ScrollToTop>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="About" element={<About />} />
+          <Route path="our-team/:slide/" element={<OurTeam />} />
+          <Route path="contact-us" element={<ContactUsPage />} />
+          {/* <Route path="Insurance" element={<Insurance />} /> */}
+          <Route path="privacy-policy" element={<Privacy />} />
+          <Route path="Provider/:name" element={<ProviderInfo />} />
+          {/* <Route path="blogs" element={<Blog />} />
             <Route path="blog info" element={<Bloginfo />} /> */}
-            <Route path="become-a-provider" element={<BecomeProviderPage />} />
-            <Route path="contact/message-sent" element={<Contacted/>} />
-          </Route>
-          <Route path="/Assessment1" element={<Assessment1/>} />
-          <Route path="/Assessment2" element={<Assessment2/>} />
-          <Route path="/Assessment3" element={<Assessment3/>} />
-          <Route path="/Assessment4" element={<Assessment4/>} />
-          <Route path="/Assessment" element={<Assessment/>} />
-          <Route path="/consumer" element={<ConsumerTest/>} />
-        </Routes>
-      </ScrollToTop>
-      
+          <Route path="become-a-provider" element={<BecomeProviderPage />} />
+          <Route path="contact/message-sent" element={<Contacted />} />
+        </Route>
+        <Route path="/Assessment1" element={<Assessment1 />} />
+        <Route path="/Assessment2" element={<Assessment2 />} />
+        <Route path="/Assessment3" element={<Assessment3 />} />
+        <Route path="/Assessment4" element={<Assessment4 />} />
+        <Route path="/Assessment" element={<Assessment />} />
+        <Route path="/consumer" element={<ConsumerTest />} />
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="sign-up" element={<SignUp />} />
+          <Route path="login" element={<Login />} />
+          <Route path="password/reset" element={<ResetPassword />} />
+          <Route path="password/new" element={<NewPassword />} />
+        </Route>
+      </Routes>
+    </ScrollToTop>
   );
 }
 
