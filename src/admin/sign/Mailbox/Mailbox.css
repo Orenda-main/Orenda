@@ -1,0 +1,28 @@
+.mailbox-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* max-width: 24rem; */
+    width: 23.5rem;
+    height: 37rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   vertical-align: middle;
+}
+.mailbox-wrapper h2 {
+    font-size: 1.75rem;
+    color: #070707;
+}
+ 
+.mailbox-wrapper a {
+    text-decoration: underline;
+    text-decoration-color: #2E0086;
+    font-size: 0.975rem;
+font-style: normal;
+font-weight: 700;
+}
+
+.mailbox-wrapper span {
+    font-weight: 600;
+}

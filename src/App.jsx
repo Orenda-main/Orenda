@@ -29,6 +29,10 @@ import { useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { getProviders } from './services/api';
 import Contacted from './components/Contact Us/Contacted';
+import Mailbox from './admin/sign/Mailbox/Mailbox';
+import Success from './admin/sign/Success/Success'
+import Password from './admin/sign/Password/Password';
+
 
 
 function App() {
@@ -62,6 +66,9 @@ function App() {
           <Route path="/Assessment4" element={<Assessment4/>} />
           <Route path="/Assessment" element={<Assessment/>} />
           <Route path="/consumer" element={<ConsumerTest/>} />
+          <Route path="/Mailbox" element={<Mailbox/>} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/Password" element={<Password />} />
         </Routes>
       </ScrollToTop>
       
