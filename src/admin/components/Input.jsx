@@ -6,8 +6,9 @@ const Input = ({
   type,
   placeholder,
   register,
+  required,
   errors,
-  validation
+  validations
 }) => {
   const passwordPattern =
     /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
@@ -35,34 +36,20 @@ const Input = ({
             type={inputType}
             {...register(name, {
               required: {
-                value: true,
+                value: required,
                 message: `The ${name
                   .replace(/([A-Z])/g, ' $1')
                   .toLowerCase()} field is required`
               },
+              ...validations,
               pattern: {
                 value:
                   type === 'email'
                     ? emailPattern
-                    : type === 'password' && name !== 'confirmPassword'
+                    : type === 'password'
                     ? passwordPattern
                     : false,
-                message:
-                  type === 'email'
-                    ? 'Please enter a valid email'
-                    : 'Password must include uppercase, lowercase, a number, and a special character'
-              },
-              minLength: {
-                value:
-                  type === 'password' && name !== 'confirmPassword' ? 8 : false,
-                message: 'Password should be 8 characters and above'
-              },
-              validate: {
-                confirmedPassword: (value) => {
-                  if (validation) {
-                    return value === validation || `Passwords don't match`;
-                  }
-                }
+                ...validations?.pattern
               }
             })}
             placeholder={placeholder}

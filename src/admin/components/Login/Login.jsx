@@ -119,7 +119,13 @@ const Login = () => {
                 type="email"
                 placeholder="Enter your email"
                 register={register}
+                required={true}
                 errors={errors}
+                validations={{
+                  pattern: {
+                    message: 'Please enter a valid email'
+                  }
+                }}
               />
               <Input
                 label="Password"
@@ -127,7 +133,18 @@ const Login = () => {
                 type="password"
                 placeholder="Create password"
                 register={register}
+                required={true}
                 errors={errors}
+                validations={{
+                  pattern: {
+                    message:
+                      'Password must include uppercase, lowercase, a number, and a special character'
+                  },
+                  minLength: {
+                    value: 8,
+                    message: 'Password should be 8 characters and above'
+                  }
+                }}
               />
             </div>
 

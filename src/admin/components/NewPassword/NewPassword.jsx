@@ -85,7 +85,7 @@ const NewPassword = () => {
           Create a new password to your account.
         </p>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div className="space-y-4">
             <Input
               label="Password"
@@ -93,7 +93,18 @@ const NewPassword = () => {
               type="password"
               placeholder="Enter your password"
               register={register}
+              required={true}
               errors={errors}
+              validations={{
+                pattern: {
+                  message:
+                    'Password must include uppercase, lowercase, a number, and a special character'
+                },
+                minLength: {
+                  value: 8,
+                  message: 'Password should be 8 characters and above'
+                }
+              }}
             />
             <Input
               label="Confirm Password"
@@ -102,7 +113,10 @@ const NewPassword = () => {
               placeholder="Confirm your password"
               register={register}
               errors={errors}
-              validation={password}
+              validations={{
+                validate: (value) =>
+                  value === password || `Passwords don't match`
+              }}
             />
           </div>
 

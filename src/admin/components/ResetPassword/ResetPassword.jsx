@@ -47,14 +47,20 @@ const ResetPassword = () => {
           password link.
         </p>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <Input
             label="Email address"
             name="email"
             type="email"
             placeholder="Enter your email"
             register={register}
+            required={true}
             errors={errors}
+            validations={{
+              pattern: {
+                message: 'Please enter a valid email'
+              }
+            }}
           />
 
           <button className="w-full bg-orenda-purple text-white rounded-3xl px-4 py-3 font-semibold hover:opacity-80 transition-colors duration-500 mt-10">
