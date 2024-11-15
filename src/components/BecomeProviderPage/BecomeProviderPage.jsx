@@ -47,7 +47,7 @@ const BecomeProviderPage = () => {
         };
         try {
           await emailjs.send(
-            'service_3uga78g',
+            'service_a6ocvxc',
             'template_rg8wzrk',
             templateParams,
             'Wv61Pn9AOeH61J_Jm'

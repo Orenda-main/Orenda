@@ -91,7 +91,7 @@ const Hero = () => {
             <div className="items-right bord-Animation">
               <div className="items-right-contents">
                 <p className="font-open-sans w-16" ref={providersRef}>
-                  <CountUp start={0} end={70} duration={5} />
+                  <CountUp start={0} end={80} duration={5} />
                   <img src={pluswhiter} alt="plus icon" style={{ width: 15 }} />
                 </p>
                 <img src={Icon} alt="icon" style={{ width: 13 }} />
@@ -113,7 +113,7 @@ const Hero = () => {
               <div className="items-left-contents">
                 <div className="items-left-img" ref={livesChangedRef}>
                   <p>
-                    <CountUp start={0} end={21} duration={5} />
+                    <CountUp start={0} end={25} duration={5} />
                     k
                     <img
                       src={pluswhiter}

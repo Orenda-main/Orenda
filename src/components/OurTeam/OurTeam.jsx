@@ -1,6 +1,7 @@
 import BecomeProvider from '../About/BecomeProvider';
 import AppointmentScheduling from '../Home/AppointmentScheduling/AppointmentScheduling';
 import ContactUs from './ContactUs';
+import ExecutiveTeam from './ExecutiveTeam';
 import OurTeamIntro from './OurTeamIntro';
 import Providers from './Providers';
 import Team from './Team';
@@ -26,6 +27,7 @@ const OurTeam = () => {
       <BecomeProvider bg="white" />
       <Team itemsPerPage={8} />
       <ContactUs />
+      <ExecutiveTeam/>
     </>
   );
 };

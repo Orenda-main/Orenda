@@ -28,8 +28,10 @@ const ProviderInfoUl = ({ h2, listArray, classes }) => {
       >
         <ul className={`list-image-dot ps-4 ~space-y-2/[1.06rem]`}>
           {effectiveListArray.slice(0, 8).map((item) => {
-            if (h2 === 'Education') {
-              item = `${item.school}, Certificate in ${item.course}`;
+             if (h2 === 'Education') {
+              item = `${item.school}, ${
+                item.degree ? item.degree + "'s" : 'Certificate'
+              } in ${item.course}`;
             }
             return (
               <li

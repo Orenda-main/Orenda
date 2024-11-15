@@ -8,14 +8,14 @@ import Layout from './components/Layout';
 import ScrollToTop from './ScrollToTop';
 import OurTeam from './components/OurTeam/OurTeam';
 import ProviderInfo from './components/Provider Info/ProviderInfo';
-import Insurance from './components/Insurance/Insurance';
+// import Insurance from './components/Insurance/Insurance';
 import Privacy from './components/Privacy/PrivacyPolicy';
 import Assessment1 from './components/Assessment/Assessment1/Assessment1';
 import Assessment2 from './components/Assessment/Assessment2/Assessment2';
 import Assessment3 from './components/Assessment/Assessment3/Assessment3';
 import Assessment4 from './components/Assessment/Assessment4/Assessment4';
-import Blog from './components/Blog/Blogs';
-import Bloginfo from './components/Blog/Bloginfo';
+// import Blog from './components/Blog/Blogs';
+// import Bloginfo from './components/Blog/Bloginfo';
 import BecomeProviderPage from './components/BecomeProviderPage/BecomeProviderPage';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -33,6 +33,8 @@ import SignUp from './admin/components/SignUp/SignUp';
 import Login from './admin/components/Login/Login';
 import ResetPassword from './admin/components/ResetPassword/ResetPassword';
 import NewPassword from './admin/components/NewPassword/NewPassword';
+import ReferAPatient from './components/ReferAPatient/ReferAPatient';
+import ExecutiveInfo from './components/Executive Info/ExecutiveInfo';
 
 function App() {
   const queryClient = useQueryClient();
@@ -58,6 +60,8 @@ function App() {
             <Route path="blog info" element={<Bloginfo />} /> */}
           <Route path="become-a-provider" element={<BecomeProviderPage />} />
           <Route path="contact/message-sent" element={<Contacted />} />
+          <Route path="refer-a-patient" element={<ReferAPatient/>} />
+          <Route path='executive/:name' element={<ExecutiveInfo />} />
         </Route>
         <Route path="/Assessment1" element={<Assessment1 />} />
         <Route path="/Assessment2" element={<Assessment2 />} />
@@ -65,12 +69,14 @@ function App() {
         <Route path="/Assessment4" element={<Assessment4 />} />
         <Route path="/Assessment" element={<Assessment />} />
         <Route path="/consumer" element={<ConsumerTest />} />
+        
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="sign-up" element={<SignUp />} />
           <Route path="login" element={<Login />} />
           <Route path="password/reset" element={<ResetPassword />} />
           <Route path="password/new" element={<NewPassword />} />
         </Route>
+        
       </Routes>
     </ScrollToTop>
   );

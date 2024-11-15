@@ -47,8 +47,8 @@ const Header = () => {
       )}
       <header className="p-5 text-center ~text-sm/[1.1rem] font-dm-sans sticky bg-white top-0 z-10">
         <div className="max-w-[90rem] mx-auto flex justify-between items-center">
-          <div className={`~w-20/[6.8125rem] flex-shrink-0`}>
-            <img width={150} height={100} src={logo} alt="Orenda Psychiatry" />
+          <div className={`~w-20/[5.8125rem] flex-shrink-0`}>
+            <img width={150} height={100} src={logo} alt='Orenda Psychiatry' />
           </div>
           <div className=" hidden forProviders:block">
             <nav>
@@ -61,7 +61,8 @@ const Header = () => {
                   // ['Blog', '/'],
                   ['Privacy Policy', '/privacy-policy'],
                   ['Contact Us', '/contact-us'],
-                  ['Join Our Team', '/become-a-provider']
+                  ['Join Our Team', '/become-a-provider'],
+                  ['Refer A Patient', '/refer-a-patient']
                 ].map(([title, url]) => (
                   <li key={title}>
                     <NavLink
@@ -147,7 +148,12 @@ const Header = () => {
                     [
                       'Join Our Team',
                       '/become-a-provider',
-                      'fa-solid fa-person-circle-plus'
+                      'fa-solid fa-person-circle-plus',
+                    ],
+                    [
+                      'Refer A Patient',
+                      '/refer-a-patient',
+                      'fa-solid fa-user-group'
                     ]
                   ].map(([title, url, icon]) => (
                     <li
