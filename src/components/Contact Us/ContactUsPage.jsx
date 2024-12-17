@@ -425,7 +425,7 @@ const ContactUsPage = () => {
           </div>
         </div>
       </main>
-      <Team itemsPerPage={12} />
+      {/* <Team itemsPerPage={12} /> */}
       <FAQ />
       <Newsletter />
     </>

@@ -20,7 +20,7 @@ const ProviderModal = ({ onClose, isOpen, assessmentAnswers }) => {
           </div>
           {/* Filter providers based on assessmentAnswers */}
           <ModalProviders assessmentAnswers={assessmentAnswers} />
-          <NavLink to="/Our Team" className="providermodal-btn-link"><button className="providermodal-btn">See more providers</button></NavLink>
+          <NavLink to="/our-team/1" className="providermodal-btn-link"><button className="providermodal-btn">See more providers</button></NavLink>
         </div>
       </div>
     </div>

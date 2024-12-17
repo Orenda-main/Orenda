@@ -26,7 +26,7 @@ const Assessment4 = ({ prevQuestion, handleSubmit }) => {
     'Depression',
     'Anxiety',
     'Obsessive Compulsive Disorder (OCD)',
-    'Eating Disorders',
+    'Eating Disorder(s)',
     'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)',
   ];
 

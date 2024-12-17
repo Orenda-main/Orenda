@@ -5,7 +5,7 @@ export const useProviders = () => {
   return useQuery({
     queryKey: ['providers'],
     queryFn: getProviders,
-    refetchOnWindowFocus: false
+    refetchOnWindowFocus: false,
   });
 };
 
@@ -14,6 +14,5 @@ export const useProviderImages = () => {
     queryKey: ['providerImages'],
     queryFn: getProviderImages,
     refetchOnWindowFocus: false,
-    refetchOnReconnect: true
   });
 };

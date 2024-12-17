@@ -13,11 +13,11 @@ const BPStepOne = ({ register, watch, errors, resetField }) => {
   //     !statesLicensed.includes(option)
   //   );
 
-  // const disabled =
-  //   statesLicensed &&
-  //   ['N/A', 'I am currently a student'].some((option) =>
-  //     statesLicensed.includes(option)
-  //   );
+  const disabled =
+    statesLicensed &&
+    ['N/A', 'I am currently a student'].some((option) =>
+      statesLicensed.includes(option)
+    );
   return (
     <div className='space-y-6'>
       <fieldset className='fieldset'>
@@ -83,13 +83,13 @@ const BPStepOne = ({ register, watch, errors, resetField }) => {
             'New Jersey',
             'Connecticut',
             'Massachusetts',
-            'N/A',
             'Others'
           ]}
           register={register}
           errors={errors}
           name='States with DEA'
           resetField={resetField}
+          disabled={disabled}
         />
       </fieldset>
 
@@ -103,7 +103,7 @@ const BPStepOne = ({ register, watch, errors, resetField }) => {
         />
         <Radios
           number='5'
-          label='Are you certified as an FNP, or do you hold any other board certifications?'
+          label='Do you hold any additional board certifications, such as FNP, AGACNP, PNP, etc.??'
           register={register}
           errors={errors}
           name='FNPCertifiedOrOthers'

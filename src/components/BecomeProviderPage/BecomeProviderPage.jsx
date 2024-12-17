@@ -29,23 +29,25 @@ const BecomeProviderPage = () => {
 
       reader.onload = async () => {
         const templateParams = {
-          from: 'Orenda',
-          section: 'Become A Provider',
-          fullName: data['Full Name'],
+          From: 'Orenda',
+          Section: 'Become A Provider',
+          FullName: data['Full Name'],
           FNPCertified: data['FNPCertifiedOrOthers'],
           CV: reader.result,
-          email: data['Email Address'],
+          Email: data['Email Address'],
           FNPinfo: data['FNPCertifiedOrOthers Info'] || 'None',
           PMHNPCertified: data['PMHNPCertified'],
-          licensedStated: data['States Licensed'],
-          deaStates: data['States with DEA'],
-          agesSeen: data['agesSeen'],
-          comfortableWithTalkTherapy: data['comfortableWithTalkTherapy'],
-          hasExperienceInMentalHealth: data['hasExperienceInMentalHealth'],
-          hasExperienceWithPrescriptionManagement:
+          LicensedStated: data['States Licensed'],
+          DeaStates: data['States with DEA'],
+          AgesSeen: data['agesSeen'],
+          ComfortableWithTalkTherapy: data['comfortableWithTalkTherapy'],
+          HasExperienceInMentalHealth: data['hasExperienceInMentalHealth'],
+          HasExperienceWithPrescriptionManagement:
             data['hasExperienceWithPrescriptionManagement']
         };
+
         try {
+          // Send email with EmailJS
           await emailjs.send(
             'service_a6ocvxc',
             'template_rg8wzrk',
@@ -53,16 +55,36 @@ const BecomeProviderPage = () => {
             'Wv61Pn9AOeH61J_Jm'
           );
           console.log('Email sent successfully');
-          setFormStep(3);
+
+          // Send data to Google Sheets
+          const googleSheetResponse = await fetch(
+            'https://script.google.com/macros/s/AKfycbzlVJkZ1PrcqFuRlYofYBb7IwQTDQjMGqyKPlQzdFDJtSM78JbhkrBs-NCyWnxVt8le3A/exec',
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(templateParams)
+            }
+          );
+
+          if (googleSheetResponse.ok) {
+            console.log('Data successfully sent to Google Sheets');
+          } else {
+            console.error('Failed to send data to Google Sheets', googleSheetResponse.statusText);
+          }
+
+          setFormStep(3); // Proceed to the next step
         } catch (error) {
           toast.error('Error! Please try again');
-          console.log(`Email not sent. Error ${JSON.stringify(error)}`);
+          console.error(`Error occurred: ${JSON.stringify(error)}`);
         } finally {
           setFormComplete(false);
         }
       };
     }
   };
+
 
   const handlePrev = () => {
     window.scrollTo(0, 100);
