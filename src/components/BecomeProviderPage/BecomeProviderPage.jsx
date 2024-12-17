@@ -71,7 +71,7 @@ const BecomeProviderPage = () => {
           if (googleSheetResponse.ok) {
             console.log('Data successfully sent to Google Sheets');
           } else {
-            console.error('Failed to send data to Google Sheets', googleSheetResponse.statusText);
+            console.error('Failed to send data to Google Sheetss', googleSheetResponse.statusText);
           }
 
           setFormStep(3); // Proceed to the next step
