@@ -35,6 +35,9 @@ import ResetPassword from './admin/components/ResetPassword/ResetPassword';
 import NewPassword from './admin/components/NewPassword/NewPassword';
 import ReferAPatient from './components/ReferAPatient/ReferAPatient';
 import ExecutiveInfo from './components/Executive Info/ExecutiveInfo';
+import Blog from './components/Blogs/Blog';
+import Blogs from './components/Blogs/Blogs';
+import OurPartners from './components/Partners/OurPartners';
 
 function App() {
   const queryClient = useQueryClient();
@@ -62,6 +65,9 @@ function App() {
           <Route path="contact/message-sent" element={<Contacted />} />
           <Route path="refer-a-patient" element={<ReferAPatient/>} />
           <Route path='executive/:name' element={<ExecutiveInfo />} />
+          <Route path="blog" element={<Blogs />} />
+          <Route path='blog/:title' element={<Blog />} />
+          <Route path="our-partners" element={<OurPartners/>} />
         </Route>
         <Route path="/Assessment1" element={<Assessment1 />} />
         <Route path="/Assessment2" element={<Assessment2 />} />
@@ -76,7 +82,6 @@ function App() {
           <Route path="password/reset" element={<ResetPassword />} />
           <Route path="password/new" element={<NewPassword />} />
         </Route>
-        
       </Routes>
     </ScrollToTop>
   );

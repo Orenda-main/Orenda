@@ -28,6 +28,9 @@ const BecomeProviderPage = () => {
       reader.readAsDataURL(file);
 
       reader.onload = async () => {
+        const now = new Date();
+        const currentDateTime = now.toLocaleString('en-US', { timeZone: 'UTC' });
+
         const templateParams = {
           From: 'Orenda',
           Section: 'Become A Provider',
@@ -43,7 +46,8 @@ const BecomeProviderPage = () => {
           ComfortableWithTalkTherapy: data['comfortableWithTalkTherapy'],
           HasExperienceInMentalHealth: data['hasExperienceInMentalHealth'],
           HasExperienceWithPrescriptionManagement:
-            data['hasExperienceWithPrescriptionManagement']
+            data['hasExperienceWithPrescriptionManagement'],
+          DateTimeSubmitted: currentDateTime,
         };
 
         try {
@@ -58,13 +62,14 @@ const BecomeProviderPage = () => {
 
           // Send data to Google Sheets
           const googleSheetResponse = await fetch(
-            'https://script.google.com/macros/s/AKfycbzlVJkZ1PrcqFuRlYofYBb7IwQTDQjMGqyKPlQzdFDJtSM78JbhkrBs-NCyWnxVt8le3A/exec',
+            'https://script.google.com/macros/s/AKfycbyAnXd4VXoVypbAwZeV3tXehHSUtOUon4VhO6ZYvOrjMBaxg6grSEcLEbtO_CUbydlO/exec',
             {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
               },
-              body: JSON.stringify(templateParams)
+              body: JSON.stringify(templateParams),
+              mode: "no-cors",
             }
           );
 

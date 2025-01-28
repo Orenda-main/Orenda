@@ -133,15 +133,15 @@ const ReferAPatient = () => {
                       <InputPro
                         label='Patient’s First Name'
                         type='text'
-                        id='patientsFirstName'
-                        name='patientsFirstName'
+                        id='patientFirstName'
+                        name='patientFirstName'
                         required={true}
                       />
                       <InputPro
                         label='Patient’s Last Name'
                         type='text'
-                        id='patientsLastName'
-                        name='patientsLastName'
+                        id='patientLastName'
+                        name='patientLastName'
                         required={true}
                       />
                       <Dropdown
