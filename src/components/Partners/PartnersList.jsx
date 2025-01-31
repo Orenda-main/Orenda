@@ -24,8 +24,8 @@ const PartnersList = () => {
                 <h4 className="font-semibold text-[#6D6D6D] ~text-base/lg ~mt-4/8">
                   Refer a patient
                 </h4>
-                <a className="underline" href="#">
-                  Link
+                <a className="underline" href="https://docs.google.com/forms/d/13Q6OZGpfuEHaOPJY8lRFaUP76cBCe4nORppurFeoDzU/edit">
+                  To Greenpoint Psychotherapy
                 </a>
               </>
             );
