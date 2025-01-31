@@ -55,15 +55,7 @@ export const partners = [
     biography:
       "Mountainside is an addiction treatment center offering a comprehensive continuum of care, including detox, residential programs, extended care, outpatient services, and recovery coaching. With locations in Connecticut, New York, and New Jersey, they provide personalized treatment plans that integrate medical and psychiatric services, clinical therapies, wellness activities, and family support. Their serene environments and compassionate staff aim to support individuals on their journey to long-term sobriety.",
   },
-  {
-    id: "j1kl",
-    name: "Mountainside",
-    operatingStates: "Connecticut, New York, New Jersey",
-    image: partnersImages.mountainside,
-    about: "Addiction treatment and recovery support",
-    biography:
-      "Mountainside is an addiction treatment center offering a comprehensive continuum of care, including detox, residential programs, extended care, outpatient services, and recovery coaching. With locations in Connecticut, New York, and New Jersey, they provide personalized treatment plans that integrate medical and psychiatric services, clinical therapies, wellness activities, and family support. Their serene environments and compassionate staff aim to support individuals on their journey to long-term sobriety.",
-  },
+  
   // {
   //   id: "9i0j",
   //   name: "The Renfrew Center",
