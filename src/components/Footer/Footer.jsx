@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto ~text-sm/base ">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ~gap-y-6/8 ~gap-x-6/8 md:gap-12">
           <div className="col-span-2 md:col-span-1">
-            <div className={`~w-24/[10.8125rem] flex-shrink-0 sm:mt-6`}>/``
+            <div className={`~w-24/[10.8125rem] flex-shrink-0 sm:mt-6`}>
               <img
                 width={100}
                 height={100}

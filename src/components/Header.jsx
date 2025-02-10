@@ -28,7 +28,7 @@ const Header = () => {
       path: "/our-team/1",
       icon: "fa-solid fa-people-group",
     },
-    { label: "Insurance", path: "/insurance", icon: "fa-solid fa-hands-bound" },
+    // { label: "Insurance", path: "/insurance", icon: "fa-solid fa-hands-bound" },
     { label: "About", path: "/about", icon: "fa-solid fa-address-card" },
     { label: "Blog", path: "/blog", icon: "fa-solid fa-blog" },
     {
@@ -57,7 +57,7 @@ const Header = () => {
           label: "Refer a patient to orenda",
           path: "/refer-a-patient",
         },
-        { label: "Our partners", path: "/our-partners" },
+        // { label: "Our partners", path: "/our-partners" },
       ],
     },
   ];

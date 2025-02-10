@@ -71,7 +71,7 @@ const Providers = () => {
                 <p>
                   <span>
                     Children (5+ yrs), Teens (13 -17 yrs), Adult (18 -64 yrs){" "}
-                  </span>
+                  </span>f
                 </p>
               </div>
               <div className="card_details details2">

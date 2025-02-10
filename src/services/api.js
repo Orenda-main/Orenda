@@ -40,6 +40,7 @@ const newOrder = [
   'Linda Orji',
   'Zohaib Qazi',
   'Angela Wandungu',
+  'Allyson Cosgrove',
   'Kristofer Generales',
   'Francine Forbes',
   'Royston Ogbuagu',
@@ -122,7 +123,6 @@ const newOrder = [
   'Celeste Johnson',
   'Catherine Colson',
   'Tricia Robinson',
-  'Allyson Cosgrove',
   'Adam Jimoh'
 ];
 
