@@ -28,24 +28,24 @@ export const partners = [
     biography:
       "Charlie Health is an intensive outpatient mental health care provider designed specifically for adolescents and adults up to 50. They offer personalized, evidence-based care through group, individual, and family therapy, tailored to those facing complex mental health challenges such as depression, anxiety, trauma, and substance use disorders. Charlie Health is available across the U.S. and uses telehealth services to make treatment more accessible. Their team of licensed professionals also emphasize family involvement and community support as integral parts of the healing process.",
   },
-  {
-    id: "j1kl",
-    name: "Mountainside",
-    operatingStates: "Connecticut, New York, New Jersey",
-    image: partnersImages.mountainside,
-    about: "Addiction treatment and recovery support",
-    biography:
-      "Mountainside is an addiction treatment center offering a comprehensive continuum of care, including detox, residential programs, extended care, outpatient services, and recovery coaching. With locations in Connecticut, New York, and New Jersey, they provide personalized treatment plans that integrate medical and psychiatric services, clinical therapies, wellness activities, and family support. Their serene environments and compassionate staff aim to support individuals on their journey to long-term sobriety.",
-  },
-  {
-    id: "k2l",
-    name: "Wondermed",
-    operatingStates: "New York",
-    image: partnersImages.wondermed,
-    about: "Ketamine therapy for treatment-resistant conditions",
-    biography:
-      "Wondermed offers a unique, science-based approach to mental health care through ketamine-assisted therapy for treatment-resistant anxiety and depression. Their platform provides guided therapeutic sessions utilizing ketamine, a well-researched psychedelic medication, to support healing and transformation. By combining telemedicine with personalized care, Wondermed offers online consultations, virtual support, and comprehensive monitoring by licensed professionals. Their mission is to unlock mental wellness through innovative, evidence-based alternative therapies.",
-  },
+  // {
+  //   id: "j1kl",
+  //   name: "Mountainside",
+  //   operatingStates: "Connecticut, New York, New Jersey",
+  //   image: partnersImages.mountainside,
+  //   about: "Addiction treatment and recovery support",
+  //   biography:
+  //     "Mountainside is an addiction treatment center offering a comprehensive continuum of care, including detox, residential programs, extended care, outpatient services, and recovery coaching. With locations in Connecticut, New York, and New Jersey, they provide personalized treatment plans that integrate medical and psychiatric services, clinical therapies, wellness activities, and family support. Their serene environments and compassionate staff aim to support individuals on their journey to long-term sobriety.",
+  // },
+  // {
+  //   id: "k2l",
+  //   name: "Wondermed",
+  //   operatingStates: "New York",
+  //   image: partnersImages.wondermed,
+  //   about: "Ketamine therapy for treatment-resistant conditions",
+  //   biography:
+  //     "Wondermed offers a unique, science-based approach to mental health care through ketamine-assisted therapy for treatment-resistant anxiety and depression. Their platform provides guided therapeutic sessions utilizing ketamine, a well-researched psychedelic medication, to support healing and transformation. By combining telemedicine with personalized care, Wondermed offers online consultations, virtual support, and comprehensive monitoring by licensed professionals. Their mission is to unlock mental wellness through innovative, evidence-based alternative therapies.",
+  // },
   // {
   //   id: "j1kl",
   //   name: "Mountainside",

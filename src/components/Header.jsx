@@ -54,10 +54,10 @@ const Header = () => {
       icon: "fa-solid fa-user-group",
       sublinks: [
         {
-          label: "Refer a patient to orenda",
+          label: "Refer a patient to Orenda",
           path: "/refer-a-patient",
         },
-        // { label: "Our partners", path: "/our-partners" },
+        { label: "Our partners", path: "/our-partners" },
       ],
     },
   ];
